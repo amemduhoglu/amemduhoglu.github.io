@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "fetched_at": "2026-03-06",
+    "scholar_id": "EWXdpogAAAAJ",
+    "name": "Abdulkadir Memduhoğlu",
+    "h_index": 0,
+    "i10_index": 0,
+    "citations_total": 470
+  },
+  "publications": [
+    {
+      "title": "Large language models as virtual experts? evaluating AHP-based criteria weighting performance for solar power plant site selection",
+      "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
+      "venue": "Expert Systems with Applications",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Utilizing large language models to simulate parking search",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
+      "venue": "Transportation Research Part A: Policy and Practice",
+      "year": "2025",
+      "citations": 7,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Towards AI-Assisted Mapmaking: Assessing the Capabilities of GPT-4o in Cartographic Design",
+      "authors": "Abdulkadir Memduhoğlu",
+      "venue": "ISPRS International Journal of Geo-Information",
+      "year": "2025",
+      "citations": 6,
+      "url": "https://www.mdpi.com/2220-9964/14/1/35",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Accurate Terrain Modeling After Dark: Evaluating Nighttime Thermal UAV-Derived DSMs",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
+      "venue": "Drones",
+      "year": "2025",
+      "citations": 3,
+      "url": "https://www.mdpi.com/2504-446X/9/6/430",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Assessing Spatiotemporal LST Variations in Urban Landscapes Using Diurnal UAV Thermography",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
+      "venue": "Applied Sciences",
+      "year": "2025",
+      "citations": 3,
+      "url": "https://www.mdpi.com/2076-3417/15/7/3448",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Assessing Seasonal and Diurnal Thermal Dynamics of Water Channel and Highway Bridges Using Unmanned Aerial Vehicle Thermography",
+      "authors": "Abdulkadir Memduhoğlu and Nizar Polat",
+      "venue": "Drones",
+      "year": "2025",
+      "citations": 1,
+      "url": "https://www.mdpi.com/2504-446X/9/3/205",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Distortions in judged spatial relations in large language models",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
+      "venue": "The Professional Geographer",
+      "year": "2024",
+      "citations": 24,
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Enriching building function classification using Large Language Model embeddings of OpenStreetMap Tags",
+      "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
+      "venue": "Earth Science Informatics",
+      "year": "2024",
+      "citations": 17,
+      "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "An unmanned aerial vehicle based investigation of roof patch suitability for solar panel installation",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
+      "venue": "International Journal of Engineering and Geosciences",
+      "year": "2024",
+      "citations": 5,
+      "url": "https://dergipark.org.tr/en/pub/ijeg/article/1424400?issue_id=86286",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Semantic enrichment of building functions through geospatial data integration and ontological inference",
+      "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
+      "venue": "Environment and Planning B: Urban Analytics and City Science",
+      "year": "2024",
+      "citations": 4,
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Evidence for Systematic Bias in the Spatial Memory of Large Language Models.",
+      "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
+      "venue": "GeoExT@ ECIR",
+      "year": "2024",
+      "citations": 3,
+      "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
+      "doi": "",
+      "type": "conference"
+    },
+    {
+      "title": "6 Şubat depremlerinden etkilenen şehirlere ait OpenStreetMap verilerinin niceliksel ve semantik analizi",
+      "authors": "Abdulkadir Memduhoğlu",
+      "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
+      "year": "2024",
+      "citations": 2,
+      "url": "",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
+      "venue": "Bartın Orman Fakültesi Dergisi",
+      "year": "2024",
+      "citations": 2,
+      "url": "https://dergipark.org.tr/en/pub/barofd/article/1352729",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Identifying impervious surfaces for rainwater harvesting feasibility using unmanned aerial vehicle imagery and machine learning classification",
+      "authors": "Abdulkadir Memduhoğlu",
+      "venue": "Advanced GIS",
+      "year": "2023",
+      "citations": 13,
+      "url": "https://scholar.google.com/scholar?cluster=15435306608757589225&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Evaluating the ground point classification performance of Agisoft Metashape Software",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2023",
+      "citations": 3,
+      "url": "https://scholar.google.com/scholar?cluster=5553457508776189779&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Determination of suitable areas for wind power plant installation in Şanlıurfa with GIS and AHP",
+      "authors": "Tacettin Ataş and Abdulkadir Memduhoğlu",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2023",
+      "citations": 0,
+      "url": "https://scholar.google.com/scholar?cluster=16617782310016532510&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Analysis of investment planning in electricity distribution systems with GIS",
+      "authors": "Kadri Kaya and Abdulkadir Memduhoğlu",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2023",
+      "citations": 0,
+      "url": "https://scholar.google.com/scholar?cluster=3577414978589747449&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Generating a thermal index map with unmanned aerial vehicles (UAVs) with thermal sensors",
+      "authors": "Yunus Kaya and Abdulkadir Memduhoğlu and Nizar Polat",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2023",
+      "citations": 0,
+      "url": "https://scholar.google.com/scholar?cluster=1634989233644878368&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "An approach for multi-scale urban building data integration and enrichment through geometric matching and semantic web",
+      "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
+      "venue": "Cartography and Geographic Information Science",
+      "year": "2022",
+      "citations": 15,
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/15230406.2021.1952108",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Determining the change in burnt forest areas with UAV: The example of Osmanbey campus",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Şeyma Akça",
+      "venue": "Advanced UAV",
+      "year": "2022",
+      "citations": 4,
+      "url": "https://scholar.google.com/scholar?cluster=13728309812289015627&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Determination of rainwater harvesting potential in GIS using UAV imagery with machine learning classification",
+      "authors": "Abdulkadir Memduhoglu",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2022",
+      "citations": 0,
+      "url": "https://scholar.google.com/scholar?cluster=14461332100546537956&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Arkeolojik kalıntıların belgelenmesinde yersel ve İHA fotogrametrisinin birlikte kullanımı",
+      "authors": "KAYA Yunus and Nizar Polat and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mustafa Ulukavak",
+      "venue": "Türkiye Fotogrametri Dergisi",
+      "year": "2021",
+      "citations": 31,
+      "url": "https://dergipark.org.tr/en/pub/tufod/article/899089",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Digital documentation of ancient stone carving in Şuayip City",
+      "authors": "Halil İbrahim Şenol and Nizar Polat and KAYA Yunus and Abdulkadir Memduhoğlu and Mustafa Ulukavak",
+      "venue": "Mersin Photogrammetry Journal",
+      "year": "2021",
+      "citations": 29,
+      "url": "https://dergipark.org.tr/en/pub/mephoj/article/899157",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "İHA FOTOGRAMETRİSİNİN ARKEOLOJİK YÜZEY ARAŞTIRMALARINA KATKILARININ İNCELENMESİ",
+      "authors": "Nizar POLAT and Seçil ÇOKOĞULLU and Abdulkadir MEMDUHOĞLU and Mustafa ULUKAVAK and Halil İbrahim ŞENOL and ORAL Muharrem and Mahmut KARAÇİZMELİ and Özgür MARANGOZ",
+      "venue": "TÜBA-AR Türkiye Bilimler Akademisi Arkeoloji Dergisi",
+      "year": "2021",
+      "citations": 16,
+      "url": "https://dergipark.org.tr/en/pub/tubaar/article/889810?issue_id=64893",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Harran Ören Yeri Kazısında Bulunan kabartma Yazıların Üç Boyutlu Olarak Modellenmesi",
+      "authors": "Nizar POLAT and ÖNAL Mehmet and KAYA Yunus and Abdulkadir MEMDUHOĞLU and KAYA Neslihan and Mustafa ULUKAVAK and Süheyla İrem MUTLU and Semih MUTLU",
+      "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
+      "year": "2021",
+      "citations": 10,
+      "url": "https://dergipark.org.tr/en/pub/bitlisfen/issue/62708/881781",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Multi instrumental documentation and 3D modelling of an archaeological site: a case study in Kizilkoyun Necropolis Area",
+      "authors": "Halil İbrahim Şenol and Abdulkadir MEMDUHOGLU and Mustafa Ulukavak",
+      "venue": "Dicle Üniversitesi Mühendislik Fakültesi Mühendislik Dergisi",
+      "year": "2020",
+      "citations": 40,
+      "url": "https://dergipark.org.tr/en/pub/dumf/article/801662",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Harran Ören Yeri Arkeolojik Kazı Alanınındın Çıkarılan Bazı Küçük Arkeolojik Buluntuların Fotogrametrik Olarak 3B Modellenmesi",
+      "authors": "Nizar POLAT and ÖNAL Mehmet and Fred Barış ERNST and Halil İ̇brahim ŞENOL and Abdulkadir MEMDUHOGLU and Semih MUTLU and Süheyla İ̇rem MUTLU and Mehmet Ali BUDAN and Mutalip TURGUT and KARA Hüseyin",
+      "venue": "Türkiye Fotogrametri Dergisi",
+      "year": "2020",
+      "citations": 32,
+      "url": "https://dergipark.org.tr/en/pub/tufod/article/835434",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "3D Map Experience with Virtual/Augmented Reality Applications",
+      "authors": "Abdulkadir MEMDUHOGLU and Halil İ̇brahim ŞENOL and Songül AKDAĞ and Mustafa ULUKAVAK",
+      "venue": "Harran Üniversitesi Mühendislik Dergisi",
+      "year": "2020",
+      "citations": 15,
+      "url": "https://dergipark.org.tr/en/pub/humder/issue/58494/771954",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Design Of Development Scenarios For Şanlıurfa Region Based On Geodesign",
+      "authors": "Fred ERNST and Mehmet Alı ÇULLU and Sedat BENEK and Esra SİVEREKLİ and Saffet ERDOĞAN and Aydın AYDEMİR and İ̇brahim YENİGÜN and Abdulkadir MEMDUHOGLU and Abdullah Izzeddin KARABULUT and Ömür Aybike YILDIRIM and Galip Muhammet KARAGÖZ",
+      "venue": "GSI Journals Serie C: Advancements in Information Sciences and Technologies",
+      "year": "2020",
+      "citations": 3,
+      "url": "https://dergipark.org.tr/en/pub/aist/article/772958?issue_id=52831",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "UAV Based 3D Modeling of Ancient Quarry Nearby the Göbeklitepe",
+      "authors": "Nizar Polat and Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Yunus Kaya",
+      "venue": "Intercontinental Geoinformation Days",
+      "year": "2020",
+      "citations": 1,
+      "url": "https://scholar.google.com/scholar?cluster=12695665199809090440&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Hacim hesaplarında İHA kullanımı: Osmanbey kampüsü örneği",
+      "authors": "Yunus Kaya and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Şeyma Akça and Mustafa Ulukavak and Nizar Polat",
+      "venue": "Türkiye Fotogrametri Dergisi",
+      "year": "2019",
+      "citations": 32,
+      "url": "https://dergipark.org.tr/en/download/article-file/859774",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "A spatiotemporal exploratory analysis of real estate sales in Turkey using GIS",
+      "authors": "Saffet Erdoğan and Abdulkadir Memduhoğlu",
+      "venue": "Journal of European Real Estate Research",
+      "year": "2019",
+      "citations": 17,
+      "url": "https://www.emerald.com/jerer/article/12/2/207/217162",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "THE USE OF UAV AND PHOTOGRAMMETRY IN DIGITAL DOCUMENTATION",
+      "authors": "Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Nizar Polat",
+      "venue": "Mersin Photogrammetry Journal",
+      "year": "2019",
+      "citations": 17,
+      "url": "https://dergipark.org.tr/en/pub/mephoj/article/637583?issue_id=50329",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "GEODESIGN FOR URBAN PLANNING–THE EXAMPALE OF HARRAN UNIVERSITY'S CAMPUS MASTERPLAN",
+      "authors": "Fred Ernst and Saffet Erdoğan and Mehmet Yılmaz and Mustafa Ulukavak and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mehmet Ali Çullu",
+      "venue": "Uluslararası Çevresel Eğilimler Dergisi",
+      "year": "2019",
+      "citations": 11,
+      "url": "https://dergipark.org.tr/en/download/article-file/741835",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Lazer Tarayıcı ve İnsansız Hava Aracı Kullanılarak Kızılkoyun Kral Kaya Mezarlarının 3 Boyutlu Belgelenmesi",
+      "authors": "Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mustafa Ulukavak and Bekir Çetin and Nizar Polat",
+      "venue": "TMMOB 17. Türkiye Harita Bilimsel ve Teknik Kurultayı",
+      "year": "2019",
+      "citations": 7,
+      "url": "https://www.hkmo.org.tr/resimler/ekler/8b7fba3de39e70b_ek.pdf",
+      "doi": "",
+      "type": "conference"
+    },
+    {
+      "title": "EXCAVATION MONITORING WITH UAV IN ŞANLIURFA CASTLE ARCHAEOLOGICAL SITE",
+      "authors": "Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Nizar Polat",
+      "venue": "Mersin Photogrammetry Journal",
+      "year": "2019",
+      "citations": 7,
+      "url": "https://dergipark.org.tr/en/download/article-file/1044841",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "The Use of UAV in Archaeological Excavation: A Case Study in Şanlıurfa Historical Castle",
+      "authors": "Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Nizar Polat and Bekir Çetin and M Demir",
+      "venue": "International Journal of Environment and Geoinformatics",
+      "year": "2019",
+      "citations": 1,
+      "url": "https://www.academia.edu/download/88350307/908825.pdf",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "POSSIBLE CONTRIBUTIONS OF SPATIAL SEMANTIC METHODS AND TECHNOLOGIES TO MULTI-REPRESENTATION SPATIAL DATABASE PARADIGM",
+      "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
+      "venue": "International Journal of Engineering and Geosciences",
+      "year": "2018",
+      "citations": 14,
+      "url": "https://dergipark.org.tr/en/pub/ijeg/article/413473",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "3D modeling of a bazaar in ancient harran city using laser scanning technique",
+      "authors": "HI Senol and S Erdogan and M Onal and M Ulukavak and A Memduhoglu and S Mutlu and FB Ernst and M Yilmaz",
+      "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+      "year": "2017",
+      "citations": 22,
+      "url": "https://isprs-archives.copernicus.org/articles/XLII-4-W6/99/2017/isprs-archives-XLII-4-W6-99-2017.html",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "KENTSEL BÜYÜME İLE MOTORLU ARAÇ TRAFİĞİ YOĞUNLUĞU ARASINDAKİ İLİŞKİNİN BELİRLENMESİ: İSTANBUL ÖRNEĞİ",
+      "authors": "Zeynel Abidin POLAT and Abdulkadir MEMDUHOĞLU and Müslüm HACAR and Hüseyin DUMAN",
+      "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
+      "year": "2017",
+      "citations": 11,
+      "url": "https://dergipark.org.tr/en/pub/ngumuh/issue/28548/341275",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "A new master plan for harran university based on geodesign",
+      "authors": "FB Ernst and S Erdoğan and M Yılmaz and M Ulukavak and Hİ Şenol and A Memduhoğlu",
+      "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+      "year": "2017",
+      "citations": 8,
+      "url": "https://isprs-archives.copernicus.org/articles/XLII-4-W6/43/2017/",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "An experimental study on map projection transformation using GIS tools",
+      "authors": "Türkay Gökgöz and Müslüm Hacar and Abdulkadir Memduhoğlu and Veli İlçi and Mustafa Fahri Karabulut and Aydemir Can Tekin and Ömer Zübeyr Özerdem",
+      "venue": "Sigma Journal of Engineering and Natural Sciences",
+      "year": "2017",
+      "citations": 2,
+      "url": "https://dergipark.org.tr/en/pub/sigma/issue/65585/1016450",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Açık kaynaklı yazılımlar ile OGC web servisleri üzerinden görerek uçuş bilgilerinin kartografik sunumu",
+      "authors": "ABDULKADİR MEMDUHOĞLU and ALİ MELİH BAŞARANER and Yavuz Selim ŞENGÜN",
+      "venue": "Harita Dergisi",
+      "year": "2016",
+      "citations": 3,
+      "url": "https://scholar.google.com/scholar?cluster=17761524923013577397&hl=en&oi=scholarr",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "A new algorithm for cartographic simplification of streams and lakes using deviation angles and error bands",
+      "authors": "Türkay Gökgöz and Alper Sen and Abdulkadir Memduhoglu and Muslum Hacar",
+      "venue": "ISPRS International Journal of Geo-Information",
+      "year": "2015",
+      "citations": 28,
+      "url": "https://www.mdpi.com/2220-9964/4/4/2185",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Web Haritalarının Tasarımı için Vektör Tabanlı Grafik Kodlama ve Standartlar",
+      "authors": "Abdulkadir Memduhoğlu and Melih Başaraner and Yavuz Selim Şengün",
+      "venue": "TMMOB Harita ve Kadastro Mühendisleri Odası, 15. Türkiye Harita Bilimsel ve Teknik Kurultayı",
+      "year": "2015",
+      "citations": 1,
+      "url": "https://obs.hkmo.org.tr/show-media/resimler/ekler/4ceea0bc341a373_ek.pdf",
+      "doi": "",
+      "type": "conference"
+    },
+    {
+      "title": "Açık kaynaklı yazılımlar ile OGC web servisleri üzerinden görerek uçuş bilgilerinin kartografik sunumu",
+      "authors": "Abdulkadir Memduhoğlu",
+      "venue": "",
+      "year": "2015",
+      "citations": 0,
+      "url": "",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "RÜZGAR TÜRBİNİ KURULACAK ALANLARIN CBS–ÇOK ÖLÇÜTLÜ KARAR ANALİZİ KULLANILARAK BELİRLENMESİ: DAVUTPAŞA KAMPÜSÜ",
+      "authors": "Abdulkadir MEMDUHOĞLU and Gülşah ÖZMEN and Gazale GÖYÇEK and Fatmagül KILIÇ",
+      "venue": "V. Uzaktan Algılama ve Coğrafi Bilgi Sistemleri Sempozyumu (UZAL-CBS 2014)",
+      "year": "2014",
+      "citations": 0,
+      "url": "",
+      "doi": "",
+      "type": "conference"
+    }
+  ]
+}
