@@ -1,0 +1,69 @@
+# DERSLER VERİ DOSYASI
+# =====================
+# Her ders bir blok olarak tanımlanır. Bloklar boş satırla ayrılır.
+# Dersler otomatik olarak Güz / Bahar dönemine göre gruplandırılır.
+#
+# ALAN AÇIKLAMALARI:
+#   kod    : Ders kodu (örn. HRT-311)
+#   ad     : Ders adı
+#   tur    : lisans | lisansustu
+#   donem  : guz | bahar
+#   dosya  : Dosya satırı (birden fazla olabilir):
+#            FORMAT → assets/files/courses/KOD/dosya.pdf | Görünen Ad | tip
+#            tip seçenekleri: pdf | doc | ppt | zip | link
+#
+# DOSYA YÜKLEME:
+#   1. İlgili dosyayı assets/files/courses/[DERS-KODU]/ klasörüne koyun.
+#   2. Aşağıya "dosya:" satırı ekleyin.
+#   Örnek:
+#     dosya: assets/files/courses/HRT-311/odev1.pdf | Ödev 1 Yönergesi | pdf
+#
+# Not: Dosya yoksa "dosya:" satırı olmadan da bırakabilirsiniz.
+
+# =====================
+# GÜZ DÖNEMİ
+# =====================
+
+kod: HRT-311
+ad: Coğrafi Bilgi Sistemleri
+tur: lisans
+donem: guz
+
+kod: HRT-401
+ad: Bilgisayar Destekli Harita Yapımı
+tur: lisans
+donem: guz
+
+kod: HRT-312
+ad: CBS'de Veri Modelleri
+tur: lisans
+donem: guz
+
+kod: HRT-101
+ad: Bilim Tarihi
+tur: lisans
+donem: guz
+
+kod: HRT-501
+ad: Web Tabanlı Kartografya ve CBS
+tur: lisansustu
+donem: guz
+
+# =====================
+# BAHAR DÖNEMİ
+# =====================
+
+kod: HRT-313
+ad: Coğrafi Bilgi Sistemleri Uygulamaları
+tur: lisans
+donem: bahar
+
+kod: HRT-221
+ad: Veri Tabanı Yönetimi
+tur: lisans
+donem: bahar
+
+kod: HRT-502
+ad: CBS'de Mekansal İstatistik
+tur: lisansustu
+donem: bahar

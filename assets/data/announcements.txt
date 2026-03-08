@@ -1,0 +1,44 @@
+# DUYURULAR VERİ DOSYASI
+# =======================
+# Her duyuru bir blok olarak tanımlanır. Bloklar boş satırla ayrılır.
+# EN YENİ DUYURULAR ÜSTE EKLEYİN — Sitede ilk 3 duyuru gösterilir,
+# diğerlerine "Tüm Duyurular" butonu ile ulaşılır.
+#
+# ALAN AÇIKLAMALARI:
+#   date  : YYYY-AA-GG formatında tarih
+#   badge : new | important | info
+#   title : Duyuru başlığı
+#   body  : Duyuru içeriği (tek satır)
+#   link  : Tıklanabilir bağlantı URL'si — bağlantı yoksa - yazın
+#
+# Yeni duyuru eklemek için bu bloğu kopyalayıp üste ekleyin.
+
+date: 2026-03-01
+badge: new
+title: 2025-26 Bahar Dönemi Ders Başlangıcı
+body: Bahar dönemi dersleri başlamıştır. Ders materyalleri "Derslerim" sekmesinden takip edilebilir.
+link: -
+
+date: 2026-01-20
+badge: important
+title: Güz Dönemi Bütünleme Sınavı Sonuçları
+body: 2025-26 Güz dönemi bütünleme sınav sonuçları sisteme girilmiştir. Lütfen öğrenci bilgi sistemini kontrol ediniz.
+link: -
+
+date: 2026-01-05
+badge: info
+title: 2025-26 Güz Dönemi Final Sınavı Tarihleri
+body: Final sınav programı bölüm ilan panosunda duyurulmuştur. Sınav tarihlerinizi mutlaka kontrol ediniz.
+link: -
+
+date: 2025-12-15
+badge: info
+title: Dönem Sonu Proje Teslim Tarihleri
+body: Dönem sonu proje ve ödevlerin teslim tarihleri belirlenmiştir. Detaylar ilgili ders sayfasında yayınlanmıştır.
+link: -
+
+date: 2025-11-10
+badge: info
+title: Ara Sınav Takvimi
+body: 2025-26 Güz dönemi ara sınav tarihleri açıklanmıştır. Bölüm ilan panosunu takip ediniz.
+link: -

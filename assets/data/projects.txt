@@ -1,0 +1,61 @@
+# PROJELER VERİ DOSYASI
+# =====================
+# Her proje bir blok olarak tanımlanır. Bloklar boş satırla ayrılır.
+# En üstteki proje ilk gösterilir.
+#
+# ALAN AÇIKLAMALARI:
+#   title   : Proje başlığı
+#   funder  : Fon kaynağı adı (gösterilecek metin)
+#   tag     : tubitak | horizon | ministry | bap | other
+#   start   : Başlangıç yılı
+#   end     : Bitiş yılı — devam edenler için: ongoing
+#   role    : Araştırmacı | Yürütücü
+#   status  : active | completed
+#   desc    : Kısa açıklama (tek satır)
+#
+# Yeni proje eklemek için bir blok kopyalayıp düzenleyin.
+
+title: Filling The Gap: Development of Ecological Planning and Design Learning Network (EPD-Net)
+funder: ERASMUS+
+tag: horizon
+start: 2024
+end: ongoing
+role: Araştırmacı
+status: active
+desc: ERASMUS+ Project 101183961. Sürdürülebilir ve afete dayanıklı kentler için ekolojik planlama ve tasarım öğrenme ağının ve adaptif akıllı eğitim modülünün geliştirilmesi.
+
+title: İklime Dayanıklı Kentsel Planlama İçin Üretken Yapay Zeka
+funder: TÜBİTAK
+tag: tubitak
+start: 2024
+end: ongoing
+role: Araştırmacı
+status: active
+desc: TÜBİTAK Uluslararası İkili İşbirliği Programı kapsamında yürütülen araştırma projesi. Üretken yapay zeka yöntemlerinin iklime dayanıklı kentsel planlamaya uygulanması.
+
+title: Sayburç Neolitik Yerleşimi Çevresindeki Kaya Sarnıçları İşlevselliğinin İHA Tabanlı Mikrotopografik, Morfolojik ve Hidrolojik Analizi
+funder: TÜBİTAK
+tag: tubitak
+start: 2023
+end: ongoing
+role: Araştırmacı
+status: active
+desc: TÜBİTAK-1002 kapsamında yürütülen arkeolojik alan araştırması. İnsansız hava aracı ile mikrotopografik ve hidrolojik analizler.
+
+title: Sulamadan Dönen Sularının Kalitesinin İyileştirilmesi için Perdeli Yapay Sulak Alan Pilot Projesi
+funder: Bakanlık
+tag: ministry
+start: 2018
+end: 2022
+role: Araştırmacı
+status: completed
+desc: Bakanlık destekli özel araştırma projesi. Sulama dönüş sularının kalitesinin perdeli yapay sulak alanlar ile iyileştirilmesi.
+
+title: Sürdürülebilir Kampüs Bağlamında Osmanbey Yerleşkesi Yağmur Suyu Hasadı Potansiyelinin İHA ve CBS Destekli Olarak Belirlenmesi
+funder: HÜ-BAP
+tag: bap
+start: 2020
+end: 2022
+role: Yürütücü
+status: completed
+desc: Harran Üniversitesi BAP projesi. İnsansız hava aracı fotogrametrisi ve coğrafi bilgi sistemleri kullanılarak kampüs alanında yağmur suyu hasadı potansiyelinin belirlenmesi.
