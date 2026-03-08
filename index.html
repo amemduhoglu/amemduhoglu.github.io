@@ -349,11 +349,11 @@
       width: 220px; height: 220px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid rgba(13,148,136,0.55);
-      box-shadow: 0 0 0 10px rgba(13,148,136,0.09), 0 24px 64px rgba(0,0,0,0.35);
+      border: 2px solid rgba(255,255,255,0.35);
+      box-shadow: 0 0 0 8px rgba(13,148,136,0.07), 0 16px 48px rgba(0,0,0,0.22);
       flex-shrink: 0;
     }
-    .profile-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .profile-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
     .profile-placeholder {
       width: 100%; height: 100%;
       background: linear-gradient(135deg, #1e3a5f 0%, #0d9488 100%);
@@ -534,6 +534,13 @@
       color: #fff;
     }
 
+    .pub-count-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      margin: -1.2rem 0 1.6rem;
+      letter-spacing: 0.02em;
+    }
     .pub-list { display: flex; flex-direction: column; gap: 0.9rem; }
     .pub-item {
       background: var(--color-bg);
@@ -1267,7 +1274,7 @@
            data-tr="Harran Üniversitesi · Şanlıurfa, Türkiye"
            data-en="Harran University · Şanlıurfa, Turkey">Harran Üniversitesi · Şanlıurfa, Türkiye</p>
         <div class="badges fade-up" style="animation-delay:.28s">
-          <span class="badge">GIS</span>
+          <span class="badge" data-tr="CBS / GIS" data-en="GIS / CBS">CBS / GIS</span>
           <span class="badge" data-tr="Uzaktan Algılama"       data-en="Remote Sensing">Uzaktan Algılama</span>
           <span class="badge" data-tr="Makine Öğrenmesi"       data-en="Machine Learning">Makine Öğrenmesi</span>
           <span class="badge">OpenStreetMap / VGI</span>
@@ -1309,6 +1316,13 @@
               <path d="M2.586 24h5.953c.199 0 .363-.164.363-.363V13.05c0-.198-.164-.363-.363-.363H2.586a.364.364 0 0 0-.363.363v10.587c0 .199.164.363.363.363zM5.563 0a5.563 5.563 0 1 0 0 11.126A5.563 5.563 0 0 0 5.563 0zm9.3 7.012c-.618 0-1.201.144-1.72.4V7.05a.363.363 0 0 0-.363-.363h-2.438a.363.363 0 0 0-.363.363v16.587c0 .199.164.363.363.363h2.438c.199 0 .363-.164.363-.363V14.25c0-1.45 1.18-2.625 2.72-2.625 1.326 0 2.438.975 2.438 2.625v9.387c0 .199.164.363.363.363h2.437c.199 0 .364-.164.364-.363V14.25C21.465 10.225 18.727 7.012 14.863 7.012z"/>
             </svg>
             ResearchGate
+          </a>
+          <a href="https://www.webofscience.com/wos/author/record/AAZ-4474-2020" target="_blank" rel="noopener" class="btn btn-outline">
+            <!-- WoS icon -->
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14.5L7 9h2l2 5.5 2-5.5h2l-3.5 7.5h-1zM17 9l-1.5 7.5h-1.5L12.5 9H14l1 5.5L16 9h1z"/>
+            </svg>
+            Web of Science
           </a>
           <a href="mailto:akadirm@harran.edu.tr" class="btn btn-outline">
             <!-- Mail -->
@@ -1569,11 +1583,11 @@
 
       <div class="pub-filters reveal">
         <button class="filter-btn active" data-filter="recent"     data-tr="Son Yayınlar" data-en="Recent">Son Yayınlar</button>
-        <button class="filter-btn"        data-filter="all"        data-tr="Tümü"         data-en="All">Tümü</button>
         <button class="filter-btn"        data-filter="journal"    data-tr="Dergi"        data-en="Journal">Dergi</button>
         <button class="filter-btn"        data-filter="conference" data-tr="Konferans"    data-en="Conference">Konferans</button>
         <button class="filter-btn"        data-filter="book"       data-tr="Kitap Bölümü" data-en="Book Chapter">Kitap Bölümü</button>
       </div>
+      <p id="pub-count-note" class="pub-count-note" data-tr="En son 5 yayın gösteriliyor" data-en="Showing last 5 publications">En son 5 yayın gösteriliyor</p>
 
       <div class="pub-list" id="pub-list">
 
@@ -2244,8 +2258,11 @@
       if (filter === 'recent') {
         items.forEach((item, idx) => { item.style.display = idx < 5 ? '' : 'none'; });
       } else {
+        let count = 0;
         items.forEach(item => {
-          item.style.display = (filter === 'all' || item.dataset.type === filter) ? '' : 'none';
+          const match = item.dataset.type === filter;
+          item.style.display = (match && count < 5) ? '' : 'none';
+          if (match) count++;
         });
       }
     }
