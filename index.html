@@ -54,1137 +54,750 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================================
-       VARIABLES
-    ============================================================ */
     :root {
-      --color-bg:       #f8f7f4;
-      --color-surface:  #ffffff;
-      --color-dark:     #1e293b;
-      --color-accent:   #0d9488;
-      --color-accent-2: #b45309;
-      --color-muted:    #64748b;
-      --color-border:   #e2e8f0;
-
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'Source Serif 4', Georgia, serif;
+      --bg-primary:   #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-light:     #f8fafc;
+      --bg-cream:     #faf7f2;
+      --text-primary: #f1f5f9;
+      --text-dark:    #0f172a;
+      --text-muted:   #94a3b8;
+      --text-muted-l: #64748b;
+      --accent:       #d97706;
+      --accent-hover: #b45309;
+      --accent-light: rgba(217,119,6,0.12);
+      --accent-2:     #6366f1;
+      --border-dark:  rgba(255,255,255,0.08);
+      --border-light: #e2e8f0;
+      --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
       --font-mono:    'JetBrains Mono', 'Courier New', monospace;
-
-      --max-w: 1180px;
-      --sec-pad: 5rem 1.5rem;
     }
 
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: var(--font-body);
-      background: var(--color-bg);
-      color: var(--color-dark);
-      line-height: 1.75;
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
       font-size: 1rem;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: var(--color-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); }
     img { max-width: 100%; display: block; }
 
-    /* ============================================================
-       UTILITY
-    ============================================================ */
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
-
-    .section-header { text-align: center; margin-bottom: 3rem; }
-    .section-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      font-weight: 700;
-      color: var(--color-dark);
-      margin-bottom: 0.5rem;
-    }
-    .section-line {
-      width: 48px; height: 3px;
-      background: var(--color-accent);
-      margin: 0.6rem auto 0.8rem;
-      border-radius: 2px;
-    }
-    .section-sub {
-      color: var(--color-muted);
-      font-size: 0.95rem;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    /* ============================================================
-       NAVBAR
-    ============================================================ */
+    /* ---- NAV ---- */
     #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1rem 0;
-      transition: background 0.35s, backdrop-filter 0.35s, box-shadow 0.35s;
-    }
-    #navbar.scrolled {
-      background: rgba(248, 247, 244, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 1px 20px rgba(0,0,0,0.07);
-    }
-    .nav-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-brand {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: white;
-      line-height: 1.2;
-      transition: color 0.3s;
-    }
-    #navbar.scrolled .nav-brand { color: var(--color-dark); }
-    .nav-brand small {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.6);
-      transition: color 0.3s;
-    }
-    #navbar.scrolled .nav-brand small { color: var(--color-muted); }
-
-    .nav-links {
-      display: flex;
-      gap: 1.75rem;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.85);
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-    }
-    #navbar.scrolled .nav-links a { color: var(--color-dark); }
-    .nav-links a:hover { color: var(--color-accent); text-decoration: none; }
-
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px; height: 2px;
-      background: white;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0;
+      background: rgba(15,23,42,0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-dark);
       transition: background 0.3s;
     }
-    #navbar.scrolled .hamburger span { background: var(--color-dark); }
+    .nav-inner {
+      max-width: 1400px; margin: 0 auto;
+      padding: 0.85rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    .nav-brand strong { color: var(--accent); font-weight: 700; }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); text-decoration: none; }
 
+    .lang-toggle {
+      display: flex; gap: 0; border: 1px solid var(--border-dark);
+      border-radius: 6px; overflow: hidden; margin-left: 0.75rem;
+    }
+    .lang-toggle button {
+      padding: 0.35rem 0.65rem; background: transparent; border: none;
+      font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
+      color: var(--text-muted); cursor: pointer; transition: all 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .lang-toggle button.lang-active { background: var(--accent); color: #fff; }
+    .lang-divider { width: 1px; background: var(--border-dark); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-muted); transition: all 0.3s; }
     .mobile-menu {
-      display: none;
-      background: var(--color-surface);
-      border-top: 1px solid var(--color-border);
-      padding: 0.5rem 1.5rem 1rem;
+      display: none; background: var(--bg-secondary);
+      border-top: 1px solid var(--border-dark); padding: 0.5rem 2rem 1rem;
     }
     .mobile-menu.open { display: block; }
     .mobile-menu a {
-      display: block;
-      padding: 0.65rem 0;
-      color: var(--color-dark);
-      font-size: 0.95rem;
-      border-bottom: 1px solid var(--color-border);
+      display: block; padding: 0.7rem 0; color: var(--text-muted);
+      font-size: 0.9rem; border-bottom: 1px solid var(--border-dark);
     }
     .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); text-decoration: none; }
 
-    /* ============================================================
-       HERO
-    ============================================================ */
+    /* ---- HERO ---- */
     #hero {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 7rem 1.5rem 5rem;
-      background-color: var(--color-dark);
-      position: relative;
-      overflow: hidden;
-    }
-    /* Topographic SVG pattern */
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='700'%3E%3Cg fill='none' stroke='%230d9488' stroke-width='1' opacity='0.18'%3E%3Cellipse cx='450' cy='350' rx='420' ry='310'/%3E%3Cellipse cx='450' cy='350' rx='360' ry='255'/%3E%3Cellipse cx='450' cy='350' rx='300' ry='200'/%3E%3Cellipse cx='450' cy='350' rx='240' ry='148'/%3E%3Cellipse cx='450' cy='350' rx='180' ry='100'/%3E%3Cellipse cx='450' cy='350' rx='120' ry='58'/%3E%3Cellipse cx='450' cy='350' rx='60' ry='24'/%3E%3Cellipse cx='100' cy='100' rx='85' ry='70'/%3E%3Cellipse cx='100' cy='100' rx='55' ry='44'/%3E%3Cellipse cx='100' cy='100' rx='28' ry='22'/%3E%3Cellipse cx='800' cy='580' rx='95' ry='78'/%3E%3Cellipse cx='800' cy='580' rx='62' ry='50'/%3E%3Cellipse cx='800' cy='580' rx='32' ry='26'/%3E%3Cellipse cx='150' cy='600' rx='70' ry='55'/%3E%3Cellipse cx='150' cy='600' rx='42' ry='32'/%3E%3Cellipse cx='780' cy='120' rx='65' ry='52'/%3E%3Cellipse cx='780' cy='120' rx='40' ry='30'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-      background-position: center;
-      pointer-events: none;
-    }
-    /* Gradient overlay */
-    #hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(30,41,59,0.96) 0%,
-        rgba(30,41,59,0.82) 55%,
-        rgba(13,148,136,0.18) 100%
-      );
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      width: 100%;
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4rem;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
       position: relative;
-      z-index: 1;
     }
-
-    .hero-label {
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: 0.75rem;
-      font-weight: 400;
+    .hero-photo-side {
+      position: relative; overflow: hidden;
+      background: var(--bg-secondary);
     }
-    .hero-text h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 5.5vw, 4.4rem);
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.05;
-      margin-bottom: 0.6rem;
-    }
-    .hero-institution {
-      font-size: 0.9rem;
-      color: #94a3b8;
-      margin-bottom: 2rem;
-      letter-spacing: 0.02em;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 2.25rem;
-    }
-    .badge {
-      padding: 0.25rem 0.8rem;
-      border: 1px solid rgba(13,148,136,0.45);
-      color: rgba(13,148,136,0.95);
-      border-radius: 100px;
-      font-size: 0.73rem;
-      letter-spacing: 0.03em;
-      background: rgba(13,148,136,0.07);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.55rem 1.15rem;
-      border-radius: 6px;
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.22s;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-    .btn svg { flex-shrink: 0; }
-    .btn-primary {
-      background: var(--color-accent);
-      color: #fff;
-      border: none;
-    }
-    .btn-primary:hover {
-      background: #0f766e;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(13,148,136,0.35);
-      text-decoration: none;
-    }
-    .btn-outline {
-      background: transparent;
-      color: #cbd5e1;
-      border: 1px solid rgba(148,163,184,0.35);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.09);
-      color: #fff;
-      border-color: rgba(148,163,184,0.6);
-      text-decoration: none;
-    }
-
-    /* Profile photo */
-    .profile-wrap {
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid rgba(255,255,255,0.35);
-      box-shadow: 0 0 0 8px rgba(13,148,136,0.07), 0 16px 48px rgba(0,0,0,0.22);
-      flex-shrink: 0;
-    }
-    .profile-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
-    .profile-placeholder {
+    .hero-photo-side img {
       width: 100%; height: 100%;
-      background: linear-gradient(135deg, #1e3a5f 0%, #0d9488 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 3.8rem;
-      font-weight: 700;
-      color: rgba(255,255,255,0.92);
+      object-fit: cover; object-position: center 15%;
+      filter: grayscale(20%) contrast(1.05);
+    }
+    .hero-photo-side .photo-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a1a3e 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 8rem; font-weight: 900;
+      color: rgba(217,119,6,0.15);
+    }
+    .hero-photo-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--bg-primary) 100%);
+    }
+    .hero-photo-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+      background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
     }
 
-    /* ============================================================
-       ABOUT
-    ============================================================ */
-    #about { background: var(--color-surface); padding: var(--sec-pad); }
+    .hero-content-side {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8rem 4rem 4rem 3rem;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem; font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-inst {
+      font-size: 0.9rem; color: var(--text-muted);
+      margin-bottom: 2.5rem; letter-spacing: 0.02em;
+    }
 
-    .about-grid {
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-tag {
+      padding: 0.3rem 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem; font-weight: 500;
+      color: var(--text-muted);
+      border: 1px solid var(--border-dark);
+      border-radius: 100px;
+      letter-spacing: 0.03em;
+      transition: all 0.25s;
+    }
+    .hero-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-links {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .hero-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem; font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.25s;
+    }
+    .hero-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .hero-link-primary {
+      background: var(--accent); color: #fff;
+    }
+    .hero-link-primary:hover {
+      background: var(--accent-hover); color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(217,119,6,0.3);
+      text-decoration: none;
+    }
+    .hero-link-ghost {
+      color: var(--text-muted);
+      border: 1px solid var(--border-dark);
+    }
+    .hero-link-ghost:hover {
+      color: var(--text-primary);
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+      text-decoration: none;
+    }
+
+    /* ---- SECTION COMMON ---- */
+    .sec { padding: 6rem 2rem; }
+    .sec-container { max-width: 1200px; margin: 0 auto; }
+    .sec-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .sec-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .sec-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+    .sec-dark { background: var(--bg-primary); color: var(--text-primary); }
+    .sec-mid  { background: var(--bg-secondary); color: var(--text-primary); }
+    .sec-light {
+      background: var(--bg-light); color: var(--text-dark);
+    }
+    .sec-light .sec-desc { color: var(--text-muted-l); }
+    .sec-light .sec-title { color: var(--text-dark); }
+    .sec-cream {
+      background: var(--bg-cream); color: var(--text-dark);
+      border-top: 3px solid var(--accent);
+    }
+    .sec-cream .sec-desc { color: var(--text-muted-l); }
+    .sec-cream .sec-title { color: var(--text-dark); }
+
+    /* ---- ABOUT ---- */
+    .about-layout {
       display: grid;
       grid-template-columns: 1fr 320px;
       gap: 4rem;
       align-items: start;
     }
     .about-text p {
-      color: #334155;
-      margin-bottom: 1.15rem;
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1.85;
+      margin-bottom: 1.2rem;
     }
+    .sec-light .about-text p { color: #334155; }
 
-    /* Timeline */
     .timeline { margin-top: 2.5rem; }
     .timeline h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 1.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
     }
     .tl-item {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.6rem;
+      display: flex; gap: 1.2rem;
+      margin-bottom: 1.8rem;
       position: relative;
     }
     .tl-item::before {
       content: '';
-      position: absolute;
-      left: 19px; top: 40px; bottom: -16px;
-      width: 2px;
-      background: var(--color-border);
+      position: absolute; left: 7px; top: 28px; bottom: -18px;
+      width: 1px;
+      background: var(--border-light);
     }
     .tl-item:last-child::before { display: none; }
-    .tl-dot {
-      width: 40px; height: 40px;
+    .tl-marker {
+      width: 15px; height: 15px;
       border-radius: 50%;
-      background: var(--color-accent);
+      border: 3px solid var(--accent);
+      background: var(--bg-light);
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.68rem;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0;
+      margin-top: 4px;
     }
-    .tl-dot.phd { background: var(--color-dark); }
+    .tl-marker.phd { background: var(--accent); }
     .tl-info h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 0.1rem;
-      line-height: 1.4;
+      font-size: 0.92rem; font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.15rem;
     }
-    .tl-info p { font-size: 0.82rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+    .tl-info p { font-size: 0.8rem; color: var(--text-muted-l); margin: 0; }
 
-    /* Sidebar cards */
-    .sidebar-card {
-      background: var(--color-bg);
-      border: 1px solid var(--color-border);
+    .about-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
       border-radius: 12px;
-      padding: 1.6rem;
-      margin-bottom: 1.25rem;
+      padding: 1.5rem;
     }
-    .sidebar-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--color-dark);
+    .stat-card h3 {
+      font-family: var(--font-mono);
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
       margin-bottom: 1rem;
     }
     .stat-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+      display: flex; justify-content: space-between; align-items: baseline;
       padding: 0.55rem 0;
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--border-light);
     }
     .stat-row:last-child { border-bottom: none; }
-    .stat-label { font-size: 0.83rem; color: var(--color-muted); }
+    .stat-label { font-size: 0.82rem; color: var(--text-muted-l); }
     .stat-val {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--color-accent);
+      font-family: var(--font-mono);
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--accent);
     }
-    .stat-val.sm { font-size: 0.83rem; font-family: var(--font-body); color: var(--color-dark); }
+    .stat-val.sm {
+      font-size: 0.82rem; font-family: var(--font-sans);
+      color: var(--text-dark); font-weight: 500;
+    }
 
-    /* ============================================================
-       RESEARCH
-    ============================================================ */
-    #research { padding: var(--sec-pad); background: var(--color-bg); }
-
-    .research-grid {
+    /* ---- RESEARCH BENTO ---- */
+    .bento-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+      grid-auto-rows: minmax(180px, auto);
+      gap: 1rem;
     }
-    .research-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 1.75rem;
-      transition: transform 0.25s, box-shadow 0.25s;
+    .bento-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    .research-card:hover {
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -50%;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(217,119,6,0.06) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .bento-card:hover::before { opacity: 1; }
+    .bento-card:hover {
+      border-color: rgba(217,119,6,0.25);
       transform: translateY(-2px);
-      box-shadow: 0 10px 32px rgba(0,0,0,0.09);
     }
-    .rc-icon {
-      width: 46px; height: 46px;
+    .bento-big { grid-column: span 2; }
+    .bento-icon {
+      width: 42px; height: 42px;
       border-radius: 10px;
-      background: rgba(13,148,136,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      color: var(--color-accent);
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
     }
-    .rc-icon svg { width: 22px; height: 22px; }
-    .research-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 0.55rem;
+    .bento-icon svg { width: 20px; height: 20px; }
+    .bento-card h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
     }
-    .research-card p { font-size: 0.86rem; color: var(--color-muted); line-height: 1.7; }
+    .bento-card p {
+      font-size: 0.82rem; color: var(--text-muted);
+      line-height: 1.7;
+    }
 
-    /* ============================================================
-       PUBLICATIONS
-    ============================================================ */
-    #publications { padding: var(--sec-pad); background: var(--color-surface); }
-
+    /* ---- PUBLICATIONS ---- */
     .pub-filters {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex; gap: 0.4rem; flex-wrap: wrap;
       margin-bottom: 2rem;
     }
     .filter-btn {
-      padding: 0.38rem 1rem;
+      padding: 0.4rem 1rem;
       border-radius: 100px;
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--border-dark);
       background: transparent;
-      color: var(--color-muted);
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.8rem; font-weight: 500;
+      cursor: pointer; transition: all 0.2s;
     }
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: var(--color-accent);
-      border-color: var(--color-accent);
-      color: #fff;
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent); border-color: var(--accent); color: #fff;
     }
-
     .pub-count-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--color-muted);
-      margin: -1.2rem 0 1.6rem;
-      letter-spacing: 0.02em;
+      font-size: 0.75rem; color: var(--text-muted);
+      margin: -1rem 0 1.5rem;
+      font-family: var(--font-mono);
     }
-    .pub-list { display: flex; flex-direction: column; gap: 0.9rem; }
+    .pub-list { display: flex; flex-direction: column; gap: 0.6rem; }
     .pub-item {
-      background: var(--color-bg);
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-accent);
-      border-radius: 0 8px 8px 0;
-      padding: 1.2rem 1.4rem;
-      transition: transform 0.2s, box-shadow 0.2s;
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+      padding: 1.4rem 1.6rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      transition: all 0.25s;
     }
-    .pub-item:hover { transform: translateY(-1px); box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
-    .pub-item[data-type="conference"] { border-left-color: #6366f1; }
-    .pub-item[data-type="book"]       { border-left-color: var(--color-accent-2); }
-
-    .pub-authors { font-size: 0.78rem; color: var(--color-muted); margin-bottom: 0.25rem; }
+    .pub-item:hover {
+      border-color: rgba(217,119,6,0.2);
+      transform: translateX(4px);
+    }
+    .pub-year-block {
+      font-family: var(--font-mono);
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--accent);
+      padding-top: 0.15rem;
+    }
+    .pub-body {}
+    .pub-authors { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem; }
     .pub-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 0.35rem;
-      line-height: 1.5;
+      font-size: 0.92rem; font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.5; margin-bottom: 0.35rem;
     }
-    .pub-title a { color: var(--color-dark); }
-    .pub-title a:hover { color: var(--color-accent); text-decoration: none; }
-
-    .pub-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
+    .pub-title a { color: var(--text-primary); }
+    .pub-title a:hover { color: var(--accent); text-decoration: none; }
+    .pub-venue { font-size: 0.78rem; color: var(--text-muted); font-style: italic; }
+    .pub-tags {
+      display: flex; flex-direction: column; gap: 0.35rem;
+      align-items: flex-end; padding-top: 0.15rem;
     }
-    .pub-journal  { font-size: 0.78rem; color: var(--color-muted); font-style: italic; }
-    .pub-year     { font-family: var(--font-mono); font-size: 0.73rem; color: var(--color-muted); }
     .type-tag {
-      font-size: 0.68rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 100px;
-      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 0.62rem; font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
-    .tag-journal    { background: rgba(13,148,136,0.1);  color: var(--color-accent); }
-    .tag-conference { background: rgba(99,102,241,0.1);  color: #6366f1; }
-    .tag-book       { background: rgba(180,83,9,0.1);    color: var(--color-accent-2); }
+    .tag-journal    { background: rgba(217,119,6,0.12);  color: var(--accent); }
+    .tag-conference { background: rgba(99,102,241,0.12); color: var(--accent-2); }
+    .tag-book       { background: rgba(16,185,129,0.12); color: #10b981; }
     .doi-btn {
-      font-size: 0.73rem;
-      padding: 0.18rem 0.55rem;
-      border: 1px solid var(--color-border);
+      font-family: var(--font-mono);
+      font-size: 0.65rem; font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border-dark);
       border-radius: 4px;
-      color: var(--color-muted);
+      color: var(--text-muted);
       transition: all 0.2s;
+      letter-spacing: 0.04em;
     }
-    .doi-btn:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+    .doi-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .cite-count {
+      font-family: var(--font-mono);
+      font-size: 0.65rem; color: var(--text-muted);
+    }
+    .pub-more { margin-top: 2rem; }
 
-    .pub-more { text-align: center; margin-top: 2rem; }
-
-    /* ============================================================
-       PROJECTS
-    ============================================================ */
-    #projects { padding: var(--sec-pad); background: var(--color-bg); }
-
+    /* ---- PROJECTS ---- */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.4rem;
+      gap: 1.25rem;
     }
     .project-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
       padding: 1.75rem;
-      transition: transform 0.25s, box-shadow 0.25s;
+      transition: all 0.25s;
+      position: relative;
     }
-    .project-card:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.09); }
-
+    .project-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
     .project-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.9rem;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 0.75rem;
+      margin-bottom: 0.8rem;
     }
     .project-title {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      line-height: 1.3;
+      font-size: 1rem; font-weight: 700;
+      color: var(--text-dark); line-height: 1.35;
     }
     .fund-tag {
       flex-shrink: 0;
-      padding: 0.22rem 0.6rem;
+      padding: 0.22rem 0.65rem;
       border-radius: 6px;
-      font-size: 0.68rem;
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 0.62rem; font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
-    .fund-tubitak  { background: rgba(220,38,38,0.1);  color: #dc2626; }
-    .fund-horizon  { background: rgba(37,99,235,0.1);  color: #2563eb; }
-    .fund-ministry { background: rgba(124,58,237,0.1); color: #7c3aed; }
-    .fund-other    { background: rgba(100,116,139,0.1);color: var(--color-muted); }
-
-    .project-desc { font-size: 0.86rem; color: var(--color-muted); line-height: 1.7; margin-bottom: 1.2rem; }
-
+    .fund-tubitak  { background: rgba(220,38,38,0.08);  color: #dc2626; }
+    .fund-horizon  { background: rgba(37,99,235,0.08);  color: #2563eb; }
+    .fund-ministry { background: rgba(124,58,237,0.08); color: #7c3aed; }
+    .fund-other    { background: rgba(100,116,139,0.08);color: var(--text-muted-l); }
+    .project-desc {
+      font-size: 0.84rem; color: var(--text-muted-l);
+      line-height: 1.7; margin-bottom: 1.25rem;
+    }
     .project-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .pm-item { font-size: 0.78rem; }
-    .pm-item strong { display: block; font-size: 0.72rem; color: var(--color-muted); font-weight: 600; margin-bottom: 0.1rem; }
-
+    .pm-item { font-size: 0.78rem; color: var(--text-dark); }
+    .pm-item strong {
+      display: block; font-size: 0.65rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted-l); font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.15rem;
+    }
     .status-tag {
       display: inline-block;
       padding: 0.18rem 0.6rem;
       border-radius: 100px;
-      font-size: 0.68rem;
-      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 0.65rem; font-weight: 700;
     }
-    .status-active    { background: rgba(13,148,136,0.1);  color: var(--color-accent); }
-    .status-completed { background: rgba(100,116,139,0.1); color: var(--color-muted); }
+    .status-active    { background: rgba(16,185,129,0.1);  color: #10b981; }
+    .status-completed { background: rgba(100,116,139,0.08); color: var(--text-muted-l); }
 
-    /* ============================================================
-       STUDENTS (Faz 2)
-    ============================================================ */
-    #students {
-      padding: var(--sec-pad);
-      background: #fffbf5;
-      border-top: 4px solid var(--color-accent-2);
-    }
-    #students .section-line { background: var(--color-accent-2); }
-
-    /* Tab navigation */
+    /* ---- STUDENTS ---- */
     .st-tabs {
-      display: flex;
-      gap: 0;
-      border-bottom: 2px solid rgba(180,83,9,0.18);
+      display: flex; gap: 0;
+      border-bottom: 2px solid rgba(217,119,6,0.15);
       margin-bottom: 2.5rem;
-      overflow-x: auto;
-      scrollbar-width: none;
+      overflow-x: auto; scrollbar-width: none;
     }
     .st-tabs::-webkit-scrollbar { display: none; }
     .st-tab {
-      padding: 0.7rem 1.4rem;
-      font-family: var(--font-body);
-      font-size: 0.87rem;
-      font-weight: 600;
-      color: var(--color-muted);
-      background: none;
-      border: none;
+      padding: 0.75rem 1.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--text-muted-l);
+      background: none; border: none;
       border-bottom: 3px solid transparent;
       margin-bottom: -2px;
       cursor: pointer;
       white-space: nowrap;
-      transition: color 0.2s, border-color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.4rem;
     }
-    .st-tab:hover  { color: var(--color-accent-2); }
-    .st-tab.active { color: var(--color-accent-2); border-bottom-color: var(--color-accent-2); }
-    .st-tab svg    { width: 16px; height: 16px; }
-
+    .st-tab:hover { color: var(--accent); }
+    .st-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .st-tab svg { width: 16px; height: 16px; }
     .st-panel { display: none; }
     .st-panel.active { display: block; }
 
-    /* --- Duyurular --- */
-    .ann-list { display: flex; flex-direction: column; gap: 1rem; }
+    .ann-list { display: flex; flex-direction: column; gap: 0.75rem; }
     .ann-card {
-      background: var(--color-surface);
-      border: 1px solid rgba(180,83,9,0.15);
-      border-left: 4px solid var(--color-accent-2);
+      background: #fff;
+      border: 1px solid rgba(217,119,6,0.12);
+      border-left: 4px solid var(--accent);
       border-radius: 0 10px 10px 0;
       padding: 1.2rem 1.4rem;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.2s;
     }
-    .ann-card:hover { transform: translateY(-1px); box-shadow: 0 4px 18px rgba(180,83,9,0.08); }
-    .ann-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-    .ann-date {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--color-muted);
-    }
+    .ann-card:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(217,119,6,0.06); }
+    .ann-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+    .ann-date { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted-l); }
     .ann-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      padding: 0.1rem 0.45rem;
-      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.6rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 0.12rem 0.5rem; border-radius: 100px;
     }
-    .ann-badge.new       { background: rgba(13,148,136,0.1);  color: var(--color-accent); }
-    .ann-badge.important { background: rgba(220,38,38,0.1);   color: #dc2626; }
-    .ann-badge.info      { background: rgba(180,83,9,0.1);    color: var(--color-accent-2); }
+    .ann-badge.new       { background: rgba(16,185,129,0.1);  color: #10b981; }
+    .ann-badge.important { background: rgba(220,38,38,0.08);  color: #dc2626; }
+    .ann-badge.info      { background: rgba(99,102,241,0.08); color: #6366f1; }
+    .ann-title { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .ann-body { font-size: 0.84rem; color: var(--text-muted-l); line-height: 1.65; }
+    .ann-link { font-size: 0.8rem; color: var(--accent); margin-top: 0.35rem; display: inline-block; }
 
-    .ann-title {
-      font-family: var(--font-body);
-      font-size: 0.97rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 0.3rem;
-    }
-    .ann-body { font-size: 0.86rem; color: var(--color-muted); line-height: 1.65; }
-    .ann-link { font-size: 0.82rem; color: var(--color-accent-2); margin-top: 0.4rem; display: inline-block; }
-    .ann-link:hover { text-decoration: underline; }
-
-    /* --- Derslerim (Accordion) --- */
-    .courses-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .courses-list { display: flex; flex-direction: column; gap: 0.6rem; }
     .course-item {
-      background: var(--color-surface);
-      border: 1px solid rgba(180,83,9,0.15);
+      background: #fff;
+      border: 1px solid rgba(217,119,6,0.12);
       border-radius: 10px;
       overflow: hidden;
     }
     .course-trigger {
-      width: 100%;
-      display: flex;
-      align-items: center;
+      width: 100%; display: flex; align-items: center;
       justify-content: space-between;
-      padding: 1.1rem 1.4rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      gap: 1rem;
+      padding: 1rem 1.4rem;
+      background: none; border: none; cursor: pointer;
+      text-align: left; gap: 1rem;
     }
-    .course-trigger:hover { background: rgba(180,83,9,0.03); }
+    .course-trigger:hover { background: rgba(217,119,6,0.03); }
     .course-left { display: flex; align-items: center; gap: 0.9rem; flex: 1; min-width: 0; }
     .course-code {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
+      font-size: 0.68rem; font-weight: 700;
       padding: 0.2rem 0.55rem;
       border-radius: 6px;
-      background: rgba(180,83,9,0.1);
-      color: var(--color-accent-2);
-      white-space: nowrap;
-      flex-shrink: 0;
+      background: var(--accent-light);
+      color: var(--accent);
+      white-space: nowrap; flex-shrink: 0;
     }
-    .course-name {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--color-dark);
-    }
-    .course-sem {
-      font-size: 0.75rem;
-      color: var(--color-muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    .course-name { font-size: 0.92rem; font-weight: 600; color: var(--text-dark); }
+    .course-sem { font-size: 0.72rem; color: var(--text-muted-l); white-space: nowrap; flex-shrink: 0; }
     .course-chevron {
-      width: 18px; height: 18px;
-      color: var(--color-muted);
-      transition: transform 0.3s;
-      flex-shrink: 0;
+      width: 18px; height: 18px; color: var(--text-muted-l);
+      transition: transform 0.3s; flex-shrink: 0;
     }
     .course-item.open .course-chevron { transform: rotate(180deg); }
-
-    .course-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.3s ease;
-    }
+    .course-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     .course-item.open .course-body { max-height: 600px; }
-    .course-body-inner {
-      padding: 0 1.4rem 1.2rem;
-      border-top: 1px solid var(--color-border);
-    }
+    .course-body-inner { padding: 0 1.4rem 1.2rem; border-top: 1px solid var(--border-light); }
     .file-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.6rem;
-      margin-top: 1rem;
+      gap: 0.6rem; margin-top: 1rem;
     }
     .file-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
       padding: 0.55rem 0.75rem;
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--border-light);
       border-radius: 8px;
-      font-size: 0.82rem;
-      color: var(--color-dark);
-      background: var(--color-bg);
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .file-item:hover {
-      border-color: var(--color-accent-2);
-      color: var(--color-accent-2);
-      text-decoration: none;
-    }
-    .file-item svg { width: 14px; height: 14px; flex-shrink: 0; }
-    .file-type {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.1rem 0.35rem;
-      border-radius: 4px;
-      margin-left: auto;
-    }
-    .ft-pdf  { background: rgba(220,38,38,0.1); color: #dc2626; }
-    .ft-doc  { background: rgba(37,99,235,0.1); color: #2563eb; }
-    .ft-ppt  { background: rgba(234,88,12,0.1); color: #ea580c; }
-    .ft-zip  { background: rgba(124,58,237,0.1);color: #7c3aed; }
-    .ft-link { background: rgba(13,148,136,0.1);color: var(--color-accent); }
-
-    .course-note {
-      font-size: 0.8rem;
-      color: var(--color-muted);
-      margin-top: 0.85rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--color-border);
-      line-height: 1.6;
-    }
-
-    /* --- Takvim --- */
-    .schedule-wrap { overflow-x: auto; }
-    .schedule-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.86rem;
-    }
-    .schedule-table th {
-      background: rgba(180,83,9,0.08);
-      color: var(--color-accent-2);
-      font-weight: 700;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      padding: 0.75rem 1rem;
-      text-align: left;
-      border-bottom: 2px solid rgba(180,83,9,0.2);
-      white-space: nowrap;
-    }
-    .schedule-table td {
-      padding: 0.7rem 1rem;
-      border-bottom: 1px solid var(--color-border);
-      vertical-align: top;
-      color: var(--color-dark);
-      line-height: 1.5;
-    }
-    .schedule-table tr:last-child td { border-bottom: none; }
-    .schedule-table tr:hover td { background: rgba(180,83,9,0.03); }
-    .schedule-table .week-num {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--color-muted);
-      white-space: nowrap;
-    }
-    .sch-badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
-      margin-top: 0.2rem;
-    }
-    .sch-odev  { background: rgba(37,99,235,0.1); color: #2563eb; }
-    .sch-sinav { background: rgba(220,38,38,0.1); color: #dc2626; }
-    .sch-empty { color: var(--color-muted); font-size: 0.78rem; }
-
-    /* course selector for schedule */
-    .schedule-selector {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.25rem;
-    }
-    .sch-select-btn {
-      padding: 0.35rem 0.9rem;
-      border-radius: 100px;
-      border: 1px solid var(--color-border);
-      background: transparent;
-      color: var(--color-muted);
-      font-size: 0.82rem;
-      cursor: pointer;
+      font-size: 0.82rem; color: var(--text-dark);
+      background: var(--bg-light);
       transition: all 0.2s;
     }
-    .sch-select-btn.active,
-    .sch-select-btn:hover {
-      background: var(--color-accent-2);
-      border-color: var(--color-accent-2);
-      color: #fff;
+    .file-item:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .file-item svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .file-type {
+      font-family: var(--font-mono);
+      font-size: 0.6rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.1rem 0.35rem; border-radius: 4px;
+      margin-left: auto;
+    }
+    .ft-pdf  { background: rgba(220,38,38,0.08); color: #dc2626; }
+    .ft-doc  { background: rgba(37,99,235,0.08); color: #2563eb; }
+    .ft-ppt  { background: rgba(234,88,12,0.08); color: #ea580c; }
+    .ft-zip  { background: rgba(124,58,237,0.08); color: #7c3aed; }
+    .ft-link { background: rgba(16,185,129,0.08); color: #10b981; }
+
+    .course-note {
+      font-size: 0.78rem; color: var(--text-muted-l);
+      margin-top: 1rem; text-align: center;
     }
 
-    /* --- İletişim & SSS --- */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-    .faq-list { display: flex; flex-direction: column; gap: 0.6rem; }
-    .faq-item {
-      border: 1px solid rgba(180,83,9,0.15);
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--color-surface);
-    }
-    .faq-trigger {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.9rem 1.1rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      gap: 0.75rem;
-    }
-    .faq-trigger:hover { background: rgba(180,83,9,0.03); }
-    .faq-q {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      line-height: 1.4;
-    }
-    .faq-chev {
-      width: 16px; height: 16px;
-      color: var(--color-muted);
-      transition: transform 0.3s;
-      flex-shrink: 0;
-    }
-    .faq-item.open .faq-chev { transform: rotate(180deg); }
-    .faq-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .faq-item.open .faq-body { max-height: 300px; }
-    .faq-body-inner {
-      padding: 0 1.1rem 0.9rem;
-      font-size: 0.84rem;
-      color: var(--color-muted);
-      line-height: 1.65;
-      border-top: 1px solid var(--color-border);
-      padding-top: 0.8rem;
-    }
-
-    .contact-card {
-      background: var(--color-surface);
-      border: 1px solid rgba(180,83,9,0.15);
-      border-radius: 12px;
-      padding: 1.75rem;
-    }
-    .contact-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      margin-bottom: 1rem;
-    }
-    .contact-card p {
-      font-size: 0.86rem;
-      color: var(--color-muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-    .contact-card .btn-amber {
-      background: var(--color-accent-2);
-      color: #fff;
-      border: none;
-    }
-    .contact-card .btn-amber:hover {
-      background: #92400e;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(180,83,9,0.3);
-      text-decoration: none;
-    }
-    .office-info {
-      margin-top: 1.25rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid var(--color-border);
-    }
-    .office-row {
-      display: flex;
-      gap: 0.6rem;
-      align-items: flex-start;
-      font-size: 0.83rem;
-      color: var(--color-muted);
-      margin-bottom: 0.5rem;
-    }
-    .office-row svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--color-accent-2); }
-
-    @media (max-width: 768px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .file-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .file-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
+    /* ---- FOOTER ---- */
     footer {
-      background: var(--color-dark);
-      color: #94a3b8;
-      padding: 3.5rem 1.5rem 2rem;
+      background: var(--bg-primary);
+      color: var(--text-muted);
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid var(--border-dark);
     }
-    .footer-grid {
-      max-width: var(--max-w);
-      margin: 0 auto;
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
       display: grid;
       grid-template-columns: 1.6fr 1fr 1fr;
       gap: 3rem;
     }
     .footer-brand {
       font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
+      font-size: 1.35rem; font-weight: 900;
+      color: var(--text-primary);
       margin-bottom: 0.75rem;
     }
     footer address {
-      font-style: normal;
-      font-size: 0.85rem;
-      line-height: 1.85;
-      color: #94a3b8;
+      font-style: normal; font-size: 0.84rem;
+      line-height: 1.85; color: var(--text-muted);
     }
-    footer address a { color: #94a3b8; }
-    footer address a:hover { color: var(--color-accent); text-decoration: none; }
+    footer address a { color: var(--text-muted); }
+    footer address a:hover { color: var(--accent); }
     footer h4 {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem; font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #cbd5e1;
-      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
       margin-bottom: 1rem;
     }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .footer-links a { font-size: 0.85rem; color: #94a3b8; }
-    .footer-links a:hover { color: var(--color-accent); text-decoration: none; }
-
+    .footer-links a { font-size: 0.84rem; color: var(--text-muted); }
+    .footer-links a:hover { color: var(--accent); text-decoration: none; }
     .footer-bottom {
-      max-width: var(--max-w);
-      margin: 2rem auto 0;
+      max-width: 1200px; margin: 2.5rem auto 0;
       padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.78rem;
+      border-top: 1px solid var(--border-dark);
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 0.5rem;
+      font-size: 0.75rem; font-family: var(--font-mono);
     }
 
-    /* ============================================================
-       PUBLICATIONS LOADING STATE
-    ============================================================ */
+    /* ---- LOADING / ERROR ---- */
     .pub-loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 3rem 1rem;
-      color: var(--color-muted);
-      font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.75rem; padding: 3rem 1rem;
+      color: var(--text-muted); font-size: 0.88rem;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .pub-loading svg { animation: spin 1s linear infinite; }
-
     .pub-error {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.875rem;
-      color: var(--color-muted);
+      text-align: center; padding: 2rem 1rem;
+      font-size: 0.85rem; color: var(--text-muted);
     }
-    .pub-error a { color: var(--color-accent); }
+    .pub-error a { color: var(--accent); }
 
-    /* ============================================================
-       LANGUAGE TOGGLE
-    ============================================================ */
-    .en-block { display: none !important; }
+    /* ---- LANGUAGE ---- */
+    .en-block  { display: none !important; }
     .tr-block  { display: block !important; }
     .en-inline { display: none !important; }
     .tr-inline { display: inline !important; }
-    [lang="en"] .en-block { display: block !important; }
-    [lang="en"] .tr-block { display: none !important; }
+    [lang="en"] .en-block  { display: block !important; }
+    [lang="en"] .tr-block  { display: none !important; }
     [lang="en"] .en-inline { display: inline !important; }
     [lang="en"] .tr-inline { display: none !important; }
 
-    .lang-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 6px;
-      overflow: hidden;
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-    }
-    #navbar.scrolled .lang-toggle { border-color: var(--color-border); }
-    .lang-toggle button {
-      padding: 0.3rem 0.6rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: rgba(255,255,255,0.5);
-      transition: all 0.2s;
-    }
-    #navbar.scrolled .lang-toggle button { color: var(--color-muted); }
-    .lang-toggle button.lang-active {
-      background: rgba(255,255,255,0.15);
-      color: #fff;
-    }
-    #navbar.scrolled .lang-toggle button.lang-active {
-      background: var(--color-accent);
-      color: #fff;
-    }
-    .lang-divider {
-      width: 1px;
-      height: 18px;
-      background: rgba(255,255,255,0.2);
-      flex-shrink: 0;
-    }
-    #navbar.scrolled .lang-divider { background: var(--color-border); }
-
-    /* ============================================================
-       ANIMATIONS
-    ============================================================ */
+    /* ---- ANIMATIONS ---- */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
+      from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     .fade-up {
       opacity: 0;
-      animation: fadeUp 0.55s ease forwards;
+      animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
     }
     .reveal {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 0; transform: translateY(20px);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
     @media (prefers-reduced-motion: reduce) {
       .reveal, .fade-up {
         transition: none; animation: none;
@@ -1192,46 +805,78 @@
       }
     }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
+    /* ---- BUTTONS (shared) ---- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem; font-weight: 600;
+      cursor: pointer; transition: all 0.22s;
+      white-space: nowrap; text-decoration: none;
+    }
+    .btn svg { flex-shrink: 0; }
+    .btn-primary { background: var(--accent); color: #fff; border: none; }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(217,119,6,0.3);
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--text-muted);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent); color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ---- RESPONSIVE ---- */
     @media (max-width: 1024px) {
-      .research-grid  { grid-template-columns: repeat(2, 1fr); }
-      .about-grid     { grid-template-columns: 1fr; }
-      .about-sidebar  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .bento-grid { grid-template-columns: repeat(2, 1fr); }
+      .bento-big  { grid-column: span 1; }
+      .about-layout { grid-template-columns: 1fr; }
+      .about-sidebar {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      }
     }
     @media (max-width: 768px) {
-      :root { --sec-pad: 3.5rem 1rem; }
-      .nav-links  { display: none; }
-      .hamburger  { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .hero-photo { display: flex; justify-content: center; order: -1; }
-      .profile-wrap { width: 160px; height: 160px; }
-      .badges { justify-content: center; }
-      .hero-actions { justify-content: center; }
-      .research-grid { grid-template-columns: 1fr; }
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-photo-side { height: 50vh; }
+      .hero-photo-overlay {
+        background: linear-gradient(to bottom, transparent 40%, var(--bg-primary) 100%);
+      }
+      .hero-photo-bottom { display: none; }
+      .hero-content-side { padding: 3rem 1.5rem 4rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .bento-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
       .about-sidebar { grid-template-columns: 1fr; }
-      .st-tabs { gap: 0; }
-      .course-left { flex-wrap: wrap; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .pub-year-block { display: none; }
+      .pub-tags { flex-direction: row; align-items: center; }
+      .sec { padding: 4rem 1.25rem; }
+      .nav-inner { padding: 0.85rem 1.25rem; }
+      .file-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
-      .hero-actions { flex-direction: column; }
-      .btn { justify-content: center; }
+      .hero-name { font-size: 2.5rem; }
+      .hero-links { flex-direction: column; }
+      .hero-link { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR
-  ============================================================ -->
+  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-brand">
-        Doç. Dr. Abdulkadir Memduhoğlu
-        <small>Harran Üniversitesi &middot; Harita Mühendisliği</small>
+        <strong>A.Memduhoğlu</strong> / Harran Univ.
       </a>
       <ul class="nav-links">
         <li><a href="#about"        data-tr="Hakkımda"       data-en="About">Hakkımda</a></li>
@@ -1240,14 +885,16 @@
         <li><a href="#projects"     data-tr="Projeler"       data-en="Projects">Projeler</a></li>
         <li><a href="#students"     data-tr="Öğrenci Köşesi" data-en="Students">Öğrenci Köşesi</a></li>
       </ul>
-      <div class="lang-toggle" role="group" aria-label="Dil seçimi">
-        <button id="btn-tr" class="lang-active" onclick="setLang('tr')">TR</button>
-        <div class="lang-divider"></div>
-        <button id="btn-en" onclick="setLang('en')">EN</button>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <div class="lang-toggle" role="group" aria-label="Dil seçimi">
+          <button id="btn-tr" class="lang-active" onclick="setLang('tr')">TR</button>
+          <div class="lang-divider"></div>
+          <button id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat">
-        <span></span><span></span><span></span>
-      </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#about"        data-tr="Hakkımda"       data-en="About">Hakkımda</a>
@@ -1258,98 +905,71 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
+  <!-- HERO -->
   <section id="hero">
-    <div class="hero-inner">
+    <div class="hero-photo-side">
+      <img
+        src="assets/img/profile.jpg"
+        alt="Doç. Dr. Abdulkadir Memduhoğlu"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+      >
+      <div class="photo-placeholder" style="display:none">AM</div>
+      <div class="hero-photo-overlay"></div>
+      <div class="hero-photo-bottom"></div>
+    </div>
 
-      <!-- Left: text -->
-      <div class="hero-text">
-        <p class="hero-label fade-up" style="animation-delay:.05s"
-           data-tr="Öğretim Üyesi · Harita Mühendisliği"
-           data-en="Faculty Member · Geomatics Engineering">Öğretim Üyesi · Harita Mühendisliği</p>
-        <h1 class="fade-up" style="animation-delay:.12s">Abdulkadir<br>Memduhoğlu</h1>
-        <p class="hero-institution fade-up" style="animation-delay:.2s"
-           data-tr="Harran Üniversitesi · Şanlıurfa, Türkiye"
-           data-en="Harran University · Şanlıurfa, Türkiye">Harran Üniversitesi · Şanlıurfa, Türkiye</p>
-        <div class="badges fade-up" style="animation-delay:.28s">
-          <span class="badge" data-tr="CBS" data-en="GIS">CBS</span>
-          <span class="badge" data-tr="Uzaktan Algılama"       data-en="Remote Sensing">Uzaktan Algılama</span>
-          <span class="badge" data-tr="Makine Öğrenmesi"       data-en="Machine Learning">Makine Öğrenmesi</span>
-          <span class="badge">OpenStreetMap / VGI</span>
-          <span class="badge">GeoAI</span>
-          <span class="badge" data-tr="Kartografya" data-en="Cartography">Kartografya</span>
-        </div>
-        <div class="hero-actions fade-up" style="animation-delay:.36s">
-          <a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr" target="_blank" rel="noopener" class="btn btn-outline">
-            <!-- Scholar "G" -->
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-            </svg>
-            Google Scholar
-          </a>
-          <a href="https://orcid.org/0000-0002-9072-869X" target="_blank" rel="noopener" class="btn btn-outline">
-            <!-- ORCID -->
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919zm1.444 1.303v7.444h2.297c2.359 0 3.788-1.681 3.788-3.722 0-2.016-1.447-3.722-3.809-3.722z"/>
-            </svg>
-            ORCID
-          </a>
-          <a href="https://www.researchgate.net/profile/Abdulkadir-Memduhoglu" target="_blank" rel="noopener" class="btn btn-outline">
-            <!-- RG icon simplified -->
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M2.586 24h5.953c.199 0 .363-.164.363-.363V13.05c0-.198-.164-.363-.363-.363H2.586a.364.364 0 0 0-.363.363v10.587c0 .199.164.363.363.363zM5.563 0a5.563 5.563 0 1 0 0 11.126A5.563 5.563 0 0 0 5.563 0zm9.3 7.012c-.618 0-1.201.144-1.72.4V7.05a.363.363 0 0 0-.363-.363h-2.438a.363.363 0 0 0-.363.363v16.587c0 .199.164.363.363.363h2.438c.199 0 .363-.164.363-.363V14.25c0-1.45 1.18-2.625 2.72-2.625 1.326 0 2.438.975 2.438 2.625v9.387c0 .199.164.363.363.363h2.437c.199 0 .364-.164.364-.363V14.25C21.465 10.225 18.727 7.012 14.863 7.012z"/>
-            </svg>
-            ResearchGate
-          </a>
-          <a href="https://www.webofscience.com/wos/author/record/AAZ-4474-2020" target="_blank" rel="noopener" class="btn btn-outline">
-            <!-- WoS icon -->
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14.5L7 9h2l2 5.5 2-5.5h2l-3.5 7.5h-1zM17 9l-1.5 7.5h-1.5L12.5 9H14l1 5.5L16 9h1z"/>
-            </svg>
-            Web of Science
-          </a>
-          <a href="mailto:akadirm@harran.edu.tr" class="btn btn-outline">
-            <!-- Mail -->
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            E-posta
-          </a>
-        </div>
+    <div class="hero-content-side">
+      <p class="hero-eyebrow fade-up" style="animation-delay:.05s"
+         data-tr="Doç. Dr. · Harita Mühendisliği"
+         data-en="Assoc. Prof. · Geomatics Engineering">Doç. Dr. · Harita Mühendisliği</p>
+
+      <h1 class="hero-name fade-up" style="animation-delay:.15s">
+        Abdulkadir<br><em>Memduhoğlu</em>
+      </h1>
+
+      <p class="hero-inst fade-up" style="animation-delay:.25s"
+         data-tr="Harran Üniversitesi · Şanlıurfa, Türkiye"
+         data-en="Harran University · Şanlıurfa, Türkiye">Harran Üniversitesi · Şanlıurfa, Türkiye</p>
+
+      <div class="hero-tags fade-up" style="animation-delay:.32s">
+        <span class="hero-tag" data-tr="CBS" data-en="GIS">CBS</span>
+        <span class="hero-tag" data-tr="Uzaktan Algılama" data-en="Remote Sensing">Uzaktan Algılama</span>
+        <span class="hero-tag" data-tr="Makine Öğrenmesi" data-en="Machine Learning">Makine Öğrenmesi</span>
+        <span class="hero-tag">OpenStreetMap / VGI</span>
+        <span class="hero-tag">GeoAI</span>
+        <span class="hero-tag" data-tr="Kartografya" data-en="Cartography">Kartografya</span>
       </div>
 
-      <!-- Right: photo -->
-      <div class="hero-photo fade-up" style="animation-delay:.2s">
-        <div class="profile-wrap">
-          <img
-            src="assets/img/profile.jpg"
-            alt="Doç. Dr. Abdulkadir Memduhoğlu profil fotoğrafı"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-          >
-          <div class="profile-placeholder" style="display:none">AM</div>
-        </div>
+      <div class="hero-links fade-up" style="animation-delay:.4s">
+        <a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr" target="_blank" rel="noopener" class="hero-link hero-link-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://orcid.org/0000-0002-9072-869X" target="_blank" rel="noopener" class="hero-link hero-link-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919zm1.444 1.303v7.444h2.297c2.359 0 3.788-1.681 3.788-3.722 0-2.016-1.447-3.722-3.809-3.722z"/></svg>
+          ORCID
+        </a>
+        <a href="https://www.researchgate.net/profile/Abdulkadir-Memduhoglu" target="_blank" rel="noopener" class="hero-link hero-link-ghost">
+          RG
+        </a>
+        <a href="https://www.webofscience.com/wos/author/record/AAZ-4474-2020" target="_blank" rel="noopener" class="hero-link hero-link-ghost">
+          WoS
+        </a>
+        <a href="mailto:akadirm@harran.edu.tr" class="hero-link hero-link-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          E-posta
+        </a>
       </div>
-
     </div>
   </section>
 
-  <!-- ============================================================
-       ABOUT
-  ============================================================ -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
-        <div class="section-line"></div>
-        <p class="section-sub" data-tr="Akademik biyografi ve eğitim geçmişi" data-en="Academic biography and educational background">Akademik biyografi ve eğitim geçmişi</p>
-      </div>
+  <!-- ABOUT -->
+  <section id="about" class="sec sec-light">
+    <div class="sec-container">
+      <div class="sec-label reveal" data-tr="01 — Hakkımda" data-en="01 — About">01 — Hakkımda</div>
+      <div class="sec-title reveal" data-tr="Akademik Profil" data-en="Academic Profile">Akademik Profil</div>
 
-      <div class="about-grid">
-
-        <!-- Biography + Timeline -->
+      <div class="about-layout">
         <div class="about-text">
           <p class="reveal tr-block">
             Harran Üniversitesi Harita Mühendisliği Bölümü'nde öğretim üyesi olarak görev yapmaktayım.
@@ -1385,40 +1005,35 @@
             at national and international levels, and publish in SCI/SSCI-indexed journals.
           </p>
 
-          <!-- Education Timeline -->
           <div class="timeline">
             <h3 data-tr="Eğitim" data-en="Education">Eğitim</h3>
-
             <div class="tl-item reveal">
-              <div class="tl-dot phd">PhD</div>
+              <div class="tl-marker phd"></div>
               <div class="tl-info">
                 <h4 data-tr="Doktora — Uzaktan Algılama ve CBS" data-en="PhD — Remote Sensing and GIS">Doktora — Uzaktan Algılama ve CBS</h4>
                 <p data-tr="Yıldız Teknik Üniversitesi · 2021" data-en="Yıldız Technical University · 2021">Yıldız Teknik Üniversitesi · 2021</p>
               </div>
             </div>
-
             <div class="tl-item reveal">
-              <div class="tl-dot">MSc</div>
+              <div class="tl-marker"></div>
               <div class="tl-info">
                 <h4 data-tr="Yüksek Lisans — Uzaktan Algılama ve CBS" data-en="MSc — Remote Sensing and GIS">Yüksek Lisans — Uzaktan Algılama ve CBS</h4>
                 <p data-tr="Yıldız Teknik Üniversitesi · 2015" data-en="Yıldız Technical University · 2015">Yıldız Teknik Üniversitesi · 2015</p>
               </div>
             </div>
-
             <div class="tl-item reveal">
-              <div class="tl-dot" style="font-size:0.62rem">BSc</div>
+              <div class="tl-marker"></div>
               <div class="tl-info">
                 <h4 data-tr="Lisans — Harita Mühendisliği" data-en="BSc — Geomatics Engineering">Lisans — Harita Mühendisliği</h4>
-                <p data-tr="Yıldız Teknik Üniversitesi · Harita Mühendisliği" data-en="Yıldız Technical University · Geomatics Engineering">Yıldız Teknik Üniversitesi · Harita Mühendisliği</p>
+                <p data-tr="Yıldız Teknik Üniversitesi" data-en="Yıldız Technical University">Yıldız Teknik Üniversitesi</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="about-sidebar">
-          <div class="sidebar-card reveal">
-            <h3 data-tr="Akademik İstatistikler" data-en="Academic Statistics">Akademik İstatistikler</h3>
+          <div class="stat-card reveal">
+            <h3 data-tr="İstatistikler" data-en="Statistics">İstatistikler</h3>
             <div class="stat-row">
               <span class="stat-label" data-tr="Yayın sayısı" data-en="Publications">Yayın sayısı</span>
               <span class="stat-val" id="stat-pub-count">—</span>
@@ -1433,7 +1048,7 @@
             </div>
           </div>
 
-          <div class="sidebar-card reveal">
+          <div class="stat-card reveal">
             <h3 data-tr="İletişim" data-en="Contact">İletişim</h3>
             <div class="stat-row">
               <span class="stat-label">E-mail</span>
@@ -1453,30 +1068,22 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       RESEARCH
-  ============================================================ -->
-  <section id="research">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 data-tr="Araştırma Alanları" data-en="Research Areas">Araştırma Alanları</h2>
-        <div class="section-line"></div>
-        <p class="section-sub" data-tr="Temel çalışma konuları ve uzmanlık alanları" data-en="Core research topics and areas of expertise">Temel çalışma konuları ve uzmanlık alanları</p>
-      </div>
+  <!-- RESEARCH -->
+  <section id="research" class="sec sec-dark">
+    <div class="sec-container">
+      <div class="sec-label reveal" data-tr="02 — Araştırma" data-en="02 — Research">02 — Araştırma</div>
+      <div class="sec-title reveal" data-tr="Araştırma Alanları" data-en="Research Areas">Araştırma Alanları</div>
+      <p class="sec-desc reveal" data-tr="Temel çalışma konuları ve uzmanlık alanları" data-en="Core research topics and areas of expertise">Temel çalışma konuları ve uzmanlık alanları</p>
 
-      <div class="research-grid">
-
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- Globe / GIS -->
+      <div class="bento-grid">
+        <div class="bento-card bento-big reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
           </div>
@@ -1484,9 +1091,8 @@
           <p data-tr="Mekansal veri analizi, CBS tabanlı karar destek sistemleri ve coğrafi veri kalitesi değerlendirmesi üzerine araştırmalar." data-en="Spatial data analysis, GIS-based decision support systems, and geographic data quality assessment research.">Mekansal veri analizi, CBS tabanlı karar destek sistemleri ve coğrafi veri kalitesi değerlendirmesi üzerine araştırmalar.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- Satellite -->
+        <div class="bento-card reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="3"/>
               <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
@@ -1496,35 +1102,29 @@
           <p data-tr="Uydu ve hava görüntülerinin işlenmesi, arazi örtüsü/arazi kullanımı sınıflandırması ve değişim tespiti çalışmaları." data-en="Processing of satellite and aerial imagery, land cover/land use classification, and change detection studies.">Uydu ve hava görüntülerinin işlenmesi, arazi örtüsü/arazi kullanımı sınıflandırması ve değişim tespiti çalışmaları.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- Neural net / ML -->
+        <div class="bento-card reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
             </svg>
           </div>
           <h3 data-tr="Makine Öğrenmesi / YZ" data-en="Machine Learning / AI">Makine Öğrenmesi / YZ</h3>
-          <p data-tr="Mekansal veri üzerinde makine öğrenmesi ve derin öğrenme algoritmalarının uygulanması; sınıflandırma, regresyon ve kümeleme modelleri." data-en="Application of machine learning and deep learning algorithms on spatial data; classification, regression, and clustering models.">Mekansal veri üzerinde makine öğrenmesi ve derin öğrenme algoritmalarının uygulanması; sınıflandırma, regresyon ve kümeleme modelleri.</p>
+          <p data-tr="Mekansal veri üzerinde makine öğrenmesi ve derin öğrenme algoritmalarının uygulanması." data-en="Application of machine learning and deep learning algorithms on spatial data.">Mekansal veri üzerinde makine öğrenmesi ve derin öğrenme algoritmalarının uygulanması.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- Map pin / OSM -->
+        <div class="bento-card reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
-              <line x1="8" y1="2" x2="8" y2="18"/>
-              <line x1="16" y1="6" x2="16" y2="22"/>
+              <line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>
             </svg>
           </div>
           <h3>OpenStreetMap / VGI</h3>
-          <p data-tr="Gönüllü kaynaklı coğrafi verinin (VGI) kalitesi, tamamlanmışlığı ve güvenilirliğinin değerlendirilmesi; OSM tabanlı mekânsal analizler." data-en="Assessment of Volunteered Geographic Information (VGI) quality, completeness, and reliability; OSM-based spatial analyses.">Gönüllü kaynaklı coğrafi verinin (VGI) kalitesi, tamamlanmışlığı ve güvenilirliğinin değerlendirilmesi; OSM tabanlı mekânsal analizler.</p>
+          <p data-tr="Gönüllü kaynaklı coğrafi verinin kalitesi, tamamlanmışlığı ve güvenilirliğinin değerlendirilmesi." data-en="Assessment of Volunteered Geographic Information quality, completeness, and reliability.">Gönüllü kaynaklı coğrafi verinin kalitesi, tamamlanmışlığı ve güvenilirliğinin değerlendirilmesi.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- AI / Neural -->
+        <div class="bento-card bento-big reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
               <circle cx="12" cy="19" r="2"/>
@@ -1536,9 +1136,8 @@
           <p data-tr="Büyük dil modelleri (LLM) ve yapay zekanın coğrafi uygulamaları; mekansal akıl yürütme, OSM etiket sınıflandırması, kartografik tasarım değerlendirmesi ve konum tabanlı yapay zeka sistemleri." data-en="Geographic applications of large language models (LLMs) and AI; spatial reasoning, OSM tag classification, cartographic design assessment, and location-aware AI systems.">Büyük dil modelleri (LLM) ve yapay zekanın coğrafi uygulamaları; mekansal akıl yürütme, OSM etiket sınıflandırması, kartografik tasarım değerlendirmesi ve konum tabanlı yapay zeka sistemleri.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="rc-icon">
-            <!-- Compass / Cartography -->
+        <div class="bento-card reveal">
+          <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
@@ -1547,21 +1146,16 @@
           <h3 data-tr="Kartografya" data-en="Cartography">Kartografya</h3>
           <p data-tr="Harita tasarımı ve görselleştirme, projeksiyon sistemleri, semboloji ve kartografik genelleme yöntemleri." data-en="Map design and visualization, projection systems, symbolization, and cartographic generalization methods.">Harita tasarımı ve görselleştirme, projeksiyon sistemleri, semboloji ve kartografik genelleme yöntemleri.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       PUBLICATIONS
-  ============================================================ -->
-  <section id="publications">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 data-tr="Seçili Yayınlar" data-en="Selected Publications">Seçili Yayınlar</h2>
-        <div class="section-line"></div>
-        <p class="section-sub" data-tr="Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar" data-en="Works published in national and international peer-reviewed journals">Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar</p>
-      </div>
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="sec sec-mid">
+    <div class="sec-container">
+      <div class="sec-label reveal" data-tr="03 — Yayınlar" data-en="03 — Publications">03 — Yayınlar</div>
+      <div class="sec-title reveal" data-tr="Seçili Yayınlar" data-en="Selected Publications">Seçili Yayınlar</div>
+      <p class="sec-desc reveal" data-tr="Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar" data-en="Works published in national and international peer-reviewed journals">Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar</p>
 
       <div class="pub-filters reveal">
         <button class="filter-btn active" data-filter="recent"     data-tr="Son Yayınlar" data-en="Recent">Son Yayınlar</button>
@@ -1569,74 +1163,13 @@
         <button class="filter-btn"        data-filter="conference" data-tr="Konferans"    data-en="Conference">Konferans</button>
         <button class="filter-btn"        data-filter="book"       data-tr="Kitap Bölümü" data-en="Book Chapter">Kitap Bölümü</button>
       </div>
-      <p id="pub-count-note" class="pub-count-note" data-tr="En son 5 yayın gösteriliyor" data-en="Showing last 5 publications">En son 5 yayın gösteriliyor</p>
+      <p id="pub-count-note" class="pub-count-note reveal" data-tr="En son 5 yayın gösteriliyor" data-en="Showing last 5 publications">En son 5 yayın gösteriliyor</p>
 
       <div class="pub-list" id="pub-list">
-
-        <div class="pub-item reveal" data-type="journal">
-          <div class="pub-authors">Memduhoğlu, A., [diğer yazarlar]</div>
-          <div class="pub-title">
-            <a href="#">[Makale başlığı eklenecek — Google Scholar'dan aktarılacak]</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-journal">International Journal of Geographical Information Science</span>
-            <span class="pub-year">2024</span>
-            <span class="type-tag tag-journal">Dergi</span>
-            <a href="#" class="doi-btn">DOI</a>
-          </div>
+        <div class="pub-loading">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+          <span data-tr="Yayınlar yükleniyor…" data-en="Loading publications…">Yayınlar yükleniyor…</span>
         </div>
-
-        <div class="pub-item reveal" data-type="journal">
-          <div class="pub-authors">Memduhoğlu, A., [diğer yazarlar]</div>
-          <div class="pub-title">
-            <a href="#">[Makale başlığı eklenecek — Google Scholar'dan aktarılacak]</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-journal">Remote Sensing</span>
-            <span class="pub-year">2023</span>
-            <span class="type-tag tag-journal">Dergi</span>
-            <a href="#" class="doi-btn">DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item reveal" data-type="journal">
-          <div class="pub-authors">Memduhoğlu, A., [diğer yazarlar]</div>
-          <div class="pub-title">
-            <a href="#">[Makale başlığı eklenecek — Google Scholar'dan aktarılacak]</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-journal">Geocarto International</span>
-            <span class="pub-year">2022</span>
-            <span class="type-tag tag-journal">Dergi</span>
-            <a href="#" class="doi-btn">DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item reveal" data-type="conference">
-          <div class="pub-authors">Memduhoğlu, A., [diğer yazarlar]</div>
-          <div class="pub-title">
-            <a href="#">[Bildiri başlığı eklenecek]</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-journal">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</span>
-            <span class="pub-year">2022</span>
-            <span class="type-tag tag-conference">Konferans</span>
-            <a href="#" class="doi-btn">DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-item reveal" data-type="book">
-          <div class="pub-authors">Memduhoğlu, A.</div>
-          <div class="pub-title">
-            <a href="#">[Kitap bölümü başlığı eklenecek]</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-journal">GIS Applications in Environmental Management</span>
-            <span class="pub-year">2021</span>
-            <span class="type-tag tag-book">Kitap Bölümü</span>
-          </div>
-        </div>
-
       </div>
 
       <div class="pub-more reveal">
@@ -1648,41 +1181,29 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       PROJECTS
-  ============================================================ -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 data-tr="Projeler" data-en="Projects">Projeler</h2>
-        <div class="section-line"></div>
-        <p class="section-sub" data-tr="Yürütülen ve tamamlanan araştırma projeleri" data-en="Ongoing and completed research projects">Yürütülen ve tamamlanan araştırma projeleri</p>
-      </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="sec sec-light">
+    <div class="sec-container">
+      <div class="sec-label reveal" data-tr="04 — Projeler" data-en="04 — Projects">04 — Projeler</div>
+      <div class="sec-title reveal" data-tr="Araştırma Projeleri" data-en="Research Projects">Araştırma Projeleri</div>
+      <p class="sec-desc reveal" data-tr="Yürütülen ve tamamlanan araştırma projeleri" data-en="Ongoing and completed research projects">Yürütülen ve tamamlanan araştırma projeleri</p>
 
       <div class="projects-grid" id="projects-list">
-        <div class="pub-loading" id="projects-loading">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-          </svg>
+        <div class="pub-loading" id="projects-loading" style="grid-column:1/-1;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
           <span data-tr="Projeler yükleniyor…" data-en="Loading projects…">Projeler yükleniyor…</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       STUDENTS (Faz 2)
-  ============================================================ -->
-  <section id="students">
-    <div class="container">
+  <!-- STUDENTS -->
+  <section id="students" class="sec sec-cream">
+    <div class="sec-container">
+      <div class="sec-label reveal" data-tr="05 — Öğrenci Köşesi" data-en="05 — Student Corner">05 — Öğrenci Köşesi</div>
+      <div class="sec-title reveal" data-tr="Öğrenci Köşesi" data-en="Student Corner">Öğrenci Köşesi</div>
+      <p class="sec-desc reveal" data-tr="Duyurular ve ders materyalleri" data-en="Announcements and course materials">Duyurular ve ders materyalleri</p>
 
-      <div class="section-header reveal">
-        <h2 data-tr="Öğrenci Köşesi" data-en="Student Corner">Öğrenci Köşesi</h2>
-        <div class="section-line"></div>
-        <p class="section-sub" data-tr="Duyurular ve ders materyalleri" data-en="Announcements and course materials">Duyurular ve ders materyalleri</p>
-      </div>
-
-      <!-- Tab navigation -->
       <nav class="st-tabs reveal" role="tablist">
         <button class="st-tab active" data-panel="ann" role="tab" aria-selected="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1698,319 +1219,39 @@
         </button>
       </nav>
 
-      <!-- ===== Panel: Duyurular ===== -->
       <div class="st-panel active" id="panel-ann">
         <div class="ann-list" id="ann-list">
           <div class="pub-loading" id="ann-loading">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
             <span data-tr="Duyurular yükleniyor…" data-en="Loading announcements…">Duyurular yükleniyor…</span>
           </div>
         </div>
-        <div class="pub-more" id="ann-more-wrap" style="display:none; margin-top:1.25rem;">
+        <div id="ann-more-wrap" style="display:none; margin-top:1.25rem;">
           <button class="btn btn-outline" id="ann-more-btn" onclick="toggleAllAnnouncements()"
-            style="border-color:var(--color-accent-2);color:var(--color-accent-2);"
+            style="border-color:var(--accent);color:var(--accent);"
             data-tr="Tüm Duyurular" data-en="All Announcements">
             Tüm Duyurular
           </button>
         </div>
-      </div><!-- /panel-ann -->
+      </div>
 
-      <!-- ===== Panel: Derslerim ===== -->
       <div class="st-panel" id="panel-courses">
         <div id="courses-list">
           <div class="pub-loading" id="courses-loading">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
             <span data-tr="Dersler yükleniyor…" data-en="Loading courses…">Dersler yükleniyor…</span>
           </div>
         </div>
         <p class="course-note" style="margin-top:1.5rem;text-align:center;">
           Ders materyalleri dönem içinde buraya eklenir. Güncel dosyalar için sayfayı düzenli kontrol ediniz.
         </p>
-      </div><!-- /panel-courses -->
-
-      <!-- ===== Panel: Haftalık Takvim (kaldırıldı) ===== -->
-      <div class="st-panel" id="panel-schedule" style="display:none !important">
-
-        <div class="schedule-selector reveal">
-          <button class="sch-select-btn active" data-sch="1">HRT-XXX — [Ders Adı]</button>
-          <button class="sch-select-btn" data-sch="2">HRT-YYY — [Ders Adı]</button>
-        </div>
-
-        <!-- Takvim 1 -->
-        <div class="sch-table-wrap" id="sch-1">
-          <div class="schedule-wrap reveal">
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th>Hafta</th>
-                  <th>Konu</th>
-                  <th>Ödev / Teslim</th>
-                  <th>Sınav</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="week-num">Hf. 1</td>
-                  <td>[Giriş ve Dersin Tanıtımı]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 2</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 3</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td><span class="sch-badge sch-odev">Ödev 1 Verildi</span></td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 4</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 5</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td><span class="sch-badge sch-odev">Ödev 1 Teslim</span></td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 6</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 7</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td><span class="sch-badge sch-sinav">Ara Sınav</span></td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 8</td>
-                  <td>Ara Sınav Değerlendirme</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 9</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td><span class="sch-badge sch-odev">Ödev 2 Verildi</span></td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 10</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 11</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 12</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td><span class="sch-badge sch-odev">Ödev 2 Teslim</span></td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 13</td>
-                  <td>[Konu başlığı eklenecek]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 14</td>
-                  <td>Genel Tekrar</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Sınav</td>
-                  <td>—</td>
-                  <td class="sch-empty">—</td>
-                  <td><span class="sch-badge sch-sinav">Final Sınavı</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div><!-- /sch-1 -->
-
-        <!-- Takvim 2 (gizli) -->
-        <div class="sch-table-wrap" id="sch-2" style="display:none">
-          <div class="schedule-wrap">
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th>Hafta</th>
-                  <th>Konu</th>
-                  <th>Ödev / Teslim</th>
-                  <th>Sınav</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="week-num">Hf. 1</td>
-                  <td>[Giriş ve Dersin Tanıtımı]</td>
-                  <td class="sch-empty">—</td>
-                  <td class="sch-empty">—</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Hf. 2–14</td>
-                  <td colspan="3" style="color:var(--color-muted); font-style:italic;">[Haftalık konu ve tarihler eklenecek]</td>
-                </tr>
-                <tr>
-                  <td class="week-num">Sınav</td>
-                  <td>—</td>
-                  <td class="sch-empty">—</td>
-                  <td><span class="sch-badge sch-sinav">Final Sınavı</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div><!-- /sch-2 -->
-
-      </div><!-- /panel-schedule -->
-
-      <!-- ===== Panel: İletişim & SSS (kaldırıldı) ===== -->
-      <div class="st-panel" id="panel-contact" style="display:none !important">
-        <div class="contact-grid">
-
-          <!-- SSS -->
-          <div>
-            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:1.2rem;color:var(--color-dark);">
-              Sık Sorulan Sorular
-            </h3>
-            <div class="faq-list">
-
-              <div class="faq-item reveal">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">Ödev tesliminde gecikme durumunda ne yapmalıyım?</span>
-                  <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-body">
-                  <div class="faq-body-inner">
-                    [Yanıt eklenecek. Örn: Teslim tarihi geçmeden mutlaka e-posta ile bildirmeniz gerekmektedir. Mazeretsiz geç teslimler kabul edilmez.]
-                  </div>
-                </div>
-              </div>
-
-              <div class="faq-item reveal">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">Danışmanlık görüşmesi için nasıl randevu alabilirim?</span>
-                  <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-body">
-                  <div class="faq-body-inner">
-                    [Yanıt eklenecek. Örn: E-posta ile randevu talebinde bulunabilirsiniz. Ofis saatleri: Salı ve Perşembe 14:00–16:00.]
-                  </div>
-                </div>
-              </div>
-
-              <div class="faq-item reveal">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">Bütünleme sınavına girebilmek için ne gerekiyor?</span>
-                  <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-body">
-                  <div class="faq-body-inner">
-                    [Yanıt eklenecek. Harran Üniversitesi yönetmeliği kapsamında belirtilen koşullar uygulanmaktadır.]
-                  </div>
-                </div>
-              </div>
-
-              <div class="faq-item reveal">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">Yüksek lisans / doktora danışmanlığı için nasıl başvurabilirim?</span>
-                  <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-body">
-                  <div class="faq-body-inner">
-                    [Yanıt eklenecek. Örn: Araştırma alanlarımla örtüşen bir konunuz varsa CV ve motivasyon mektubunuzla e-posta gönderebilirsiniz.]
-                  </div>
-                </div>
-              </div>
-
-              <div class="faq-item reveal">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">Ders notu / harf notu itirazı için ne yapmalıyım?</span>
-                  <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-body">
-                  <div class="faq-body-inner">
-                    [Yanıt eklenecek. Örn: Sonuçların açıklanmasından itibaren 5 iş günü içinde dilekçeyle bölüm sekreterliğine başvurmanız gerekmektedir.]
-                  </div>
-                </div>
-              </div>
-
-            </div><!-- /faq-list -->
-          </div>
-
-          <!-- Contact card -->
-          <div class="contact-card reveal">
-            <h3>E-posta Göndermeden Önce</h3>
-            <p>
-              E-posta göndermeden önce lütfen soldaki SSS bölümünü inceleyin.
-              Sorunuzu orada bulamadıysanız, aşağıdaki adrese yazabilirsiniz.
-            </p>
-            <p>
-              <strong>E-postanıza şunları eklemeyi unutmayın:</strong><br>
-              Adınız, öğrenci numaranız, ilgili ders kodu ve sorunuzun kısa özeti.
-            </p>
-            <a href="mailto:akadirm@harran.edu.tr?subject=[Ders Kodu] — Konu" class="btn btn-amber">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              E-posta Gönder
-            </a>
-
-            <div class="office-info">
-              <div class="office-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-                <span>Ofis No: [Eklenecek] &mdash; Mühendislik Fakültesi</span>
-              </div>
-              <div class="office-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span>Ofis Saatleri: [Eklenecek — Salı/Perşembe vb.]</span>
-              </div>
-              <div class="office-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 0.75h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                <span>Dahili: [Eklenecek]</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div><!-- /panel-contact -->
-
+      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-grid">
-
+    <div class="footer-inner">
       <div>
         <div class="footer-brand">Doç. Dr. Abdulkadir Memduhoğlu</div>
         <address>
@@ -2020,18 +1261,16 @@
           <a href="mailto:akadirm@harran.edu.tr">akadirm@harran.edu.tr</a>
         </address>
       </div>
-
       <div>
         <h4 data-tr="Hızlı Erişim" data-en="Quick Links">Hızlı Erişim</h4>
         <ul class="footer-links">
-          <li><a href="#about"        data-tr="Hakkımda"        data-en="About">Hakkımda</a></li>
+          <li><a href="#about"        data-tr="Hakkımda"           data-en="About">Hakkımda</a></li>
           <li><a href="#research"     data-tr="Araştırma Alanları" data-en="Research Areas">Araştırma Alanları</a></li>
-          <li><a href="#publications" data-tr="Yayınlar"        data-en="Publications">Yayınlar</a></li>
-          <li><a href="#projects"     data-tr="Projeler"        data-en="Projects">Projeler</a></li>
-          <li><a href="#students"     data-tr="Öğrenci Köşesi"  data-en="Student Corner">Öğrenci Köşesi</a></li>
+          <li><a href="#publications" data-tr="Yayınlar"           data-en="Publications">Yayınlar</a></li>
+          <li><a href="#projects"     data-tr="Projeler"           data-en="Projects">Projeler</a></li>
+          <li><a href="#students"     data-tr="Öğrenci Köşesi"     data-en="Student Corner">Öğrenci Köşesi</a></li>
         </ul>
       </div>
-
       <div>
         <h4 data-tr="Akademik Profiller" data-en="Academic Profiles">Akademik Profiller</h4>
         <ul class="footer-links">
@@ -2040,7 +1279,6 @@
           <li><a href="https://www.researchgate.net/profile/Abdulkadir-Memduhoglu" target="_blank" rel="noopener">ResearchGate</a></li>
         </ul>
       </div>
-
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Abdulkadir Memduhoğlu &middot; Harran Üniversitesi</span>
@@ -2048,13 +1286,9 @@
     </div>
   </footer>
 
-  <!-- ============================================================
-       JAVASCRIPT
-  ============================================================ -->
+  <!-- JAVASCRIPT -->
   <script>
-    // ============================================================
-    // LANGUAGE TOGGLE
-    // ============================================================
+    // ---- LANGUAGE TOGGLE ----
     function setLang(lang) {
       const root = document.getElementById('html-root');
       root.setAttribute('lang', lang);
@@ -2075,23 +1309,9 @@
       document.getElementById('btn-en').classList.toggle('lang-active', lang === 'en');
       localStorage.setItem('lang', lang);
     }
+    (function() { const s = localStorage.getItem('lang'); if (s === 'en') setLang('en'); })();
 
-    (function() {
-      const saved = localStorage.getItem('lang');
-      if (saved === 'en') setLang('en');
-    })();
-
-    // ============================================================
-    // NAVBAR SCROLL
-    // ============================================================
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
-
-    // ============================================================
-    // HAMBURGER MENU
-    // ============================================================
+    // ---- HAMBURGER ----
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
@@ -2099,9 +1319,7 @@
       a.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // ============================================================
-    // STUDENTS: TAB NAVIGATION
-    // ============================================================
+    // ---- TABS ----
     document.querySelectorAll('.st-tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.st-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
@@ -2112,22 +1330,18 @@
       });
     });
 
-    // ============================================================
-    // SCROLL REVEAL (Intersection Observer)
-    // ============================================================
+    // ---- SCROLL REVEAL ----
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
           io.unobserve(entry.target);
         }
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // ============================================================
-    // UTILITY: TXT BLOCK PARSER
-    // ============================================================
+    // ---- UTILITIES ----
     function parseTxtBlocks(text) {
       const blocks = [];
       const lines = text.split('\n').filter(l => !l.trim().startsWith('#'));
@@ -2154,23 +1368,16 @@
       return blocks;
     }
 
-    // ============================================================
-    // UTILITY: XSS-SAFE HTML ESCAPE
-    // ============================================================
     function escHtml(str) {
-      return String(str || '')
-        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    // ============================================================
-    // PUBLICATIONS
-    // ============================================================
+    // ---- PUBLICATIONS ----
     function renderPubItem(pub, lang) {
       const typeMap = {
-        journal:    { tr: 'Dergi',        en: 'Journal',      cls: 'tag-journal' },
-        conference: { tr: 'Konferans',     en: 'Conference',   cls: 'tag-conference' },
-        book:       { tr: 'Kitap Bölümü', en: 'Book Chapter', cls: 'tag-book' },
+        journal:    { tr:'Dergi',       en:'Journal',      cls:'tag-journal' },
+        conference: { tr:'Konferans',    en:'Conference',   cls:'tag-conference' },
+        book:       { tr:'Kitap Bölümü',en:'Book Chapter', cls:'tag-book' },
       };
       const t = typeMap[pub.type] || typeMap.journal;
       const label = lang === 'en' ? t.en : t.tr;
@@ -2181,17 +1388,19 @@
         ? `<a href="https://doi.org/${escHtml(pub.doi)}" target="_blank" rel="noopener" class="doi-btn">DOI</a>`
         : '';
       const citHtml = pub.citations > 0
-        ? `<span class="pub-year">${pub.citations} atıf</span>`
+        ? `<span class="cite-count">${pub.citations} atıf</span>`
         : '';
       const el = document.createElement('div');
       el.className = 'pub-item';
       el.dataset.type = pub.type || 'journal';
       el.innerHTML = `
-        <div class="pub-authors">${escHtml(pub.authors)}</div>
-        <div class="pub-title">${titleHtml}</div>
-        <div class="pub-meta">
-          <span class="pub-journal">${escHtml(pub.venue)}</span>
-          <span class="pub-year">${escHtml(pub.year)}</span>
+        <div class="pub-year-block">${escHtml(pub.year)}</div>
+        <div class="pub-body">
+          <div class="pub-authors">${escHtml(pub.authors)}</div>
+          <div class="pub-title">${titleHtml}</div>
+          <div class="pub-venue">${escHtml(pub.venue)}</div>
+        </div>
+        <div class="pub-tags">
           <span class="type-tag ${t.cls}" data-tr="${t.tr}" data-en="${t.en}">${label}</span>
           ${citHtml}${doiHtml}
         </div>`;
@@ -2200,13 +1409,7 @@
 
     async function loadPublications() {
       const list = document.getElementById('pub-list');
-      list.innerHTML = `
-        <div class="pub-loading">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-          </svg>
-          Yayınlar yükleniyor…
-        </div>`;
+      list.innerHTML = `<div class="pub-loading"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Yayınlar yükleniyor…</div>`;
       try {
         const res = await fetch('assets/data/publications.json');
         if (!res.ok) throw new Error('JSON bulunamadı');
@@ -2214,8 +1417,8 @@
         if (data.meta) {
           const set = (id, val) => { const el = document.getElementById(id); if (el && val != null) el.textContent = val; };
           set('stat-pub-count', data.publications?.length);
-          set('stat-citations',  data.meta.citations_total);
-          set('stat-hindex',     data.meta.h_index);
+          set('stat-citations', data.meta.citations_total);
+          set('stat-hindex', data.meta.h_index);
         }
         const pubs = data.publications || [];
         if (!pubs.length) { list.innerHTML = '<p class="pub-error">Yayın verisi bulunamadı.</p>'; return; }
@@ -2223,15 +1426,9 @@
         list.innerHTML = '';
         pubs.forEach(pub => list.appendChild(renderPubItem(pub, lang)));
         attachPubFilter();
-        // Default: show recent (first 5)
         applyPubFilter('recent');
       } catch (e) {
-        list.innerHTML = `
-          <div class="pub-error">
-            Yayın verisi yüklenemedi.<br>
-            <a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr"
-               target="_blank" rel="noopener">Google Scholar profilini</a> ziyaret edebilirsiniz.
-          </div>`;
+        list.innerHTML = `<div class="pub-error">Yayın verisi yüklenemedi.<br><a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar profilini</a> ziyaret edebilirsiniz.</div>`;
       }
     }
 
@@ -2261,9 +1458,7 @@
 
     loadPublications();
 
-    // ============================================================
-    // PROJECTS: LOAD FROM projects.txt
-    // ============================================================
+    // ---- PROJECTS ----
     async function loadProjects() {
       const container = document.getElementById('projects-list');
       try {
@@ -2274,11 +1469,11 @@
         if (!projects.length) throw new Error('empty');
         const lang = document.getElementById('html-root').getAttribute('lang') || 'tr';
         const tagMap = {
-          tubitak: { cls: 'fund-tubitak', label: 'TÜBİTAK' },
-          horizon: { cls: 'fund-horizon', label: 'ERASMUS+/Horizon' },
-          ministry:{ cls: 'fund-ministry',label: 'Bakanlık' },
-          bap:     { cls: 'fund-other',   label: 'HÜ-BAP' },
-          other:   { cls: 'fund-other',   label: '' },
+          tubitak:{cls:'fund-tubitak',label:'TÜBİTAK'},
+          horizon:{cls:'fund-horizon',label:'ERASMUS+/Horizon'},
+          ministry:{cls:'fund-ministry',label:'Bakanlık'},
+          bap:{cls:'fund-other',label:'HÜ-BAP'},
+          other:{cls:'fund-other',label:''},
         };
         container.innerHTML = '';
         projects.forEach(p => {
@@ -2300,7 +1495,7 @@
             </div>
             <p class="project-desc">${escHtml(p.desc || '')}</p>
             <div class="project-meta">
-              <div class="pm-item"><strong data-tr="Süre" data-en="Duration">Süre</strong> ${escHtml(p.start || '')} – <span data-tr="${endTr}" data-en="${endEn}">${endTr}</span></div>
+              <div class="pm-item"><strong data-tr="Süre" data-en="Duration">Süre</strong> ${escHtml(p.start||'')} – <span data-tr="${endTr}" data-en="${endEn}">${endTr}</span></div>
               <div class="pm-item"><strong data-tr="Rol" data-en="Role">Rol</strong> <span data-tr="${roleTr}" data-en="${roleEn}">${roleTr}</span></div>
               <div class="pm-item"><strong data-tr="Durum" data-en="Status">Durum</strong> <span class="status-tag ${statusClass}" data-tr="${statusTr}" data-en="${statusEn}">${statusTr}</span></div>
             </div>`;
@@ -2314,12 +1509,9 @@
         container.innerHTML = '<p class="pub-error">Proje verileri yüklenemedi.</p>';
       }
     }
-
     loadProjects();
 
-    // ============================================================
-    // ANNOUNCEMENTS: LOAD FROM announcements.txt
-    // ============================================================
+    // ---- ANNOUNCEMENTS ----
     let _allAnnouncements = [];
     let _annExpanded = false;
 
@@ -2342,7 +1534,7 @@
       const container = document.getElementById('ann-list');
       const items = showAll ? _allAnnouncements : _allAnnouncements.slice(0, 3);
       container.innerHTML = '';
-      const badgeLabels = { new: 'Yeni', important: 'Önemli', info: 'Bilgi' };
+      const badgeLabels = { new:'Yeni', important:'Önemli', info:'Bilgi' };
       items.forEach(ann => {
         const card = document.createElement('div');
         card.className = 'ann-card reveal';
@@ -2351,11 +1543,11 @@
           : '';
         card.innerHTML = `
           <div class="ann-meta">
-            <span class="ann-date">${escHtml(ann.date || '')}</span>
-            <span class="ann-badge ${escHtml(ann.badge || 'info')}">${escHtml(badgeLabels[ann.badge] || ann.badge || '')}</span>
+            <span class="ann-date">${escHtml(ann.date||'')}</span>
+            <span class="ann-badge ${escHtml(ann.badge||'info')}">${escHtml(badgeLabels[ann.badge]||ann.badge||'')}</span>
           </div>
-          <div class="ann-title">${escHtml(ann.title || '')}</div>
-          <p class="ann-body">${escHtml(ann.body || '')}</p>
+          <div class="ann-title">${escHtml(ann.title||'')}</div>
+          <p class="ann-body">${escHtml(ann.body||'')}</p>
           ${linkHtml}`;
         container.appendChild(card);
         io.observe(card);
@@ -2373,12 +1565,9 @@
           : (lang === 'en' ? 'All Announcements' : 'Tüm Duyurular');
       }
     }
-
     loadAnnouncements();
 
-    // ============================================================
-    // COURSES: LOAD FROM courses.txt
-    // ============================================================
+    // ---- COURSES ----
     async function loadCourses() {
       const container = document.getElementById('courses-list');
       try {
@@ -2387,19 +1576,16 @@
         const text = await res.text();
         const courses = parseTxtBlocks(text);
         if (!courses.length) throw new Error('empty');
-
-        const guz   = courses.filter(c => c.donem === 'guz');
+        const guz = courses.filter(c => c.donem === 'guz');
         const bahar = courses.filter(c => c.donem === 'bahar');
-
         container.innerHTML = '';
 
         function renderSeason(label, list) {
           if (!list.length) return;
           const header = document.createElement('h3');
-          header.style.cssText = 'font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--color-accent-2);margin:1.5rem 0 0.9rem;padding-bottom:0.4rem;border-bottom:2px solid rgba(180,83,9,0.15);';
+          header.style.cssText = 'font-family:var(--font-mono);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin:1.5rem 0 0.9rem;padding-bottom:0.4rem;border-bottom:2px solid rgba(217,119,6,0.15);';
           header.textContent = label;
           container.appendChild(header);
-
           const courseList = document.createElement('div');
           courseList.className = 'courses-list';
 
@@ -2413,26 +1599,23 @@
                   const parts = df.split('|').map(s => s.trim());
                   const path = parts[0] || '#';
                   const name = parts[1] || 'Dosya';
-                  const tip  = (parts[2] || 'pdf').toLowerCase();
-                  const tipCls = { pdf:'ft-pdf', doc:'ft-doc', ppt:'ft-ppt', zip:'ft-zip', link:'ft-link' }[tip] || 'ft-pdf';
-                  const tipLabel = tip.toUpperCase();
+                  const tip = (parts[2] || 'pdf').toLowerCase();
+                  const tipCls = {pdf:'ft-pdf',doc:'ft-doc',ppt:'ft-ppt',zip:'ft-zip',link:'ft-link'}[tip] || 'ft-pdf';
                   return `<a href="${escHtml(path)}" class="file-item" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                    ${escHtml(name)}<span class="file-type ${tipCls}">${tipLabel}</span>
+                    ${escHtml(name)}<span class="file-type ${tipCls}">${tip.toUpperCase()}</span>
                   </a>`;
                 }).join('')
-              : '<p style="font-size:0.82rem;color:var(--color-muted);margin-top:0.75rem;">Henüz dosya eklenmedi.</p>';
+              : '<p style="font-size:0.82rem;color:var(--text-muted-l);margin-top:0.75rem;">Henüz dosya eklenmedi.</p>';
 
             item.innerHTML = `
               <button class="course-trigger" aria-expanded="false">
                 <div class="course-left">
-                  <span class="course-code">${escHtml(course.kod || '')}</span>
-                  <span class="course-name">${escHtml(course.ad || '')}</span>
+                  <span class="course-code">${escHtml(course.kod||'')}</span>
+                  <span class="course-name">${escHtml(course.ad||'')}</span>
                 </div>
                 <span class="course-sem">${turLabel} &middot; ${semLabel}</span>
-                <svg class="course-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                <svg class="course-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
               </button>
               <div class="course-body">
                 <div class="course-body-inner">
@@ -2440,7 +1623,6 @@
                 </div>
               </div>`;
 
-            // Accordion toggle
             item.querySelector('.course-trigger').addEventListener('click', () => {
               const isOpen = item.classList.contains('open');
               container.querySelectorAll('.course-item').forEach(ci => {
@@ -2452,22 +1634,18 @@
                 item.querySelector('.course-trigger').setAttribute('aria-expanded','true');
               }
             });
-
             courseList.appendChild(item);
             io.observe(item);
           });
-
           container.appendChild(courseList);
         }
 
         renderSeason('Güz Dönemi', guz);
         renderSeason('Bahar Dönemi', bahar);
-
       } catch(e) {
         container.innerHTML = '<p class="pub-error">Ders verileri yüklenemedi.</p>';
       }
     }
-
     loadCourses();
   </script>
 
