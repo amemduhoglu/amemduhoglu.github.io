@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-04-17",
+    "fetched_at": "2026-05-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 14,
     "i10_index": 19,
-    "citations_total": 488
+    "citations_total": 495
   },
   "publications": [
     {
@@ -33,7 +33,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "Transportation Research Part A: Policy and Practice",
       "year": "2025",
-      "citations": 7,
+      "citations": 8,
       "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
       "type": "journal"
@@ -43,7 +43,7 @@
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
-      "citations": 7,
+      "citations": 8,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
       "doi": "",
       "type": "journal"
@@ -53,7 +53,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
       "venue": "Applied Sciences",
       "year": "2025",
-      "citations": 5,
+      "citations": 6,
       "url": "https://www.mdpi.com/2076-3417/15/7/3448",
       "doi": "",
       "type": "journal"
@@ -83,7 +83,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "The Professional Geographer",
       "year": "2024",
-      "citations": 25,
+      "citations": 26,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
       "type": "journal"
@@ -93,7 +93,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 22,
+      "citations": 24,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal"
@@ -413,7 +413,7 @@
       "authors": "Zeynel Abidin POLAT and Abdulkadir MEMDUHOĞLU and Müslüm HACAR and Hüseyin DUMAN",
       "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
       "year": "2017",
-      "citations": 12,
+      "citations": 13,
       "url": "https://dergipark.org.tr/en/pub/ngumuh/issue/28548/341275",
       "doi": "",
       "type": "journal"
