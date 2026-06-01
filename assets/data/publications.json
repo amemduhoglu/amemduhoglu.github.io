@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-05-01",
+    "fetched_at": "2026-06-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 14,
-    "i10_index": 19,
-    "citations_total": 495
+    "i10_index": 20,
+    "citations_total": 507
   },
   "publications": [
     {
@@ -13,7 +13,7 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 2,
+      "citations": 4,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
       "doi": "",
       "type": "journal"
@@ -29,12 +29,12 @@
       "type": "journal"
     },
     {
-      "title": "Utilizing large language models to simulate parking search",
+      "title": "Simulating Parking Choices Using Large Language Models: Experiments with GPT-4o Mini",
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
-      "venue": "Transportation Research Part A: Policy and Practice",
-      "year": "2025",
-      "citations": 8,
-      "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
+      "venue": "",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://ebooks.iospress.nl/volumearticle/78375",
       "doi": "",
       "type": "journal"
     },
@@ -43,8 +43,18 @@
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
-      "citations": 8,
+      "citations": 10,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Utilizing large language models to simulate parking search",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
+      "venue": "Transportation Research Part A: Policy and Practice",
+      "year": "2025",
+      "citations": 8,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
       "type": "journal"
     },
@@ -63,7 +73,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
       "venue": "Drones",
       "year": "2025",
-      "citations": 3,
+      "citations": 4,
       "url": "https://www.mdpi.com/2504-446X/9/6/430",
       "doi": "",
       "type": "journal"
@@ -103,7 +113,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
       "venue": "International Journal of Engineering and Geosciences",
       "year": "2024",
-      "citations": 5,
+      "citations": 6,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/1424400?issue_id=86286",
       "doi": "",
       "type": "journal"
@@ -113,10 +123,20 @@
       "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
       "venue": "Environment and Planning B: Urban Analytics and City Science",
       "year": "2024",
-      "citations": 5,
+      "citations": 6,
       "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
       "doi": "",
       "type": "journal"
+    },
+    {
+      "title": "Evidence for Systematic Bias in the Spatial Memory of Large Language Models.",
+      "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
+      "venue": "GeoExT@ ECIR",
+      "year": "2024",
+      "citations": 4,
+      "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
+      "doi": "",
+      "type": "conference"
     },
     {
       "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
@@ -127,16 +147,6 @@
       "url": "https://dergipark.org.tr/en/pub/barofd/article/1352729",
       "doi": "",
       "type": "journal"
-    },
-    {
-      "title": "Evidence for Systematic Bias in the Spatial Memory of Large Language Models.",
-      "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
-      "venue": "GeoExT@ ECIR",
-      "year": "2024",
-      "citations": 3,
-      "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
-      "doi": "",
-      "type": "conference"
     },
     {
       "title": "6 Şubat depremlerinden etkilenen şehirlere ait OpenStreetMap verilerinin niceliksel ve semantik analizi",
@@ -233,7 +243,7 @@
       "authors": "KAYA Yunus and Nizar Polat and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mustafa Ulukavak",
       "venue": "Türkiye Fotogrametri Dergisi",
       "year": "2021",
-      "citations": 32,
+      "citations": 33,
       "url": "https://dergipark.org.tr/en/pub/tufod/article/899089",
       "doi": "",
       "type": "journal"
@@ -253,7 +263,7 @@
       "authors": "Nizar POLAT and Seçil ÇOKOĞULLU and Abdulkadir MEMDUHOĞLU and Mustafa ULUKAVAK and Halil İbrahim ŞENOL and ORAL Muharrem and Mahmut KARAÇİZMELİ and Özgür MARANGOZ",
       "venue": "TÜBA-AR Türkiye Bilimler Akademisi Arkeoloji Dergisi",
       "year": "2021",
-      "citations": 17,
+      "citations": 18,
       "url": "https://dergipark.org.tr/en/pub/tubaar/article/889810?issue_id=64893",
       "doi": "",
       "type": "journal"
@@ -263,7 +273,7 @@
       "authors": "Nizar POLAT and ÖNAL Mehmet and KAYA Yunus and Abdulkadir MEMDUHOĞLU and KAYA Neslihan and Mustafa ULUKAVAK and Süheyla İrem MUTLU and Semih MUTLU",
       "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
       "year": "2021",
-      "citations": 10,
+      "citations": 11,
       "url": "https://dergipark.org.tr/en/pub/bitlisfen/issue/62708/881781",
       "doi": "",
       "type": "journal"
@@ -453,7 +463,7 @@
       "authors": "Türkay Gökgöz and Alper Sen and Abdulkadir Memduhoglu and Muslum Hacar",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2015",
-      "citations": 29,
+      "citations": 30,
       "url": "https://www.mdpi.com/2220-9964/4/4/2185",
       "doi": "",
       "type": "journal"
