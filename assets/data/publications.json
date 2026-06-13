@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-06-01",
+    "fetched_at": "2026-06-13",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 14,
     "i10_index": 20,
-    "citations_total": 507
+    "citations_total": 510
   },
   "publications": [
     {
@@ -63,7 +63,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
       "venue": "Applied Sciences",
       "year": "2025",
-      "citations": 6,
+      "citations": 7,
       "url": "https://www.mdpi.com/2076-3417/15/7/3448",
       "doi": "",
       "type": "journal"
@@ -93,7 +93,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "The Professional Geographer",
       "year": "2024",
-      "citations": 26,
+      "citations": 27,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
       "type": "journal"
@@ -213,7 +213,7 @@
       "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
       "venue": "Cartography and Geographic Information Science",
       "year": "2022",
-      "citations": 15,
+      "citations": 16,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/15230406.2021.1952108",
       "doi": "",
       "type": "journal"
@@ -333,7 +333,7 @@
       "authors": "Yunus Kaya and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Şeyma Akça and Mustafa Ulukavak and Nizar Polat",
       "venue": "Türkiye Fotogrametri Dergisi",
       "year": "2019",
-      "citations": 32,
+      "citations": 33,
       "url": "https://dergipark.org.tr/en/download/article-file/859774",
       "doi": "",
       "type": "journal"
@@ -423,7 +423,7 @@
       "authors": "Zeynel Abidin POLAT and Abdulkadir MEMDUHOĞLU and Müslüm HACAR and Hüseyin DUMAN",
       "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
       "year": "2017",
-      "citations": 13,
+      "citations": 12,
       "url": "https://dergipark.org.tr/en/pub/ngumuh/issue/28548/341275",
       "doi": "",
       "type": "journal"
