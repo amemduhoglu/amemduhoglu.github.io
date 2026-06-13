@@ -10,14 +10,18 @@
   <meta name="author" content="Abdulkadir Memduhoğlu">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Abdulkadir Memduhoğlu, Harran Üniversitesi, GIS, Coğrafi Bilgi Sistemleri, Uzaktan Algılama, Makine Öğrenmesi, GeoAI, Büyük Dil Modelleri, LLM, OpenStreetMap, VGI, Gönüllü Kaynaklı Coğrafi Veri, Kartografya, Harita Mühendisliği, remote sensing, geospatial">
-  <link rel="canonical" href="https://abdulkadirmemduhoglu.com/">
+  <link rel="canonical" href="https://amemduhoglu.github.io/">
+
+  <!-- Favicon (inline SVG monogram) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23d97706' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/img/og-image.jpg">
 
   <!-- OpenGraph -->
   <meta property="og:type"        content="profile">
   <meta property="og:title"       content="Doç. Dr. Abdulkadir Memduhoğlu — Harran Üniversitesi">
   <meta property="og:description" content="Harran Üniversitesi Harita Mühendisliği Öğretim Üyesi. GIS, Uzaktan Algılama, Makine Öğrenmesi ve OpenStreetMap alanlarında araştırmalar.">
-  <meta property="og:url"         content="https://abdulkadirmemduhoglu.com/">
-  <meta property="og:image"       content="https://abdulkadirmemduhoglu.com/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://amemduhoglu.github.io/">
+  <meta property="og:image"       content="https://amemduhoglu.github.io/assets/img/og-image.jpg">
   <meta property="og:locale"      content="tr_TR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="profile:first_name" content="Abdulkadir">
@@ -27,7 +31,7 @@
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Doç. Dr. Abdulkadir Memduhoğlu — Harran Üniversitesi">
   <meta name="twitter:description" content="Harran Üniversitesi Harita Mühendisliği Öğretim Üyesi. GIS, Uzaktan Algılama, Makine Öğrenmesi.">
-  <meta name="twitter:image"       content="https://abdulkadirmemduhoglu.com/assets/img/og-image.jpg">
+  <meta name="twitter:image"       content="https://amemduhoglu.github.io/assets/img/og-image.jpg">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -55,6 +59,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (interactive map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <style>
     :root {
@@ -882,6 +892,46 @@
       .hero-links { flex-direction: column; }
       .hero-link { justify-content: center; }
     }
+    /* ---- PUBLICATIONS-PER-YEAR CHART ---- */
+    .pubchart {
+      display: flex; align-items: flex-end; gap: 0.5rem;
+      height: 130px; margin-bottom: 2.25rem;
+      padding: 0 0.25rem;
+    }
+    .pc-col {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end;
+      height: 100%; gap: 0.4rem; min-width: 0;
+    }
+    .pc-bar-wrap { width: 100%; display: flex; align-items: flex-end; justify-content: center; flex: 1; }
+    .pc-bar {
+      width: 100%; max-width: 38px;
+      background: linear-gradient(180deg, var(--accent) 0%, rgba(217,119,6,0.35) 100%);
+      border-radius: 5px 5px 0 0;
+      min-height: 4px;
+      transition: height 0.7s cubic-bezier(0.16,1,0.3,1), background 0.2s;
+      position: relative;
+    }
+    .pc-col:hover .pc-bar { background: linear-gradient(180deg, #f59e0b 0%, var(--accent) 100%); }
+    .pc-val {
+      font-family: var(--font-mono); font-size: 0.62rem;
+      font-weight: 700; color: var(--accent);
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .pc-col:hover .pc-val { opacity: 1; }
+    .pc-year { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-muted); }
+
+    /* ---- LOCATION MAP ---- */
+    .map-card { padding: 0; overflow: hidden; }
+    .map-card h3 { padding: 1.5rem 1.5rem 0.85rem; margin: 0; }
+    #locmap {
+      width: 100%; height: 190px;
+      background: var(--bg-secondary);
+      filter: saturate(0.85);
+    }
+    #locmap .leaflet-control-attribution { font-size: 9px; }
+    .leaflet-popup-content { font-family: var(--font-sans); font-size: 0.8rem; }
+
   </style>
 </head>
 <body>
@@ -960,11 +1010,13 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919zm1.444 1.303v7.444h2.297c2.359 0 3.788-1.681 3.788-3.722 0-2.016-1.447-3.722-3.809-3.722z"/></svg>
           ORCID
         </a>
-        <a href="https://www.researchgate.net/profile/Abdulkadir-Memduhoglu" target="_blank" rel="noopener" class="hero-link hero-link-ghost">
-          RG
+        <a href="https://www.researchgate.net/profile/Abdulkadir-Memduhoglu" target="_blank" rel="noopener" class="hero-link hero-link-ghost" aria-label="ResearchGate">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.001a3.13 3.13 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93H19.59v-.99h3.706c.005.075.01.155.014.243.005.087.005.18.005.275 0 1.738-.498 3.046-1.385 3.9C20.95 13.95 19.738 14.38 18.272 14.38c-.95 0-1.82-.196-2.598-.59a5.567 5.567 0 0 1-1.99-1.626c-.535-.685-.95-1.498-1.244-2.434-.293-.937-.44-1.954-.44-3.044 0-1.084.147-2.092.44-3.025.294-.933.71-1.738 1.244-2.418A5.604 5.604 0 0 1 15.674.617C16.45.206 17.32 0 18.272 0h1.314zM9.276 6.394c.61 0 1.16.106 1.654.32.494.213.916.51 1.265.892.349.382.617.832.804 1.35.188.519.282 1.083.282 1.694 0 .61-.094 1.176-.282 1.695a3.95 3.95 0 0 1-.804 1.349 3.69 3.69 0 0 1-1.265.893c-.494.214-1.044.32-1.654.32H6.117V18H4V6.394h5.276zM6.117 8.13v4.984h2.99c.378 0 .714-.06 1.008-.18.295-.12.544-.29.748-.51.204-.22.36-.487.466-.8.107-.314.16-.668.16-1.062 0-.394-.053-.748-.16-1.062a2.116 2.116 0 0 0-.466-.798 1.998 1.998 0 0 0-.748-.5 2.706 2.706 0 0 0-1.008-.18h-2.99v.108z"/></svg>
+          ResearchGate
         </a>
-        <a href="https://www.webofscience.com/wos/author/record/AAZ-4474-2020" target="_blank" rel="noopener" class="hero-link hero-link-ghost">
-          WoS
+        <a href="https://www.webofscience.com/wos/author/record/AAZ-4474-2020" target="_blank" rel="noopener" class="hero-link hero-link-ghost" aria-label="Web of Science">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Web of Science
         </a>
         <a href="mailto:akadirm@harran.edu.tr" class="hero-link hero-link-ghost">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1078,6 +1130,11 @@
               <span class="stat-val sm" data-tr="Şanlıurfa, Türkiye" data-en="Şanlıurfa, Türkiye">Şanlıurfa, Türkiye</span>
             </div>
           </div>
+
+          <div class="stat-card map-card reveal">
+            <h3 data-tr="Konum" data-en="Location">Konum</h3>
+            <div id="locmap" role="img" aria-label="Harran Üniversitesi Osmanbey Yerleşkesi haritası"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1168,6 +1225,9 @@
       <div class="sec-title reveal" data-tr="Seçili Yayınlar" data-en="Selected Publications">Seçili Yayınlar</div>
       <p class="sec-desc reveal" data-tr="Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar" data-en="Works published in national and international peer-reviewed journals">Ulusal ve uluslararası hakemli dergilerde yayımlanmış çalışmalar</p>
 
+      <div class="pubchart reveal" id="pubchart" role="img"
+           aria-label="Yıllara göre yayın sayısı grafiği"></div>
+
       <div class="pub-filters reveal">
         <button class="filter-btn active" data-filter="recent"     data-tr="Son Yayınlar" data-en="Recent">Son Yayınlar</button>
         <button class="filter-btn"        data-filter="journal"    data-tr="Dergi"        data-en="Journal">Dergi</button>
@@ -1215,13 +1275,13 @@
       <p class="sec-desc reveal" data-tr="Duyurular ve ders materyalleri" data-en="Announcements and course materials">Duyurular ve ders materyalleri</p>
 
       <nav class="st-tabs reveal" role="tablist">
-        <button class="st-tab active" data-panel="ann" role="tab" aria-selected="true">
+        <button class="st-tab active" id="tab-ann" data-panel="ann" role="tab" aria-selected="true" aria-controls="panel-ann">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
           </svg>
           <span data-tr="Duyurular" data-en="Announcements">Duyurular</span>
         </button>
-        <button class="st-tab" data-panel="courses" role="tab" aria-selected="false">
+        <button class="st-tab" id="tab-courses" data-panel="courses" role="tab" aria-selected="false" aria-controls="panel-courses">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
@@ -1229,7 +1289,7 @@
         </button>
       </nav>
 
-      <div class="st-panel active" id="panel-ann">
+      <div class="st-panel active" id="panel-ann" role="tabpanel" aria-labelledby="tab-ann">
         <div class="ann-list" id="ann-list">
           <div class="pub-loading" id="ann-loading">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
@@ -1245,7 +1305,7 @@
         </div>
       </div>
 
-      <div class="st-panel" id="panel-courses">
+      <div class="st-panel" id="panel-courses" role="tabpanel" aria-labelledby="tab-courses">
         <div id="courses-list">
           <div class="pub-loading" id="courses-loading">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
@@ -1292,7 +1352,7 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Abdulkadir Memduhoğlu &middot; Harran Üniversitesi</span>
-      <span data-tr="Son güncelleme: Nisan 2026" data-en="Last updated: April 2026">Son güncelleme: Nisan 2026</span>
+      <span id="last-updated" data-tr="Son güncelleme: Nisan 2026" data-en="Last updated: April 2026">Son güncelleme: Nisan 2026</span>
     </div>
   </footer>
 
@@ -1429,6 +1489,7 @@
           set('stat-pub-count', data.publications?.length);
           set('stat-citations', data.meta.citations_total);
           set('stat-hindex', data.meta.h_index);
+          if (data.meta.fetched_at) updateLastUpdated(data.meta.fetched_at);
         }
         const pubs = data.publications || [];
         if (!pubs.length) { list.innerHTML = '<p class="pub-error">Yayın verisi bulunamadı.</p>'; return; }
@@ -1437,6 +1498,7 @@
         pubs.forEach(pub => list.appendChild(renderPubItem(pub, lang)));
         attachPubFilter();
         applyPubFilter('recent');
+        renderPubChart(pubs);
       } catch (e) {
         list.innerHTML = `<div class="pub-error">Yayın verisi yüklenemedi.<br><a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar profilini</a> ziyaret edebilirsiniz.</div>`;
       }
@@ -1466,7 +1528,73 @@
       });
     }
 
+    // ---- FOOTER LAST-UPDATED (from publications meta) ----
+    const MONTHS_TR = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+    const MONTHS_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    function updateLastUpdated(isoDate) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(isoDate);
+      if (!m) return;
+      const y = m[1], mi = parseInt(m[2], 10) - 1;
+      const el = document.getElementById('last-updated');
+      if (!el) return;
+      el.dataset.tr = `Son güncelleme: ${MONTHS_TR[mi]} ${y}`;
+      el.dataset.en = `Last updated: ${MONTHS_EN[mi]} ${y}`;
+      const lang = document.getElementById('html-root').getAttribute('lang') || 'tr';
+      el.textContent = lang === 'en' ? el.dataset.en : el.dataset.tr;
+    }
+
+    // ---- PUBLICATIONS-PER-YEAR CHART ----
+    function renderPubChart(pubs) {
+      const host = document.getElementById('pubchart');
+      if (!host) return;
+      const counts = {};
+      pubs.forEach(p => {
+        const y = parseInt(p.year, 10);
+        if (y) counts[y] = (counts[y] || 0) + 1;
+      });
+      const years = Object.keys(counts).map(Number).sort((a, b) => a - b);
+      if (!years.length) { host.style.display = 'none'; return; }
+      // last 10 years window
+      const recent = years.slice(-10);
+      const max = Math.max(...recent.map(y => counts[y]));
+      host.innerHTML = recent.map(y => {
+        const c = counts[y];
+        const h = Math.round((c / max) * 100);
+        return `<div class="pc-col" title="${y}: ${c} yayın">
+          <span class="pc-val">${c}</span>
+          <div class="pc-bar-wrap"><div class="pc-bar" style="height:0" data-h="${h}"></div></div>
+          <span class="pc-year">'${String(y).slice(2)}</span>
+        </div>`;
+      }).join('');
+      // animate bars when visible
+      const bars = host.querySelectorAll('.pc-bar');
+      const animate = () => bars.forEach(b => { b.style.height = b.dataset.h + '%'; });
+      const obs = new IntersectionObserver((ents, o) => {
+        ents.forEach(e => { if (e.isIntersecting) { animate(); o.disconnect(); } });
+      }, { threshold: 0.3 });
+      obs.observe(host);
+    }
+
     loadPublications();
+
+    // ---- LOCATION MAP (Leaflet + OSM) ----
+    function initMap() {
+      const el = document.getElementById('locmap');
+      if (!el || typeof L === 'undefined') return;
+      // Harran Üniversitesi Osmanbey Yerleşkesi, Şanlıurfa
+      const lat = 37.1665, lng = 38.9985;
+      const map = L.map(el, { scrollWheelZoom: false, attributionControl: true }).setView([lat, lng], 14);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+      }).addTo(map);
+      L.circleMarker([lat, lng], {
+        radius: 8, color: '#d97706', weight: 2, fillColor: '#d97706', fillOpacity: 0.6
+      }).addTo(map).bindPopup('<strong>Harran Üniversitesi</strong><br>Osmanbey Yerleşkesi, Şanlıurfa');
+      // fix tiles when card scrolls into view
+      setTimeout(() => map.invalidateSize(), 300);
+    }
+    window.addEventListener('load', initMap);
 
     // ---- PROJECTS ----
     async function loadProjects() {
