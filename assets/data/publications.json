@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-06-13",
+    "fetched_at": "2026-07-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 14,
-    "i10_index": 20,
-    "citations_total": 510
+    "i10_index": 21,
+    "citations_total": 516
   },
   "publications": [
     {
@@ -13,8 +13,18 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 4,
+      "citations": 5,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Detour-based metrics of alcohol availability along walking commutes",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Johannes Huber and Alexander Zipf",
+      "venue": "AGILE: GIScience Series",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://agile-giss.copernicus.org/articles/7/23/2026/",
       "doi": "",
       "type": "journal"
     },
@@ -39,22 +49,22 @@
       "type": "journal"
     },
     {
+      "title": "Utilizing large language models to simulate parking search",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
+      "venue": "Transportation Research Part A: Policy and Practice",
+      "year": "2025",
+      "citations": 12,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
+      "doi": "",
+      "type": "journal"
+    },
+    {
       "title": "Towards AI-Assisted Mapmaking: Assessing the Capabilities of GPT-4o in Cartographic Design",
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
       "citations": 10,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
-      "doi": "",
-      "type": "journal"
-    },
-    {
-      "title": "Utilizing large language models to simulate parking search",
-      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
-      "venue": "Transportation Research Part A: Policy and Practice",
-      "year": "2025",
-      "citations": 8,
-      "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
       "type": "journal"
     },
@@ -103,7 +113,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 24,
+      "citations": 25,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal"
@@ -123,7 +133,7 @@
       "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
       "venue": "Environment and Planning B: Urban Analytics and City Science",
       "year": "2024",
-      "citations": 6,
+      "citations": 5,
       "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
       "doi": "",
       "type": "journal"
@@ -243,7 +253,7 @@
       "authors": "KAYA Yunus and Nizar Polat and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mustafa Ulukavak",
       "venue": "Türkiye Fotogrametri Dergisi",
       "year": "2021",
-      "citations": 33,
+      "citations": 32,
       "url": "https://dergipark.org.tr/en/pub/tufod/article/899089",
       "doi": "",
       "type": "journal"
@@ -263,7 +273,7 @@
       "authors": "Nizar POLAT and Seçil ÇOKOĞULLU and Abdulkadir MEMDUHOĞLU and Mustafa ULUKAVAK and Halil İbrahim ŞENOL and ORAL Muharrem and Mahmut KARAÇİZMELİ and Özgür MARANGOZ",
       "venue": "TÜBA-AR Türkiye Bilimler Akademisi Arkeoloji Dergisi",
       "year": "2021",
-      "citations": 18,
+      "citations": 17,
       "url": "https://dergipark.org.tr/en/pub/tubaar/article/889810?issue_id=64893",
       "doi": "",
       "type": "journal"
@@ -423,7 +433,7 @@
       "authors": "Zeynel Abidin POLAT and Abdulkadir MEMDUHOĞLU and Müslüm HACAR and Hüseyin DUMAN",
       "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
       "year": "2017",
-      "citations": 12,
+      "citations": 13,
       "url": "https://dergipark.org.tr/en/pub/ngumuh/issue/28548/341275",
       "doi": "",
       "type": "journal"
@@ -463,7 +473,7 @@
       "authors": "Türkay Gökgöz and Alper Sen and Abdulkadir Memduhoglu and Muslum Hacar",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2015",
-      "citations": 30,
+      "citations": 32,
       "url": "https://www.mdpi.com/2220-9964/4/4/2185",
       "doi": "",
       "type": "journal"
