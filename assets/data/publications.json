@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-07-01",
+    "fetched_at": "2026-08-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 14,
     "i10_index": 21,
-    "citations_total": 516
+    "citations_total": 532
   },
   "publications": [
     {
@@ -13,7 +13,7 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 5,
+      "citations": 9,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
       "doi": "",
       "type": "journal"
@@ -40,11 +40,11 @@
     },
     {
       "title": "Simulating Parking Choices Using Large Language Models: Experiments with GPT-4o Mini",
-      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
+      "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
       "venue": "",
       "year": "2026",
       "citations": 0,
-      "url": "https://ebooks.iospress.nl/volumearticle/78375",
+      "url": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA422#page=102",
       "doi": "",
       "type": "journal"
     },
@@ -53,7 +53,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "Transportation Research Part A: Policy and Practice",
       "year": "2025",
-      "citations": 12,
+      "citations": 14,
       "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
       "type": "journal"
@@ -63,7 +63,7 @@
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
-      "citations": 10,
+      "citations": 12,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
       "doi": "",
       "type": "journal"
@@ -73,7 +73,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
       "venue": "Applied Sciences",
       "year": "2025",
-      "citations": 7,
+      "citations": 9,
       "url": "https://www.mdpi.com/2076-3417/15/7/3448",
       "doi": "",
       "type": "journal"
@@ -103,7 +103,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "The Professional Geographer",
       "year": "2024",
-      "citations": 27,
+      "citations": 28,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
       "type": "journal"
@@ -113,7 +113,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 25,
+      "citations": 27,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal"
@@ -125,6 +125,16 @@
       "year": "2024",
       "citations": 6,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/1424400?issue_id=86286",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
+      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
+      "venue": "Bartın Orman Fakültesi Dergisi",
+      "year": "2024",
+      "citations": 6,
+      "url": "https://dergipark.org.tr/en/pub/barofd/article/1352729",
       "doi": "",
       "type": "journal"
     },
@@ -147,16 +157,6 @@
       "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
       "doi": "",
       "type": "conference"
-    },
-    {
-      "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
-      "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
-      "venue": "Bartın Orman Fakültesi Dergisi",
-      "year": "2024",
-      "citations": 4,
-      "url": "https://dergipark.org.tr/en/pub/barofd/article/1352729",
-      "doi": "",
-      "type": "journal"
     },
     {
       "title": "6 Şubat depremlerinden etkilenen şehirlere ait OpenStreetMap verilerinin niceliksel ve semantik analizi",
@@ -293,7 +293,7 @@
       "authors": "Halil İbrahim Şenol and Abdulkadir MEMDUHOGLU and Mustafa Ulukavak",
       "venue": "Dicle Üniversitesi Mühendislik Fakültesi Mühendislik Dergisi",
       "year": "2020",
-      "citations": 40,
+      "citations": 41,
       "url": "https://dergipark.org.tr/en/pub/dumf/article/801662",
       "doi": "",
       "type": "journal"
@@ -383,7 +383,7 @@
       "authors": "Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Mustafa Ulukavak and Bekir Çetin and Nizar Polat",
       "venue": "TMMOB 17. Türkiye Harita Bilimsel ve Teknik Kurultayı",
       "year": "2019",
-      "citations": 7,
+      "citations": 8,
       "url": "https://www.hkmo.org.tr/resimler/ekler/8b7fba3de39e70b_ek.pdf",
       "doi": "",
       "type": "conference"
@@ -433,7 +433,7 @@
       "authors": "Zeynel Abidin POLAT and Abdulkadir MEMDUHOĞLU and Müslüm HACAR and Hüseyin DUMAN",
       "venue": "Niğde Ömer Halisdemir Üniversitesi Mühendislik Bilimleri Dergisi",
       "year": "2017",
-      "citations": 13,
+      "citations": 12,
       "url": "https://dergipark.org.tr/en/pub/ngumuh/issue/28548/341275",
       "doi": "",
       "type": "journal"
