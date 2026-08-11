@@ -17,6 +17,7 @@ Notlar:
 """
 
 import json
+import re
 import time
 import sys
 from datetime import date
@@ -24,6 +25,30 @@ from pathlib import Path
 
 SCHOLAR_ID = "EWXdpogAAAAJ"
 OUTPUT_PATH = Path("assets/data/publications.json")
+
+
+def normalize_title(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", title.lower())
+
+
+def load_curated_fields() -> dict:
+    """Elle eklenen abstract/quartile gibi alanları başlığa göre indeksler,
+    böylece bu script tekrar çalıştığında üzerine yazılmazlar."""
+    if not OUTPUT_PATH.exists():
+        return {}
+    try:
+        old_data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    curated = {}
+    for pub in old_data.get("publications", []):
+        key = normalize_title(pub.get("title", ""))
+        if not key:
+            continue
+        fields = {k: v for k, v in pub.items() if k in ("abstract", "quartile")}
+        if fields:
+            curated[key] = fields
+    return curated
 
 
 CONFERENCE_KEYWORDS = [
@@ -91,6 +116,7 @@ def fetch_publications():
     print(f"  h-indeks     : {h_index}")
     print(f"  i10-indeks   : {i10_index}\n")
 
+    curated = load_curated_fields()
     publications = []
     failed = 0
 
@@ -112,7 +138,7 @@ def fetch_publications():
             or ""
         )
 
-        publications.append({
+        entry = {
             "title":     bib.get("title", ""),
             "authors":   bib.get("author", ""),
             "venue":     venue,
@@ -121,7 +147,9 @@ def fetch_publications():
             "url":       pub.get("pub_url", ""),
             "doi":       extract_doi(pub),
             "type":      detect_type(bib),
-        })
+        }
+        entry.update(curated.get(normalize_title(entry["title"]), {}))
+        publications.append(entry)
 
         # Google'ı yavaşlatmamak için kısa bekleme
         time.sleep(1.5)

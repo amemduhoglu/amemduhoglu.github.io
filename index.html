@@ -557,6 +557,37 @@
       font-family: var(--font-mono);
       font-size: 0.65rem; color: var(--text-muted);
     }
+    .abstract-btn {
+      font-family: var(--font-mono);
+      font-size: 0.65rem; font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border-dark);
+      border-radius: 4px;
+      color: var(--text-muted);
+      background: transparent;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      transition: all 0.2s;
+      letter-spacing: 0.04em;
+    }
+    .abstract-btn:hover, .pub-item.abs-open .abstract-btn { border-color: var(--accent); color: var(--accent); }
+    .abstract-btn svg { width: 9px; height: 9px; transition: transform 0.2s; }
+    .pub-item.abs-open .abstract-btn svg { transform: rotate(180deg); }
+    .pub-abstract {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s ease;
+    }
+    .pub-item.abs-open .pub-abstract { grid-template-rows: 1fr; }
+    .pub-abstract-inner {
+      overflow: hidden;
+      font-size: 0.82rem; line-height: 1.65; color: var(--text-muted);
+    }
+    .pub-abstract-inner p {
+      padding-top: 0.9rem; margin-top: 0.9rem;
+      border-top: 1px dashed var(--border-dark);
+    }
     .pub-more { margin-top: 2rem; }
 
     /* ---- PROJECTS ---- */
@@ -1461,6 +1492,16 @@
       const citHtml = pub.citations > 0
         ? `<span class="cite-count">${pub.citations} atıf</span>`
         : '';
+      const abstractLabel = lang === 'en' ? 'Abstract' : 'Özet';
+      const abstractBtnHtml = pub.abstract
+        ? `<button class="abstract-btn" type="button" aria-expanded="false">
+             <span data-tr="Özet" data-en="Abstract">${abstractLabel}</span>
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+           </button>`
+        : '';
+      const abstractHtml = pub.abstract
+        ? `<div class="pub-abstract"><div class="pub-abstract-inner"><p>${escHtml(pub.abstract)}</p></div></div>`
+        : '';
       const el = document.createElement('div');
       el.className = 'pub-item';
       el.dataset.type = pub.type || 'journal';
@@ -1473,8 +1514,16 @@
         </div>
         <div class="pub-tags">
           <span class="type-tag ${t.cls}" data-tr="${t.tr}" data-en="${t.en}">${label}</span>
-          ${citHtml}${doiHtml}
-        </div>`;
+          ${citHtml}${doiHtml}${abstractBtnHtml}
+        </div>
+        ${abstractHtml}`;
+      if (pub.abstract) {
+        const btn = el.querySelector('.abstract-btn');
+        btn.addEventListener('click', () => {
+          const open = el.classList.toggle('abs-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
       return el;
     }
 

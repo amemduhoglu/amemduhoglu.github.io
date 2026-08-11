@@ -36,7 +36,9 @@
       "citations": 0,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.70227",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "The proliferation of AI-generated building footprints in OpenStreetMap (OSM) has transformed crowdsourced mapping, yet the geometric characteristics associated with different digitization methods remain poorly understood. This study presents a comprehensive morphometric analysis of more than 9 million building footprints across 15 geographically diverse cities spanning six continents. To investigate whether buildings labeled with AI source tags exhibit distinct geometric patterns, machine learning classifiers were trained on a regionally balanced dataset of approximately 1 million buildings. Thirty-two shape-based features encompassing size metrics, shape regularity, complexity measures, and anomaly detection indicators were extracted, and three gradient boosting classifiers were evaluated to distinguish these contributions. The best-performing model (LightGBM with class weighting) was used to achieve 74.5% balanced accuracy, 82.9% recall, and 0.819 AUC, providing evidence that buildings labeled with AI source tags exhibit geometric patterns that differ systematically from other buildings in the dataset. Feature importance analysis revealed that orthogonality measurements, vertex density patterns, and shape regularity indices were the strongest discriminators, with orthogonality z-scores alone accounting for 18.2% of model importance. AI-generated buildings showed significantly higher orthogonality (angles within 5° of 90°), greater rectangularity, and more consistent vertex spacing compared to human-digitized footprints. Geographic analysis revealed substantial variation in both AI adoption (0.15% in Berlin to 15.7% in Cairo) and model performance across regions, with balanced accuracy ranging from 67.5% (Asia) to 79.9% (Oceania). However, 34% of human-mapped buildings exhibited AI-like geometric patterns: an overlap reflecting multiple competing factors including methodological convergence, label uncertainty from hybrid workflows, OSM's version-history limitations, and natural variation in human digitization practices, none of which can be definitively separated without independent ground truth validation. These findings provide exploratory evidence that geometric analysis might complement other approaches to understanding data provenance in crowdsourced platforms, though substantial overlap between categories limits the utility of morphometric features for definitive source attribution."
     },
     {
       "title": "Simulating Parking Choices Using Large Language Models: Experiments with GPT-4o Mini",
@@ -56,7 +58,9 @@
       "citations": 14,
       "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "This study explores the capability of Large Language Models (LLMs) to mimic general economic decision-making patterns relevant to parking choices. We conducted two series of experiments. In the first, a LLM acted as a survey participant, choosing between parking options based on attributes and sociodemographic profiles, which we term \"Personas.\" The model's choices aligned with findings from parking behavior literature, consistently selecting lower-cost parking options while minimizing walking distances and search times, demonstrating utility-maximizing decision-making. Additionally, its responses revealed a willingness to trade off between price and time savings, reflecting diminishing marginal utility and an increased willingness to pay among higher-income Personas. The model also exhibited trends not well-documented, such as older Personas' heightened sensitivity to reduced walking distances. In the second series of experiments, the model engaged in a dynamic decision-making scenario that emulated a serious game, continuously making decisions under uncertainty regarding expected cruising time. The model exhibited myopia and risk attitudes similar to those of humans in comparable experiments, with heightened risk aversion in older Personas. Our experiments highlight the potential of LLMs to emulate hypothetical scenarios across diverse populations, geographical settings, and policy and technological innovations. We outline a pathway toward leveraging LLMs as tools to support and complement human participants in the design of behavioral studies."
     },
     {
       "title": "Towards AI-Assisted Mapmaking: Assessing the Capabilities of GPT-4o in Cartographic Design",
@@ -66,7 +70,9 @@
       "citations": 12,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "Cartographic design is fundamental to effective mapmaking, requiring adherence to principles such as visual hierarchy, symbolization, and color theory to convey spatial information accurately and intuitively, while Artificial Intelligence (AI) and Large Language Models (LLMs) have transformed various fields, their application in cartographic design remains underexplored. This study assesses the capabilities of a multimodal advanced LLM, GPT-4o, in understanding and suggesting cartographic design elements, focusing on adherence to established cartographic principles. Two assessments were conducted: a text-to-text evaluation and an image-to-text evaluation. In the text-to-text assessment, GPT-4o was presented with 15 queries derived from key concepts in cartography, covering classification, symbolization, visual hierarchy, color theory, and typography. Each query was posed multiple times under different temperature settings to evaluate consistency and variability. In the image-to-text evaluation, GPT-4o analyzed maps containing deliberate cartographic errors to assess its ability to identify issues and suggest improvements. The results indicate that GPT-4o demonstrates general reliability in text-based tasks, with variability influenced by temperature settings. The model showed proficiency in classification and symbolization tasks but occasionally deviated from theoretical expectations. In visual hierarchy and layout, the model performed consistently, suggesting appropriate design choices. In the image-to-text assessment, GPT-4o effectively identified critical design flaws such as inappropriate color schemes, poor contrast and misuse of shape and size variables, offering actionable suggestions for improvement. However, limitations include dependency on input quality and challenges in interpreting nuanced spatial relationships. The study concludes that LLMs like GPT-4o have significant potential in cartographic design, particularly for tasks involving creative exploration and routine design support. Their ability to critique and generate cartographic elements positions them as valuable tools for enhancing human expertise. Further research is recommended to enhance their spatial reasoning capabilities and expand their use of visual variables beyond color, thereby improving their applicability in professional cartographic workflows."
     },
     {
       "title": "Assessing Spatiotemporal LST Variations in Urban Landscapes Using Diurnal UAV Thermography",
@@ -76,7 +82,9 @@
       "citations": 9,
       "url": "https://www.mdpi.com/2076-3417/15/7/3448",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "This study investigates the spatiotemporal dynamics of land surface temperature (LST) across five distinct land use/land cover (LULC) classes through high-resolution unmanned aerial vehicle (UAV) thermal remote sensing. Thermal orthomosaics were systematically captured at four diurnal periods (morning, afternoon, evening, and midnight) over an urban university campus environment. Using stratified random sampling in each class with spatial controls to minimize autocorrelation, we quantified thermal signatures across bare soil, buildings, grassland, paved roads, and water bodies. Statistical analyses incorporating outlier management via the Interquartile Range (IQR) method, spatial autocorrelation assessment using Moran's I, correlation testing, and Geographically Weighted Regression (GWR) revealed substantial thermal variability across LULC classes, with temperature differentials of up to 17.7℃ between grassland (20.57 ± 5.13℃) and water bodies (7.10 ± 1.25℃) during afternoon periods. The Moran's I analysis indicated notable spatial dependence in land surface temperature, justifying the use of GWR to model these spatial patterns. Impervious surfaces demonstrated pronounced heat retention capabilities, with paved roads maintaining elevated temperatures into evening (13.18 ± 3.49℃) and midnight (2.25 ± 1.51℃) periods despite ambient cooling. Water bodies exhibited exceptional thermal stability (SD range: 0.79–2.85℃ across all periods), while grasslands showed efficient nocturnal cooling (ΔT = 23.02℃ from afternoon to midnight). GWR models identified spatially heterogeneous relationships between LST patterns and LULC distribution, with water bodies exerting the strongest localized cooling influence (R2≈ 0.62–0.68 during morning/evening periods). The findings demonstrate that surface material properties significantly modulate diurnal heat flux dynamics, with human-made surfaces contributing to prolonged thermal loading. This research advances urban microclimate monitoring methodologies by integrating high-resolution UAV thermal imagery with robust statistical frameworks, providing empirically-grounded insights for climate-adaptive urban planning and heat mitigation strategies. Future work should incorporate multi-seasonal observations, in situ validation instrumentation, and integration with human thermal comfort indices."
     },
     {
       "title": "Accurate Terrain Modeling After Dark: Evaluating Nighttime Thermal UAV-Derived DSMs",
@@ -86,7 +94,9 @@
       "citations": 4,
       "url": "https://www.mdpi.com/2504-446X/9/6/430",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "Nighttime terrain mapping has remained a significant challenge in photogrammetry due to the absence of visible light required by conventional imaging systems. This study evaluates the feasibility of generating Digital Surface Models (DSMs) from nighttime aerial thermal imagery using structure-from-motion photogrammetry. A DJI Mavic 3 Enterprise Thermal Unmanned Aerial Vehicle (UAV) captured 1746 images at 35 m altitude over a 9.4-hectare campus environment. Reflective aluminum sheets served as ground control points, ensuring visibility in thermal imagery under nocturnal conditions. The resulting thermal DSM achieved a point density of 0.117 points/cm2. Statistical analysis of four independent checkpoints yielded a root mean square error (RMSE) of 0.0522 m, a mean error (ME) of −0.052 m, and a standard deviation (SD) of 0.0054 m, indicating high vertical accuracy with minimal scatter around the systematic bias. Comparison with a reference RGB-based DSM revealed a correlation coefficient of 0.975, demonstrating strong spatial agreement. These results establish that high-quality DSMs can be generated solely from nighttime thermal imagery, providing a viable alternative for applications requiring 24-h operational capability, including emergency response, post-disaster assessment, and nocturnal environmental monitoring where traditional photogrammetry is impractical."
     },
     {
       "title": "Assessing Seasonal and Diurnal Thermal Dynamics of Water Channel and Highway Bridges Using Unmanned Aerial Vehicle Thermography",
@@ -96,7 +106,9 @@
       "citations": 1,
       "url": "https://www.mdpi.com/2504-446X/9/3/205",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "Bridges are critical components of modern infrastructure, yet their long-term performance is often compromised by thermal stresses induced by environmental and material factors. Despite advances in remote sensing, characterizing the complex thermal dynamics of bridge structures remains challenging. In this study, we investigate the seasonal and diurnal thermal behavior of two common bridge types—a water channel bridge with paving stone surfacing and a highway bridge with asphalt surfacing—using high-resolution UAV thermography. A pre-designed photogrammetric flight plan (yielding a ground sampling distance of <5 cm) was implemented to acquire thermal and visual imagery during four distinct temporal windows (winter morning, winter evening, summer morning, and summer evening). The methodology involved generating thermal orthophotos via structure-from-motion techniques, extracting systematic temperature measurements (n=150 per bridge), and analyzing these using independent-samples and paired t-tests to quantify material-specific thermal responses and environmental coupling effects. The results reveal that the water channel bridge exhibited significantly lower thermal variability (1.54–3.48 °C) compared to the highway bridge (3.27–5.66 °C), with pronounced differences during winter mornings (Cohen's d=2.03, p<0.001). Furthermore, material properties strongly modulated thermal dynamics, as evidenced by the significant temperature differentials between the paving stone and asphalt surfaces, while ambient conditions further influence surface–ambient coupling (r=0.961 vs. 0.975). The results provide UAV-based quantitative metrics for bridge thermal assessment and empirical evidence to support the temporal monitoring of bridges with varying materials and environmental conditions for future studies."
     },
     {
       "title": "Distortions in judged spatial relations in large language models",
@@ -106,7 +118,9 @@
       "citations": 28,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "We present a benchmark for assessing the capability of large language models (LLMs) to discern intercardinal directions between geographic locations and apply it to three prominent LLMs: GPT-3.5, GPT-4, and Llama-2. This benchmark specifically evaluates whether LLMs exhibit a hierarchical spatial bias similar to humans, where judgments about individual locations' spatial relationships are influenced by the perceived relationships of the larger groups that contain them. To investigate this, we formulated fourteen questions focusing on well-known U.S. cities. Seven questions were designed to challenge the LLMs with scenarios potentially influenced by the orientation of larger geographical units, such as states or countries, whereas the remaining seven targeted locations were less susceptible to such hierarchical categorization. Among the tested models, GPT-4 exhibited superior performance with 55 percent accuracy, followed by GPT-3.5 at 47 percent and Llama-2 at 45 percent. The models showed significantly reduced accuracy on tasks with suspected hierarchical bias. For example, GPT-4's accuracy dropped to 33 percent on these tasks, compared to 86 percent on others. The models identified the nearest cardinal direction in most cases, however, reflecting their associative learning mechanism, thereby embodying human-like misconceptions. We discuss avenues for improving the spatial reasoning capabilities of LLMs."
     },
     {
       "title": "Enriching building function classification using Large Language Model embeddings of OpenStreetMap Tags",
@@ -116,7 +130,9 @@
       "citations": 27,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "Automated methods for building function classification are essential due to restricted access to official building use data. Existing approaches utilize traditional Natural Language Processing (NLP) techniques to analyze textual data representing human activities, but they struggle with the ambiguity of semantic contexts. In contrast, Large Language Models (LLMs) excel at capturing the broader context of language. This study presents a method that uses LLMs to interpret OpenStreetMap (OSM) tags, combining them with physical and spatial metrics to classify urban building functions. We employed an XGBoost model trained on 32 features from six city datasets to classify urban building functions, demonstrating varying F1 scores from 67.80% in Madrid to 91.59% in Liberec. Integrating LLM embeddings enhanced the model's performance by an average of 12.5% across all cities compared to models using only physical and spatial metrics. Moreover, integrating LLM embeddings improved the model's performance by 6.2% over models that incorporate OSM tags as one-hot encodings, and when predicting based solely on OSM tags, the LLM approach outperforms traditional NLP methods in 5 out of 6 cities. These results suggest that deep contextual understanding, as captured by LLM embeddings more effectively than traditional NLP approaches, is beneficial for classification. Finally, a Pearson correlation coefficient of approximately -0.858 between population density and F1-scores suggests that denser areas present greater classification challenges. Moving forward, we recommend investigation into discrepancies in model performance across and within cities, aiming to identify generalized models."
     },
     {
       "title": "An unmanned aerial vehicle based investigation of roof patch suitability for solar panel installation",
@@ -126,7 +142,9 @@
       "citations": 6,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/1424400?issue_id=86286",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "This study presents a Geographic Information Systems (GIS) and Unmanned Aerial Vehicle (UAV) based approach to determine suitable roof patches of buildings for solar panel installation in Harran University (Şanlıurfa) campus area. Initially, the Solar Radiation Potential (SRP) of the study area was calculated using a UAV-based Digital Surface Model (DSM) in GIS. Then, a correction process was applied to this theoretically calculated SRP by using an adjustment coefficient derived from 5-year measurements of the Solar Power Plant (SPP) located in the region. This coefficient was used to adjust the calculated SRP and compared with the SPP measurements at a concurrent period. The rooftop objects were segmented by textural analysis to determine the suitable panel installation patches on the buildings. Then, the obtained suitable patches are divided into four different classes considering the adjusted total SRP to find panel installation priority. Finally, the calculated electricity potential of the suitable roof patches could meet approximately 65% of the yearly consumption of campus buildings. This paper reveals that in GIS-based SRP studies, it is necessary to detect the rooftop objects to obtain the solar panel installation area more accurately, and a correction should be applied to approximate the theoretically calculated SRP values to the actual values."
     },
     {
       "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
@@ -146,7 +164,9 @@
       "citations": 5,
       "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "The comprehensive definition of buildings in urban spatial databases (SDBs) and geographic information systems (GISs) is crucial for city management, considering their essential role in cities. Modern urban geospatial applications such as smart cities need a rich-information infrastructure, relying upon urban SDBs and GISs, powered by multiple data sources. In this respect, many geospatial techniques are available for acquiring geometric data of buildings, but their semantic definitions require extra effort. Today, volunteered geographic information (VGI) platforms are assumed to be alternative geospatial data sources and their integration with official datasets provides a new opportunity for the enrichment of urban geospatial datasets. In this context, geospatial semantic web technologies can contribute to the semantic enrichment process. This study presents a methodology for enriching various building datasets using GIS and geospatial semantic web technologies, enabling an enhanced definition of building functions. The proposed method makes use of an OpenStreetMap (OSM) dataset to obtain missing semantic information about building features. The enrichment process was implemented by transferring OSM point of interest (POI) values to associated OSM building features through the application of semantic web rule language (SWRL) rules. Furthermore, the same process was also applied to two additional official datasets at different levels of detail (TOPO1K and TOPO25K), which were subsequently incorporated into the geospatial ontology. The resulting geospatial ontology offers new opportunities for functional definition and logical rule-making for buildings, with the potential to uncover new classes and insights. In addition, it allows for the definition of terms and explanations in multiple languages, covering most of the OSM values used worldwide for selected tags to define building functions."
     },
     {
       "title": "Evidence for Systematic Bias in the Spatial Memory of Large Language Models.",
@@ -226,7 +246,9 @@
       "citations": 16,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/15230406.2021.1952108",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q2",
+      "abstract": "The advent of Web 2.0 has emerged abundant but often unstructured user-generated georeferenced data, such as those from Volunteered Geographic Information (VGI) initiatives. In many cases, these data can be considered as complementary to the authoritative geospatial data. With the increasing availability of multi-source geospatial data, the efforts for geospatial data integration have gained momentum, aiming at gathering maximum information to answer sophisticated questions that cannot be answered using a single data source. Although there are various approaches employed for this purpose with different degrees of success, semantic web methods and tools have not been tested sufficiently in this scope, particularly for multi-scale urban building data integration and enrichment. Attempting to fill this gap, in this study, multi-source and multi-scale urban building data were integrated with a geometric matching method based on the overlapping area, then a geospatial ontology was developed to define multi-scale representations and detailed cardinality relations of the building features. Finally, some features from the geospatial ontology were then linked to popular knowledge bases such as DBpedia and YAGO. For the exploitation on the web, query and visualization processes were demonstrated using sample questions. The semantic web enabled to model complex cardinality of relations between the features from three different building data sets using inferencing and Semantic Web Rule Language (SWRL). The study showed that integrating different geospatial data sets as a knowledge base can facilitate answering sophisticated questions from different users."
     },
     {
       "title": "Determining the change in burnt forest areas with UAV: The example of Osmanbey campus",
@@ -476,7 +498,9 @@
       "citations": 32,
       "url": "https://www.mdpi.com/2220-9964/4/4/2185",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "Multi-representation databases (MRDBs) are used in several geographical information system applications for different purposes. MRDBs are mainly obtained through model and cartographic generalizations. Simplification is the essential operator of cartographic generalization, and streams and lakes are essential features in hydrography. In this study, a new algorithm was developed for the simplification of streams and lakes. In this algorithm, deviation angles and error bands are used to determine the characteristic vertices and the planimetric accuracy of the features, respectively. The algorithm was tested using a high-resolution national hydrography dataset of Pomme de Terre, a sub-basin in the USA. To assess the performance of the new algorithm, the Bend Simplify and Douglas-Peucker algorithms, the medium-resolution hydrography dataset of the sub-basin, and Topfer's radical law were used. For quantitative analysis, the vertex numbers, the lengths, and the sinuosity values were computed. Consequently, it was shown that the new algorithm was able to meet the main requirements (i.e., accuracy, legibility and aesthetics, and storage)."
     },
     {
       "title": "Web Haritalarının Tasarımı için Vektör Tabanlı Grafik Kodlama ve Standartlar",
