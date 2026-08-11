@@ -588,7 +588,7 @@
       padding-top: 0.9rem; margin-top: 0.9rem;
       border-top: 1px dashed var(--border-dark);
     }
-    .pub-more { margin-top: 2rem; }
+    .pub-more { margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
     /* ---- PROJECTS ---- */
     .projects-grid {
@@ -1264,6 +1264,7 @@
         <button class="filter-btn active" data-filter="recent"     data-tr="Son Yayınlar" data-en="Recent">Son Yayınlar</button>
         <button class="filter-btn"        data-filter="journal"    data-tr="Dergi"        data-en="Journal">Dergi</button>
         <button class="filter-btn"        data-filter="conference" data-tr="Konferans"    data-en="Conference">Konferans</button>
+        <button class="filter-btn"        data-filter="all"        data-tr="Tümü"         data-en="All">Tümü</button>
       </div>
       <p id="pub-count-note" class="pub-count-note reveal" data-tr="En son 5 yayın gösteriliyor" data-en="Showing last 5 publications">En son 5 yayın gösteriliyor</p>
 
@@ -1275,9 +1276,13 @@
       </div>
 
       <div class="pub-more reveal">
+        <button type="button" class="btn btn-outline" id="pub-show-all-btn"
+                data-tr="Sitede Tüm Yayınları Göster" data-en="Show All Publications Here">
+          Sitede Tüm Yayınları Göster
+        </button>
         <a href="https://scholar.google.com.tr/citations?user=EWXdpogAAAAJ&hl=tr" target="_blank" rel="noopener" class="btn btn-primary"
-           data-tr="Tüm yayınları Google Scholar'da görüntüle →" data-en="View all publications on Google Scholar →">
-          Tüm yayınları Google Scholar'da görüntüle &rarr;
+           data-tr="Google Scholar profilini görüntüle →" data-en="View Google Scholar profile →">
+          Google Scholar profilini görüntüle &rarr;
         </a>
       </div>
     </div>
@@ -1556,16 +1561,49 @@
 
     function applyPubFilter(filter) {
       const items = document.querySelectorAll('#pub-list .pub-item');
+      let shown = 0;
       if (filter === 'recent') {
-        items.forEach((item, idx) => { item.style.display = idx < 5 ? '' : 'none'; });
+        items.forEach((item, idx) => {
+          const show = idx < 5;
+          item.style.display = show ? '' : 'none';
+          if (show) shown++;
+        });
+      } else if (filter === 'all') {
+        items.forEach(item => { item.style.display = ''; });
+        shown = items.length;
       } else {
         let count = 0;
         items.forEach(item => {
           const match = item.dataset.type === filter;
-          item.style.display = (match && count < 5) ? '' : 'none';
+          const show = match && count < 5;
+          item.style.display = show ? '' : 'none';
           if (match) count++;
+          if (show) shown++;
         });
       }
+      updatePubCountNote(filter, shown, items.length);
+    }
+
+    function updatePubCountNote(filter, shown, total) {
+      const el = document.getElementById('pub-count-note');
+      if (!el) return;
+      let tr, en;
+      if (filter === 'all') {
+        tr = `Tüm ${total} yayın gösteriliyor`;
+        en = `Showing all ${total} publications`;
+      } else if (filter === 'recent') {
+        tr = `En son ${shown} yayın gösteriliyor`;
+        en = `Showing last ${shown} publications`;
+      } else {
+        const typeTr = filter === 'journal' ? 'dergi' : 'konferans';
+        const typeEn = filter === 'journal' ? 'journal' : 'conference';
+        tr = `En son ${shown} ${typeTr} yayını gösteriliyor`;
+        en = `Showing last ${shown} ${typeEn} publications`;
+      }
+      el.dataset.tr = tr;
+      el.dataset.en = en;
+      const lang = document.getElementById('html-root').getAttribute('lang') || 'tr';
+      el.textContent = lang === 'en' ? en : tr;
     }
 
     function attachPubFilter() {
@@ -1576,6 +1614,15 @@
           applyPubFilter(btn.dataset.filter);
         };
       });
+      const showAllBtn = document.getElementById('pub-show-all-btn');
+      if (showAllBtn) {
+        showAllBtn.onclick = () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          document.querySelector('.filter-btn[data-filter="all"]')?.classList.add('active');
+          applyPubFilter('all');
+          document.getElementById('pub-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+      }
     }
 
     // ---- FOOTER LAST-UPDATED (from publications meta) ----
