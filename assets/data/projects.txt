@@ -4,14 +4,16 @@
 # En üstteki proje ilk gösterilir.
 #
 # ALAN AÇIKLAMALARI:
-#   title   : Proje başlığı
-#   funder  : Fon kaynağı adı (gösterilecek metin)
-#   tag     : tubitak | horizon | ministry | bap | other
-#   start   : Başlangıç yılı
-#   end     : Bitiş yılı — devam edenler için: ongoing
-#   role    : Araştırmacı | Yürütücü
-#   status  : active | completed
-#   desc    : Kısa açıklama (tek satır)
+#   title    : Proje başlığı (TR)
+#   title_en : Proje başlığı (EN) — opsiyonel, yoksa title kullanılır
+#   funder   : Fon kaynağı adı (gösterilecek metin)
+#   tag      : tubitak | horizon | irasme | ministry | bap | other
+#   start    : Başlangıç yılı
+#   end      : Bitiş yılı — devam edenler için: ongoing
+#   role     : Araştırmacı | Yürütücü
+#   status   : active | completed
+#   desc     : Kısa açıklama (TR, tek satır)
+#   desc_en  : Kısa açıklama (EN, tek satır) — opsiyonel, yoksa desc kullanılır
 #
 # Yeni proje eklemek için bir blok kopyalayıp düzenleyin.
 
@@ -22,16 +24,19 @@ start: 2025
 end: ongoing
 role: Araştırmacı
 status: active
-desc: ERASMUS+ Project 101183961. Sürdürülebilir ve afete dayanıklı kentler için ekolojik planlama ve tasarım öğrenme ağının ve adaptif akıllı eğitim modülünün geliştirilmesi.
+desc: ERASMUS+ Projesi 101183961. Sürdürülebilir ve afete dayanıklı kentler için ekolojik planlama ve tasarım öğrenme ağının ve adaptif akıllı eğitim modülünün geliştirilmesi.
+desc_en: ERASMUS+ Project 101183961. Development of an ecological planning and design learning network and an adaptive smart training module for disaster-resilient and sustainable cities.
 
-title: İklime Dayanıklı Kentsel Planlama İçin Üretken Yapay Zeka
-funder: TÜBİTAK
-tag: tubitak
+title: GreenCityMind — İklime Dayanıklı Kentsel Planlama İçin Üretken Yapay Zeka
+title_en: GreenCityMind — Generative AI for Climate-Resilient Urban Planning
+funder: TÜBİTAK / IraSME
+tag: irasme
 start: 2025
 end: ongoing
 role: Araştırmacı
 status: active
-desc: TÜBİTAK Uluslararası İkili İşbirliği Programı kapsamında yürütülen araştırma projesi. Üretken yapay zeka yöntemlerinin iklime dayanıklı kentsel planlamaya uygulanması.
+desc: TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı kapsamında, IraSME ağı üzerinden yürütülen Türkiye-Almanya ortak projesi. Türkiye tarafında koordinatörlüğünü Harran Üniversitesi'nin yaptığı, Atatürk Üniversitesi ve Eskişehir Teknik Üniversitesi ile Alman ortaklar Otto-von-Guericke-Universität Magdeburg ve LS Software & Engineering GmbH'nin yer aldığı proje; kentsel veri setlerini analiz ederek iklime dayanıklı, sürdürülebilir planlama senaryoları üreten yapay zekâ destekli bir karar destek sistemi (dijital ikiz + VR görselleştirme) geliştirmeyi amaçlıyor.
+desc_en: A Turkey-Germany joint project funded under TÜBİTAK's International Industrial R&D Programme via the IraSME network. Coordinated on the Turkish side by Harran University, with Atatürk University and Eskişehir Technical University (Turkey) and Otto-von-Guericke-Universität Magdeburg and LS Software & Engineering GmbH (Germany) as partners, the project develops an AI-powered decision-support system — including a digital twin and VR visualization — that analyzes urban datasets to generate climate-resilient, sustainable urban planning scenarios.
 
 title: Sayburç Neolitik Yerleşimi Çevresindeki Kaya Sarnıçları İşlevselliğinin İHA Tabanlı Mikrotopografik, Morfolojik ve Hidrolojik Analizi
 funder: TÜBİTAK

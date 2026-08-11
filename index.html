@@ -597,6 +597,7 @@
     }
     .fund-tubitak  { background: rgba(220,38,38,0.08);  color: #dc2626; }
     .fund-horizon  { background: rgba(37,99,235,0.08);  color: #2563eb; }
+    .fund-irasme   { background: rgba(13,148,136,0.08); color: #0d9488; }
     .fund-ministry { background: rgba(124,58,237,0.08); color: #7c3aed; }
     .fund-other    { background: rgba(100,116,139,0.08);color: var(--text-muted-l); }
     .project-desc {
@@ -1609,6 +1610,7 @@
         const tagMap = {
           tubitak:{cls:'fund-tubitak',label:'TÜBİTAK'},
           horizon:{cls:'fund-horizon',label:'ERASMUS+/Horizon'},
+          irasme:{cls:'fund-irasme',label:'TÜBİTAK / IraSME'},
           ministry:{cls:'fund-ministry',label:'Bakanlık'},
           bap:{cls:'fund-other',label:'HÜ-BAP'},
           other:{cls:'fund-other',label:''},
@@ -1628,10 +1630,10 @@
           card.className = 'project-card reveal';
           card.innerHTML = `
             <div class="project-head">
-              <div class="project-title">${escHtml(p.title)}</div>
+              <div class="project-title" data-tr="${escHtml(p.title)}" data-en="${escHtml(p.title_en || p.title)}">${escHtml(p.title)}</div>
               <span class="fund-tag ${tm.cls}">${funderLabel}</span>
             </div>
-            <p class="project-desc">${escHtml(p.desc || '')}</p>
+            <p class="project-desc" data-tr="${escHtml(p.desc || '')}" data-en="${escHtml(p.desc_en || p.desc || '')}">${escHtml(p.desc || '')}</p>
             <div class="project-meta">
               <div class="pm-item"><strong data-tr="Süre" data-en="Duration">Süre</strong> ${escHtml(p.start||'')} – <span data-tr="${endTr}" data-en="${endEn}">${endTr}</span></div>
               <div class="pm-item"><strong data-tr="Rol" data-en="Role">Rol</strong> <span data-tr="${roleTr}" data-en="${roleEn}">${roleTr}</span></div>
