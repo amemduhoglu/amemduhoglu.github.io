@@ -28,7 +28,8 @@
       "citations": 0,
       "url": "https://agile-giss.copernicus.org/articles/7/23/2026/",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "As evidence accumulates that even moderate alcohol use carries health risks, policy interest is shifting toward reducing everyday exposure; yet existing spatial metrics still mostly map outlet presence rather than behaviorally plausible purchase opportunities along routine trips. We introduce behaviorally informed, detour-based indices tailored to after-work alcohol acquisitions on walking commutes. Using preference surveys of adults in two German cities, we infer empirical \"detour budgets\" for after-work alcohol runs and embed them in a home-level index capturing the share of transit–home walking paths that include at least one feasible purchase opportunity, and a store-level leverage index capturing how many such paths each outlet can intercept. Under a 250 m detour budget, roughly the extra distance that half of respondents are willing to walk, half of stop–home walking segments and 29% of homes are exposed on all routes. Kiosks, while only about 28% of outlets, account for roughly 35% of this after-work leverage. Applying the indices to European alcohol-policy regimes, we show that a state retail monopoly cuts mean home exposure by about 75%, while targeted removal of the 25% most exposure-imposing outlets achieves almost the same reduction as a selective licensing pattern that shuts more stores. These findings show how behaviorally informed exposure metrics can support more targeted alcohol-availability policy and be extended to other purchase-chain-specific exposures."
     },
     {
       "title": "Machine Learning Classification of AI‐Generated and Human‐Mapped Buildings in OpenStreetMap Using Morphometric Analysis",
@@ -45,12 +46,13 @@
     {
       "title": "Simulating Parking Choices Using Large Language Models: Experiments with GPT-4o Mini",
       "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
-      "venue": "",
+      "venue": "Frontiers in Artificial Intelligence and Applications, Vol. 422 — Geography According to Foundation Models",
       "year": "2026",
       "citations": 0,
-      "url": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA422#page=102",
-      "doi": "",
-      "type": "journal"
+      "url": "https://ebooks.iospress.nl/volumearticle/79460",
+      "doi": "10.3233/FAIA260472",
+      "type": "book",
+      "abstract": "This study explores the use of GPT-4o mini, a Large Language Model (LLM), to simulate parking choices in urban environments, potentially assisting in the design of traditional preference studies. We conducted a series of experiments where the model acted as a survey participant, choosing between parking options based on attributes and sociodemographic profiles, which we term Personas. GPT-4o mini's choices align with findings in parking behavior literature. The model consistently selects lower-cost parking options while minimizing walking distances and search times, demonstrating utility-maximizing decision-making. Additionally, its responses reveal a clear willingness to trade-off between price and time savings, reflecting diminishing marginal utility and an increased willingness to pay with higher income levels. It also exhibits complex trends not well-documented in existing literature, such as older personas' heightened sensitivity to reduced walking distances. This highlights the potential of LLMs to emulate hypothetical scenarios across diverse populations, geographical settings, and potential policies and technological innovations. We discuss the broader implications of using LLMs for preference study design, pilot testing, transportation modeling, and the potential ethical concerns surrounding their future application in simulating human decision-making."
     },
     {
       "title": "Utilizing large language models to simulate parking search",
@@ -178,7 +180,8 @@
       "citations": 4,
       "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
       "doi": "",
-      "type": "conference"
+      "type": "conference",
+      "abstract": "We report our initial findings from an examination of potential systematic bias in Large Language Models' (LLM) spatial reasoning capabilities. We devised a series of questions to probe the spatial reasoning abilities of four LLMs: GPT-3.5, GPT-4, Gemini, and Llama-2, targeting four specific biases rooted in human spatial perception: hierarchical, proximity and directional biases. The questions encompassed scenarios challenging the models' spatial reasoning, and each question was posed 10 times independently to gauge the consistency of the LLMs' responses. The models demonstrated a strong understanding of straightforward geographical relationships, achieving 87% accuracy in questions that did not challenge biases in spatial reasoning. However, when faced with questions highlighting these biases, the models' accuracy dropped to 24%. We discuss the design of a large-scale experiment aimed at examining spatial cognition biases in large language models and identifying potential mitigation strategies."
     },
     {
       "title": "6 Şubat depremlerinden etkilenen şehirlere ait OpenStreetMap verilerinin niceliksel ve semantik analizi",
@@ -208,7 +211,8 @@
       "citations": 3,
       "url": "https://scholar.google.com/scholar?cluster=5553457508776189779&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "This paper investigates the complex process of extracting bare land surfaces from point clouds, with a particular focus on filtering out objects such as trees, buildings, and vehicles. It underscores the importance of this task in diverse domains, including cadastral surveying, base mapping, and various geographical sciences, all while excluding specific reference to LiDAR and GIS applications. The research provides an extensive exploration of different algorithms used for point cloud filtering, culminating in a comprehensive evaluation of Agisoft's ground point filtering algorithm in contrast to the well-recognized CSF method. For this comparison, an Unmanned Aerial Vehicle (UAV) flight was performed at Harran University's Osmanbey campus to generate the necessary point cloud. The results of this assessment reveal that a significant portion of the obtained points pertains to ground points, underscoring the efficacy of the filtering process in producing Digital Terrain Models (DTMs). The numerical findings demonstrate that the overall accuracy stands at 0.002, with minimal Type I and Type II errors, reaffirming the robust performance of the filtering algorithms in producing accurate DTMs."
     },
     {
       "title": "Determination of suitable areas for wind power plant installation in Şanlıurfa with GIS and AHP",
@@ -218,7 +222,8 @@
       "citations": 0,
       "url": "https://scholar.google.com/scholar?cluster=16617782310016532510&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Despite the increasing energy consumption day by day, the demand for energy is also growing. Currently, energy is obtained in two different ways: renewable and non-renewable sources. Non-renewable sources cannot meet the increasing energy demand due to their limited availability. The use of non-renewable sources results in carbon emissions, posing a risk to living beings. Therefore, people have turned to renewable energy sources in search of alternative solutions. Wind energy, as one of the renewable energy sources, stands out as a clean and sustainable energy source. To harness this source, it is necessary to establish Wind Power Plants (WPP). For the efficient operation of these plants, proper site selection is crucial. In this study, Geographic Information Systems (GIS) and the Analytic Hierarchy Process (AHP) method were utilized to determine suitable areas for WPP installation in a part of Şanlıurfa province. Seven criteria were identified to be considered in determining the suitable areas for WPP, including wind speed, land use, slope, distance to power transmission lines, distance to highways, distance to active fault lines, and distance to residential areas. These criteria were compared with each other using the AHP method to establish a priority ranking. Based on this ranking, the areas suitable for WPP installation were evaluated. The evaluation results identified a total area of 42.68 km² as highly suitable for WPP installation in the study area."
     },
     {
       "title": "Analysis of investment planning in electricity distribution systems with GIS",
@@ -228,7 +233,8 @@
       "citations": 0,
       "url": "https://scholar.google.com/scholar?cluster=3577414978589747449&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Efficient distribution of electrical energy is crucial in today's world. Geographic Information System (GIS) software plays a significant role in determining the traceability and measurability of electricity distribution. Distribution companies receive investment funds from affiliated organizations to make investments in their service areas. This study analyzes the effective utilization of these investment funds and the selection of appropriate areas for investment through geometric and semantic data using GIS applications. In this study, an investment plan was developed for the Seyrantepe neighborhood, a densely populated area in the Karaköprü district of Sanliurfa province, where energy waste occurs due to unauthorized energy consumption. Electrical grid and spatial analysis were conducted using the GIS system. Three main criteria were considered in determining the relevant area: unauthorized energy density, uninterrupted energy supply, and new subscription processes. The entire process was carried out using GIS software, which involved defining an identity (project code) for the planned area and conducting analysis and obtaining results through SQL queries. The integration of electrical measurement circuits of subscribers and provision of quality and uninterrupted electricity to new settlement areas were achieved through GIS-enabled visualization using the software. Using this software, an investment plan was identified that could reduce the region's unauthorized consumption and System Average Interruption Frequency Index by approximately three times."
     },
     {
       "title": "Generating a thermal index map with unmanned aerial vehicles (UAVs) with thermal sensors",
@@ -238,7 +244,8 @@
       "citations": 0,
       "url": "https://scholar.google.com/scholar?cluster=1634989233644878368&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Unmanned Aerial Vehicles (UAVs) are more advantageous than traditional methods in terms of high-resolution imaging, low cost, and time. With the thermal camera placed on the UAV, the temperature reflectance values of large areas can be obtained more easily. This study produced a detailed thermal index map showing the potential of this approach with the preliminary applications using DJI Mavic 3 Pro T UAV at Harran University Osmanbey campus. Thermal index maps can be used to identify areas with different thermal properties and to detect environmental changes. Since the processing of thermal photographs does not yet allow for map production in terms of software, these images are processed with remote sensing and photogrammetric methods to obtain a thermal index map. This approach can also be used in many areas, such as urban planning, building energy efficiency assessments, and agriculture. This study investigated the effectiveness of UAVs with thermal cameras for mapping activities and many different application potentials, and preliminary results of thermal index map production studies conducted at Harran University Osmanbey campus were presented."
     },
     {
       "title": "An approach for multi-scale urban building data integration and enrichment through geometric matching and semantic web",
@@ -270,7 +277,8 @@
       "citations": 0,
       "url": "https://scholar.google.com/scholar?cluster=14461332100546537956&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "The importance of water is increasing with the growing world population. Therefore, preserving and collecting water is essential for the continuation of life. Rainwater harvesting is one of the long-standing methods of water collection. With advances in Geographic Information Systems (GIS), Unmanned Aerial Vehicle (UAV) based remote sensing and Machine Learning (ML) image classification technologies, it has become easier to calculate rainwater harvesting potential. However, methods need to be customized for different man-made objects. In this study, the rainwater harvesting potential of a building complex with its surrounding marble ground surface located in the Harran University Osmanbey Campus was determined in GIS by using UAV imagery with ML classification techniques. The results showed that a 4153 m2 grass area can be irrigated every day for a year from this potentially harvested rainwater."
     },
     {
       "title": "Arkeolojik kalıntıların belgelenmesinde yersel ve İHA fotogrametrisinin birlikte kullanımı",
@@ -360,7 +368,8 @@
       "citations": 1,
       "url": "https://scholar.google.com/scholar?cluster=12695665199809090440&hl=en&oi=scholarr",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Documentation of historical artifacts and archaeological sites is a very important process in terms of preserving cultural heritage. Because such cultural heritages that should be passed on to future generations are destroyed or even disappeared over time. The documentation process is a versatile multi-disciplinary process. Today, methods in the documentation process started to change with the developing technologies. In recent years, image-based 3-dimensional (3D) modeling by using Unmanned Aerial Vehicles (UAV) has also been widely used. In this study, UAV based 3D modeling of an ancient quarry located on another hill relatively close to Göbeklitepe and the produced topographic products such as digital elevation model and orthophoto are presented."
     },
     {
       "title": "Hacim hesaplarında İHA kullanımı: Osmanbey kampüsü örneği",
@@ -380,7 +389,8 @@
       "citations": 17,
       "url": "https://www.emerald.com/jerer/article/12/2/207/217162",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "abstract": "Purpose: The purpose of this paper is to examine the real estate sales in Turkey on a district basis to reveal the current state of real estate sales and any meaningful changes in the last period. The real estate market is important and is an indicator of the country's general economic health, as real estate is seen as an investment. Design/methodology/approach: As a powerful method of spatial analysis and evaluation, geographic information systems have been used to examine real estate data in both spatial and temporal ways. In this study, 14 years of sales data covering the years 2004 to 2017 obtained from government agencies on a district basis were evaluated using spatiotemporal methods. Several maps were produced using Getis-Ord Gi* and local Moran's I indices, which showed the spatiotemporal change of sales and sales rates. Findings: When looking at the maps, provinces such as Istanbul, Ankara, Izmir, Antalya and their surrounding districts have buoyant real estate markets compared to the other side of the country. Real estate sales are more stagnant in the eastern and northern parts of the country. In addition, the authors found that the growth rate of annual average real estate sales was approximately seven times higher than the annual average population growth. Originality/value: This spatiotemporal study, which presents 14 years of performance data of the real estate market and, by extension, the economic situation, also highlights the regions that stand out for investment planning throughout the country. The results of spatiotemporal analysis also present a new way of real estate market visualization using maps with well-designed categorizations."
     },
     {
       "title": "THE USE OF UAV AND PHOTOGRAMMETRY IN DIGITAL DOCUMENTATION",
@@ -430,7 +440,8 @@
       "citations": 1,
       "url": "https://www.academia.edu/download/88350307/908825.pdf",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "abstract": "There are many archaeological sites in the world from past civilizations. These areas, which are cultural heritage sites, have suffered severe destruction and deformation because of humanitarian interventions such as earthquakes and floods or wars. These demolitions and deformations continue today. Therefore, archaeologists try to document all objects of potential value that they uncover as a result of excavation. Documentation is also necessary for the identification and interpretation of the found objects, as well as for restoration and reconstruction which are possible after archaeological excavation. For this reason, the documentation process is as sensitive as possible, without damaging the objects and requires the correct way. At this point, recently, fast and practical, very high-resolution images, low cost and repetitive use due to the unmanned aircraft (UAV) began to be preferred in documentation studies. In this study, UAV usage is given in the archaeological excavations of Urfa Castle. It is estimated that the fortress of Urfa was built on a Neolithic settlement mound, dating back to 9500 BC, and it is estimated that the last building of the castle, which is currently standing, is between the 6th and 11th centuries. Within the scope of the study, the litter was prepared by using UAV for the archaeological excavations of the Urfa Fortress located in the historic Balıklı Göl plateau in the centre of Şanlıurfa province and the flight repetitions were planned during the excavation. In the first step of the study, the entire fortress area in 4 columns from a height of 80m was photographed with UAV. The orthophoto produced using photographs with high terrestrial resolution (1.3 cm) was divided into 10x10m squares and shared with the archaeology team. A second UAV flight was carried out at a height of 50m after the excavations started. By using two UAV flight data, the total volume of soil uncovered in the first phase of the excavation area was calculated and the first visual documentation of the excavation area was obtained."
     },
     {
       "title": "POSSIBLE CONTRIBUTIONS OF SPATIAL SEMANTIC METHODS AND TECHNOLOGIES TO MULTI-REPRESENTATION SPATIAL DATABASE PARADIGM",
@@ -440,7 +451,8 @@
       "citations": 14,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/413473",
       "doi": "",
-      "type": "journal"
+      "type": "journal",
+      "abstract": "Today, the amount and variety of spatial data have increased dramatically. In addition, the web has made it easier to disseminate and share this kind of data. Therefore, spatial data integration and interoperability have gained more importance. Spatial data are collected from different sources and often heterogeneous in terms of the levels of detail and the points of view. To able to meet the demands of different spatial applications, multi-source and heterogeneous spatial datasets need to be integrated as well as the consistency of these datasets needs to be maintained. In this context, multirepresentation spatial database (MRSDB) paradigm has been suggested by researchers. However, the heterogeneity constitutes a significant barrier in this respect and hence the implementations have so far been remained within a rather narrow scope. In this article, it is mainly discussed about the possible contributions of basic methods and technologies of spatial semantics such as ontologies, semantic web and linked data to the data integration for creating a MRSBD. Some examples are also given to illustrate the concept."
     },
     {
       "title": "3D modeling of a bazaar in ancient harran city using laser scanning technique",
@@ -450,7 +462,8 @@
       "citations": 22,
       "url": "https://isprs-archives.copernicus.org/articles/XLII-4-W6/99/2017/isprs-archives-XLII-4-W6-99-2017.html",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Turkey is a rich country in historical monuments. In the district of Harran, Şanlıurfa province, the work was done, an ancient city and many other ruins beside the world's first university can be found. Considering the climate and sensitive structure of the studied region 3D modeling is a suitable technique. By means of such works reconstruction, that can show us the former state of the region will be enabled at a later point of time. In case the historical site would be destroyed in any way, it will be useful for recording the work as a visual and digital resource. Then, when the work has to be restored, the data can be used as a base and realistic restoration projects could be carried out."
     },
     {
       "title": "KENTSEL BÜYÜME İLE MOTORLU ARAÇ TRAFİĞİ YOĞUNLUĞU ARASINDAKİ İLİŞKİNİN BELİRLENMESİ: İSTANBUL ÖRNEĞİ",
@@ -470,7 +483,8 @@
       "citations": 8,
       "url": "https://isprs-archives.copernicus.org/articles/XLII-4-W6/43/2017/",
       "doi": "",
-      "type": "journal"
+      "type": "conference",
+      "abstract": "Harran hosted the historical Harran University, which is considered to be the oldest university of the world. The Department of Geomatics of the modern Harran University has been charged with the design of a new master plan using Geodesign technology. Carl Steinitz developed a complete framework for doing Geodesign as applied to regional landscape studies. In this project \"Geodesign Hub\", an online software for collaborative Geodesign, has been selected as the main tool. According to the Geodesign concept, data collection had to be limited to support the evaluation of the ten selected systems. The deployment of Unmanned Aerial Systems (UAS) has been necessary in order to collect data with the required accuracy for such a vast area. Currently, works on the third model of the Geodesign framework are continuing."
     },
     {
       "title": "An experimental study on map projection transformation using GIS tools",
@@ -517,12 +531,12 @@
     {
       "title": "Açık kaynaklı yazılımlar ile OGC web servisleri üzerinden görerek uçuş bilgilerinin kartografik sunumu",
       "authors": "Abdulkadir Memduhoğlu",
-      "venue": "",
+      "venue": "Yüksek Lisans Tezi, Yıldız Teknik Üniversitesi",
       "year": "2015",
       "citations": 0,
       "url": "",
       "doi": "",
-      "type": "journal"
+      "type": "thesis"
     },
     {
       "title": "RÜZGAR TÜRBİNİ KURULACAK ALANLARIN CBS–ÇOK ÖLÇÜTLÜ KARAR ANALİZİ KULLANILARAK BELİRLENMESİ: DAVUTPAŞA KAMPÜSÜ",

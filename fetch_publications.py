@@ -32,8 +32,12 @@ def normalize_title(title: str) -> str:
 
 
 def load_curated_fields() -> dict:
-    """Elle eklenen abstract/quartile gibi alanları başlığa göre indeksler,
-    böylece bu script tekrar çalıştığında üzerine yazılmazlar."""
+    """Önceki çıktıdaki abstract/quartile/type/venue alanlarını başlığa göre
+    indeksler, böylece bu script tekrar çalıştığında üzerine yazılmazlar.
+    type/venue bir kez belirlendikten sonra sabit kalır — Scholar'ın bib
+    verisi tutarsız olduğundan (konferans/kitap serilerini 'journal' alanına
+    yazması gibi), her ay yeniden sınıflandırma denemek yanlış pozitiflere
+    yol açabiliyor (bkz. detect_type düzeltmesi öncesi durum)."""
     if not OUTPUT_PATH.exists():
         return {}
     try:
@@ -45,7 +49,7 @@ def load_curated_fields() -> dict:
         key = normalize_title(pub.get("title", ""))
         if not key:
             continue
-        fields = {k: v for k, v in pub.items() if k in ("abstract", "quartile")}
+        fields = {k: v for k, v in pub.items() if k in ("abstract", "quartile", "type", "venue")}
         if fields:
             curated[key] = fields
     return curated
@@ -54,20 +58,34 @@ def load_curated_fields() -> dict:
 CONFERENCE_KEYWORDS = [
     "proceedings", "conference", "congress", "symposium", "sempozyum",
     "kurultay", "workshop", "intercontinental geoinformation", "isprs archives",
-    "geoext", "uzal-cbs", "harita bilimsel", "konferans",
+    "geoext", "uzal-cbs", "harita bilimsel", "konferans", "agile: giscience",
+    "agile giscience", "geoinformation days",
+]
+
+BOOK_KEYWORDS = [
+    "frontiers in artificial intelligence and applications",
 ]
 
 def detect_type(bib: dict) -> str:
-    """Yayın türünü bibliyografik veriden tespit eder."""
-    if bib.get("journal"):
-        return "journal"
-    venue = " ".join([
+    """Yayın türünü bibliyografik veriden tespit eder.
+
+    scholarly sıklıkla konferans/kitap serilerini bib['journal'] alanına
+    yazıyor; bu yüzden anahtar kelime kontrolü journal/booktitle/conference/
+    venue alanlarının TAMAMI üzerinde ve 'journal doluysa journal say'
+    varsayımından ÖNCE yapılmalı.
+    """
+    combined = " ".join([
+        bib.get("journal", ""),
         bib.get("booktitle", ""),
         bib.get("conference", ""),
         bib.get("venue", ""),
     ]).lower()
-    if any(kw in venue for kw in CONFERENCE_KEYWORDS):
+    if any(kw in combined for kw in BOOK_KEYWORDS):
+        return "book"
+    if any(kw in combined for kw in CONFERENCE_KEYWORDS):
         return "conference"
+    if bib.get("journal"):
+        return "journal"
     if bib.get("booktitle"):
         return "book"
     return "journal"

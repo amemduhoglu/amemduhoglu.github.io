@@ -542,6 +542,7 @@
     .tag-journal    { background: rgba(217,119,6,0.12);  color: var(--accent); }
     .tag-conference { background: rgba(99,102,241,0.12); color: var(--accent-2); }
     .tag-book       { background: rgba(16,185,129,0.12); color: #10b981; }
+    .tag-thesis     { background: rgba(124,58,237,0.12); color: #7c3aed; }
     .doi-btn {
       font-family: var(--font-mono);
       font-size: 0.65rem; font-weight: 700;
@@ -1485,6 +1486,7 @@
         journal:    { tr:'Dergi',       en:'Journal',      cls:'tag-journal' },
         conference: { tr:'Konferans',    en:'Conference',   cls:'tag-conference' },
         book:       { tr:'Kitap Bölümü',en:'Book Chapter', cls:'tag-book' },
+        thesis:     { tr:'Tez',         en:'Thesis',       cls:'tag-thesis' },
       };
       const t = typeMap[pub.type] || typeMap.journal;
       const label = lang === 'en' ? t.en : t.tr;
