@@ -980,7 +980,9 @@
         <li><a href="#research"     data-tr="Araştırma"      data-en="Research">Araştırma</a></li>
         <li><a href="#publications" data-tr="Yayınlar"       data-en="Publications">Yayınlar</a></li>
         <li><a href="#projects"     data-tr="Projeler"       data-en="Projects">Projeler</a></li>
+        <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
         <li><a href="#students"     data-tr="Öğrenci Köşesi" data-en="Students">Öğrenci Köşesi</a></li>
+        -->
       </ul>
       <div style="display:flex;align-items:center;gap:0.5rem;">
         <div class="lang-toggle" role="group" aria-label="Dil seçimi">
@@ -998,7 +1000,9 @@
       <a href="#research"     data-tr="Araştırma"      data-en="Research">Araştırma</a>
       <a href="#publications" data-tr="Yayınlar"       data-en="Publications">Yayınlar</a>
       <a href="#projects"     data-tr="Projeler"       data-en="Projects">Projeler</a>
+      <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
       <a href="#students"     data-tr="Öğrenci Köşesi" data-en="Students">Öğrenci Köşesi</a>
+      -->
     </div>
   </nav>
 
@@ -1306,6 +1310,8 @@
   </section>
 
   <!-- STUDENTS -->
+  <!-- Öğrenci Köşesi pasif — kullanıma alınınca bu section'ı ve ilgili nav/footer linklerini,
+       ann-list/courses-list scriptlerinin çağrılarını (loadAnnouncements/loadCourses) tekrar aç.
   <section id="students" class="sec sec-cream">
     <div class="sec-container">
       <div class="sec-label reveal" data-tr="05 — Öğrenci Köşesi" data-en="05 — Student Corner">05 — Öğrenci Köşesi</div>
@@ -1356,6 +1362,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- FOOTER -->
   <footer>
@@ -1376,7 +1383,9 @@
           <li><a href="#research"     data-tr="Araştırma Alanları" data-en="Research Areas">Araştırma Alanları</a></li>
           <li><a href="#publications" data-tr="Yayınlar"           data-en="Publications">Yayınlar</a></li>
           <li><a href="#projects"     data-tr="Projeler"           data-en="Projects">Projeler</a></li>
+          <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
           <li><a href="#students"     data-tr="Öğrenci Köşesi"     data-en="Student Corner">Öğrenci Köşesi</a></li>
+          -->
         </ul>
       </div>
       <div>
@@ -1803,7 +1812,7 @@
           : (lang === 'en' ? 'All Announcements' : 'Tüm Duyurular');
       }
     }
-    loadAnnouncements();
+    // loadAnnouncements(); // Öğrenci Köşesi pasif — bkz. yukarıdaki section yorumu
 
     // ---- COURSES ----
     async function loadCourses() {
@@ -1884,7 +1893,7 @@
         container.innerHTML = '<p class="pub-error">Ders verileri yüklenemedi.</p>';
       }
     }
-    loadCourses();
+    // loadCourses(); // Öğrenci Köşesi pasif — bkz. yukarıdaki section yorumu
   </script>
 
 </body>
