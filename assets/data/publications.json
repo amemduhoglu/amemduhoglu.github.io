@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-08-01",
+    "fetched_at": "2026-09-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
-    "h_index": 14,
-    "i10_index": 21,
-    "citations_total": 532
+    "h_index": 15,
+    "i10_index": 23,
+    "citations_total": 556
   },
   "publications": [
     {
@@ -13,7 +13,7 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 9,
+      "citations": 12,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
       "doi": "",
       "type": "journal",
@@ -49,8 +49,8 @@
       "venue": "Frontiers in Artificial Intelligence and Applications, Vol. 422 — Geography According to Foundation Models",
       "year": "2026",
       "citations": 0,
-      "url": "https://ebooks.iospress.nl/volumearticle/79460",
-      "doi": "10.3233/FAIA260472",
+      "url": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA422#page=102",
+      "doi": "",
       "type": "book",
       "abstract": "This study explores the use of GPT-4o mini, a Large Language Model (LLM), to simulate parking choices in urban environments, potentially assisting in the design of traditional preference studies. We conducted a series of experiments where the model acted as a survey participant, choosing between parking options based on attributes and sociodemographic profiles, which we term Personas. GPT-4o mini's choices align with findings in parking behavior literature. The model consistently selects lower-cost parking options while minimizing walking distances and search times, demonstrating utility-maximizing decision-making. Additionally, its responses reveal a clear willingness to trade-off between price and time savings, reflecting diminishing marginal utility and an increased willingness to pay with higher income levels. It also exhibits complex trends not well-documented in existing literature, such as older personas' heightened sensitivity to reduced walking distances. This highlights the potential of LLMs to emulate hypothetical scenarios across diverse populations, geographical settings, and potential policies and technological innovations. We discuss the broader implications of using LLMs for preference study design, pilot testing, transportation modeling, and the potential ethical concerns surrounding their future application in simulating human decision-making."
     },
@@ -59,7 +59,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "Transportation Research Part A: Policy and Practice",
       "year": "2025",
-      "citations": 14,
+      "citations": 16,
       "url": "https://www.sciencedirect.com/science/article/pii/S0965856425001703",
       "doi": "",
       "type": "journal",
@@ -71,7 +71,7 @@
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
-      "citations": 12,
+      "citations": 14,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
       "doi": "",
       "type": "journal",
@@ -119,7 +119,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "The Professional Geographer",
       "year": "2024",
-      "citations": 28,
+      "citations": 31,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
       "type": "journal",
@@ -131,7 +131,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 27,
+      "citations": 29,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal",
@@ -143,12 +143,24 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu",
       "venue": "International Journal of Engineering and Geosciences",
       "year": "2024",
-      "citations": 6,
+      "citations": 7,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/1424400?issue_id=86286",
       "doi": "",
       "type": "journal",
       "quartile": "Q2",
       "abstract": "This study presents a Geographic Information Systems (GIS) and Unmanned Aerial Vehicle (UAV) based approach to determine suitable roof patches of buildings for solar panel installation in Harran University (Şanlıurfa) campus area. Initially, the Solar Radiation Potential (SRP) of the study area was calculated using a UAV-based Digital Surface Model (DSM) in GIS. Then, a correction process was applied to this theoretically calculated SRP by using an adjustment coefficient derived from 5-year measurements of the Solar Power Plant (SPP) located in the region. This coefficient was used to adjust the calculated SRP and compared with the SPP measurements at a concurrent period. The rooftop objects were segmented by textural analysis to determine the suitable panel installation patches on the buildings. Then, the obtained suitable patches are divided into four different classes considering the adjusted total SRP to find panel installation priority. Finally, the calculated electricity potential of the suitable roof patches could meet approximately 65% of the yearly consumption of campus buildings. This paper reveals that in GIS-based SRP studies, it is necessary to detect the rooftop objects to obtain the solar panel installation area more accurately, and a correction should be applied to approximate the theoretically calculated SRP values to the actual values."
+    },
+    {
+      "title": "Semantic enrichment of building functions through geospatial data integration and ontological inference",
+      "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
+      "venue": "Environment and Planning B: Urban Analytics and City Science",
+      "year": "2024",
+      "citations": 6,
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
+      "doi": "",
+      "type": "journal",
+      "quartile": "Q1",
+      "abstract": "The comprehensive definition of buildings in urban spatial databases (SDBs) and geographic information systems (GISs) is crucial for city management, considering their essential role in cities. Modern urban geospatial applications such as smart cities need a rich-information infrastructure, relying upon urban SDBs and GISs, powered by multiple data sources. In this respect, many geospatial techniques are available for acquiring geometric data of buildings, but their semantic definitions require extra effort. Today, volunteered geographic information (VGI) platforms are assumed to be alternative geospatial data sources and their integration with official datasets provides a new opportunity for the enrichment of urban geospatial datasets. In this context, geospatial semantic web technologies can contribute to the semantic enrichment process. This study presents a methodology for enriching various building datasets using GIS and geospatial semantic web technologies, enabling an enhanced definition of building functions. The proposed method makes use of an OpenStreetMap (OSM) dataset to obtain missing semantic information about building features. The enrichment process was implemented by transferring OSM point of interest (POI) values to associated OSM building features through the application of semantic web rule language (SWRL) rules. Furthermore, the same process was also applied to two additional official datasets at different levels of detail (TOPO1K and TOPO25K), which were subsequently incorporated into the geospatial ontology. The resulting geospatial ontology offers new opportunities for functional definition and logical rule-making for buildings, with the potential to uncover new classes and insights. In addition, it allows for the definition of terms and explanations in multiple languages, covering most of the OSM values used worldwide for selected tags to define building functions."
     },
     {
       "title": "Triangular Greenness Index Analysis for Monitoring Fungal Disease in Pine Trees: A UAV-based Approach",
@@ -161,24 +173,12 @@
       "type": "journal"
     },
     {
-      "title": "Semantic enrichment of building functions through geospatial data integration and ontological inference",
-      "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
-      "venue": "Environment and Planning B: Urban Analytics and City Science",
-      "year": "2024",
-      "citations": 5,
-      "url": "https://journals.sagepub.com/doi/abs/10.1177/23998083231206165",
-      "doi": "",
-      "type": "journal",
-      "quartile": "Q1",
-      "abstract": "The comprehensive definition of buildings in urban spatial databases (SDBs) and geographic information systems (GISs) is crucial for city management, considering their essential role in cities. Modern urban geospatial applications such as smart cities need a rich-information infrastructure, relying upon urban SDBs and GISs, powered by multiple data sources. In this respect, many geospatial techniques are available for acquiring geometric data of buildings, but their semantic definitions require extra effort. Today, volunteered geographic information (VGI) platforms are assumed to be alternative geospatial data sources and their integration with official datasets provides a new opportunity for the enrichment of urban geospatial datasets. In this context, geospatial semantic web technologies can contribute to the semantic enrichment process. This study presents a methodology for enriching various building datasets using GIS and geospatial semantic web technologies, enabling an enhanced definition of building functions. The proposed method makes use of an OpenStreetMap (OSM) dataset to obtain missing semantic information about building features. The enrichment process was implemented by transferring OSM point of interest (POI) values to associated OSM building features through the application of semantic web rule language (SWRL) rules. Furthermore, the same process was also applied to two additional official datasets at different levels of detail (TOPO1K and TOPO25K), which were subsequently incorporated into the geospatial ontology. The resulting geospatial ontology offers new opportunities for functional definition and logical rule-making for buildings, with the potential to uncover new classes and insights. In addition, it allows for the definition of terms and explanations in multiple languages, covering most of the OSM values used worldwide for selected tags to define building functions."
-    },
-    {
       "title": "Evidence for Systematic Bias in the Spatial Memory of Large Language Models.",
       "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
       "venue": "GeoExT@ ECIR",
       "year": "2024",
-      "citations": 4,
-      "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
+      "citations": 3,
+      "url": "https://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-3683/paper8.pdf",
       "doi": "",
       "type": "conference",
       "abstract": "We report our initial findings from an examination of potential systematic bias in Large Language Models' (LLM) spatial reasoning capabilities. We devised a series of questions to probe the spatial reasoning abilities of four LLMs: GPT-3.5, GPT-4, Gemini, and Llama-2, targeting four specific biases rooted in human spatial perception: hierarchical, proximity and directional biases. The questions encompassed scenarios challenging the models' spatial reasoning, and each question was posed 10 times independently to gauge the consistency of the LLMs' responses. The models demonstrated a strong understanding of straightforward geographical relationships, achieving 87% accuracy in questions that did not challenge biases in spatial reasoning. However, when faced with questions highlighting these biases, the models' accuracy dropped to 24%. We discuss the design of a large-scale experiment aimed at examining spatial cognition biases in large language models and identifying potential mitigation strategies."
@@ -208,7 +208,7 @@
       "authors": "Nizar Polat and Abdulkadir Memduhoğlu and Yunus Kaya",
       "venue": "Intercontinental Geoinformation Days",
       "year": "2023",
-      "citations": 3,
+      "citations": 4,
       "url": "https://scholar.google.com/scholar?cluster=5553457508776189779&hl=en&oi=scholarr",
       "doi": "",
       "type": "conference",
@@ -252,7 +252,7 @@
       "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
       "venue": "Cartography and Geographic Information Science",
       "year": "2022",
-      "citations": 16,
+      "citations": 17,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/15230406.2021.1952108",
       "doi": "",
       "type": "journal",
@@ -315,8 +315,18 @@
       "authors": "Nizar POLAT and ÖNAL Mehmet and KAYA Yunus and Abdulkadir MEMDUHOĞLU and KAYA Neslihan and Mustafa ULUKAVAK and Süheyla İrem MUTLU and Semih MUTLU",
       "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
       "year": "2021",
-      "citations": 11,
+      "citations": 12,
       "url": "https://dergipark.org.tr/en/pub/bitlisfen/issue/62708/881781",
+      "doi": "",
+      "type": "journal"
+    },
+    {
+      "title": "Coğrafi bilgi sistemi ve semantik web aracılığıyla bina detaylarına ilişkin çok kaynaklı ve çok ölçekli mekansal verilerin entegrasyonu ve zenginleştirmesi",
+      "authors": "ABDULKADİR MEMDUHOĞLU",
+      "venue": "",
+      "year": "2021",
+      "citations": 0,
+      "url": "https://avesis.yildiz.edu.tr/yonetilen-tez/79122400-5098-49fc-bdc5-a02944f95171/cografi-bilgi-sistemi-ve-semantik-web-araciligiyla-bina-detaylarina-iliskin-cok-kaynakli-ve-cok-olcekli-mekansal-verilerin-entegrasyonu-ve-zenginlestirmesi",
       "doi": "",
       "type": "journal"
     },
@@ -325,7 +335,7 @@
       "authors": "Halil İbrahim Şenol and Abdulkadir MEMDUHOGLU and Mustafa Ulukavak",
       "venue": "Dicle Üniversitesi Mühendislik Fakültesi Mühendislik Dergisi",
       "year": "2020",
-      "citations": 41,
+      "citations": 40,
       "url": "https://dergipark.org.tr/en/pub/dumf/article/801662",
       "doi": "",
       "type": "journal"
@@ -335,7 +345,7 @@
       "authors": "Nizar POLAT and ÖNAL Mehmet and Fred Barış ERNST and Halil İ̇brahim ŞENOL and Abdulkadir MEMDUHOGLU and Semih MUTLU and Süheyla İ̇rem MUTLU and Mehmet Ali BUDAN and Mutalip TURGUT and KARA Hüseyin",
       "venue": "Türkiye Fotogrametri Dergisi",
       "year": "2020",
-      "citations": 32,
+      "citations": 31,
       "url": "https://dergipark.org.tr/en/pub/tufod/article/835434",
       "doi": "",
       "type": "journal"
@@ -376,7 +386,7 @@
       "authors": "Yunus Kaya and Halil İbrahim Şenol and Abdulkadir Memduhoğlu and Şeyma Akça and Mustafa Ulukavak and Nizar Polat",
       "venue": "Türkiye Fotogrametri Dergisi",
       "year": "2019",
-      "citations": 33,
+      "citations": 32,
       "url": "https://dergipark.org.tr/en/download/article-file/859774",
       "doi": "",
       "type": "journal"
@@ -397,7 +407,7 @@
       "authors": "Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Nizar Polat",
       "venue": "Mersin Photogrammetry Journal",
       "year": "2019",
-      "citations": 17,
+      "citations": 15,
       "url": "https://dergipark.org.tr/en/pub/mephoj/article/637583?issue_id=50329",
       "doi": "",
       "type": "journal"
@@ -427,7 +437,7 @@
       "authors": "Mustafa Ulukavak and Abdulkadir Memduhoğlu and Halil İbrahim Şenol and Nizar Polat",
       "venue": "Mersin Photogrammetry Journal",
       "year": "2019",
-      "citations": 7,
+      "citations": 6,
       "url": "https://dergipark.org.tr/en/download/article-file/1044841",
       "doi": "",
       "type": "journal"
@@ -438,7 +448,7 @@
       "venue": "International Journal of Environment and Geoinformatics",
       "year": "2019",
       "citations": 1,
-      "url": "https://www.academia.edu/download/88350307/908825.pdf",
+      "url": "https://www.tufuab.org.tr/uploads/files/articles/the-use-of-uav-in-archaeological-excavation-a-case-study-in-sanliurfa-historical-castle-2146.pdf",
       "doi": "",
       "type": "journal",
       "abstract": "There are many archaeological sites in the world from past civilizations. These areas, which are cultural heritage sites, have suffered severe destruction and deformation because of humanitarian interventions such as earthquakes and floods or wars. These demolitions and deformations continue today. Therefore, archaeologists try to document all objects of potential value that they uncover as a result of excavation. Documentation is also necessary for the identification and interpretation of the found objects, as well as for restoration and reconstruction which are possible after archaeological excavation. For this reason, the documentation process is as sensitive as possible, without damaging the objects and requires the correct way. At this point, recently, fast and practical, very high-resolution images, low cost and repetitive use due to the unmanned aircraft (UAV) began to be preferred in documentation studies. In this study, UAV usage is given in the archaeological excavations of Urfa Castle. It is estimated that the fortress of Urfa was built on a Neolithic settlement mound, dating back to 9500 BC, and it is estimated that the last building of the castle, which is currently standing, is between the 6th and 11th centuries. Within the scope of the study, the litter was prepared by using UAV for the archaeological excavations of the Urfa Fortress located in the historic Balıklı Göl plateau in the centre of Şanlıurfa province and the flight repetitions were planned during the excavation. In the first step of the study, the entire fortress area in 4 columns from a height of 80m was photographed with UAV. The orthophoto produced using photographs with high terrestrial resolution (1.3 cm) was divided into 10x10m squares and shared with the archaeology team. A second UAV flight was carried out at a height of 50m after the excavations started. By using two UAV flight data, the total volume of soil uncovered in the first phase of the excavation area was calculated and the first visual documentation of the excavation area was obtained."
@@ -448,7 +458,7 @@
       "authors": "Abdulkadir Memduhoglu and Melih Basaraner",
       "venue": "International Journal of Engineering and Geosciences",
       "year": "2018",
-      "citations": 14,
+      "citations": 17,
       "url": "https://dergipark.org.tr/en/pub/ijeg/article/413473",
       "doi": "",
       "type": "journal",
@@ -459,8 +469,8 @@
       "authors": "HI Senol and S Erdogan and M Onal and M Ulukavak and A Memduhoglu and S Mutlu and FB Ernst and M Yilmaz",
       "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
       "year": "2017",
-      "citations": 22,
-      "url": "https://isprs-archives.copernicus.org/articles/XLII-4-W6/99/2017/isprs-archives-XLII-4-W6-99-2017.html",
+      "citations": 21,
+      "url": "https://www.academia.edu/download/108472831/isprs-archives-XLII-4-W6-99-2017.pdf",
       "doi": "",
       "type": "conference",
       "abstract": "Turkey is a rich country in historical monuments. In the district of Harran, Şanlıurfa province, the work was done, an ancient city and many other ruins beside the world's first university can be found. Considering the climate and sensitive structure of the studied region 3D modeling is a suitable technique. By means of such works reconstruction, that can show us the former state of the region will be enabled at a later point of time. In case the historical site would be destroyed in any way, it will be useful for recording the work as a visual and digital resource. Then, when the work has to be restored, the data can be used as a base and realistic restoration projects could be carried out."
@@ -499,19 +509,19 @@
     {
       "title": "Açık kaynaklı yazılımlar ile OGC web servisleri üzerinden görerek uçuş bilgilerinin kartografik sunumu",
       "authors": "ABDULKADİR MEMDUHOĞLU and ALİ MELİH BAŞARANER and Yavuz Selim ŞENGÜN",
-      "venue": "Harita Dergisi",
+      "venue": "Yüksek Lisans Tezi, Yıldız Teknik Üniversitesi",
       "year": "2016",
-      "citations": 3,
-      "url": "https://scholar.google.com/scholar?cluster=17761524923013577397&hl=en&oi=scholarr",
+      "citations": 4,
+      "url": "https://avesis.yildiz.edu.tr/yonetilen-tez/a43aaa82-939d-4cb1-9eed-b00125ec4b13/acik-kaynakli-yazilimlar-ile-ogc-web-servisleri-uzerinden-gorerek-ucus-bilgilerinin-kartografik-sunumu",
       "doi": "",
-      "type": "journal"
+      "type": "thesis"
     },
     {
       "title": "A new algorithm for cartographic simplification of streams and lakes using deviation angles and error bands",
       "authors": "Türkay Gökgöz and Alper Sen and Abdulkadir Memduhoglu and Muslum Hacar",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2015",
-      "citations": 32,
+      "citations": 33,
       "url": "https://www.mdpi.com/2220-9964/4/4/2185",
       "doi": "",
       "type": "journal",
@@ -523,7 +533,7 @@
       "authors": "Abdulkadir Memduhoğlu and Melih Başaraner and Yavuz Selim Şengün",
       "venue": "TMMOB Harita ve Kadastro Mühendisleri Odası, 15. Türkiye Harita Bilimsel ve Teknik Kurultayı",
       "year": "2015",
-      "citations": 1,
+      "citations": 0,
       "url": "https://obs.hkmo.org.tr/show-media/resimler/ekler/4ceea0bc341a373_ek.pdf",
       "doi": "",
       "type": "conference"
@@ -537,6 +547,16 @@
       "url": "",
       "doi": "",
       "type": "thesis"
+    },
+    {
+      "title": "Rüzgar Türbini Kurulacak Alanların Cbs–Çok Ölçütlü Karar Analizi Kullanılarak Belirlenmesi: Davutpaşa Kampüsü",
+      "authors": "Abdulkadir Memduhoğlu and Gülşah Özmen and Gazale Göyçek and Fatmagül Kılıç",
+      "venue": "V. Uzaktan Algılama ve Coğrafi Bilgi Sistemleri Sempozyumu (UZAL-CBS 2014)",
+      "year": "2014",
+      "citations": 11,
+      "url": "https://avesis.yildiz.edu.tr/yayin/e2f9948a-1ac7-46e5-9716-ea99c425dab5/ruzgar-turbini-kurulacak-alanlarin-cbs-cok-olcutlu-karar-analizi-kullanilarak-belirlenmesi-davutpasa-kampusu",
+      "doi": "",
+      "type": "conference"
     },
     {
       "title": "RÜZGAR TÜRBİNİ KURULACAK ALANLARIN CBS–ÇOK ÖLÇÜTLÜ KARAR ANALİZİ KULLANILARAK BELİRLENMESİ: DAVUTPAŞA KAMPÜSÜ",
