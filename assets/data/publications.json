@@ -29,7 +29,8 @@
       "url": "https://www.sciencedirect.com/science/article/pii/S0264275126007341",
       "doi": "",
       "type": "journal",
-      "quartile": "Q1"
+      "quartile": "Q1",
+      "abstract": "Moderate alcohol use is increasingly viewed as a potential health concern. Existing spatial exposure metrics, however, remain largely behavior-agnostic: they map the presence of outlets but do not account for how people's routine movements enable same-day alcohol purchases. We introduce behaviorally calibrated, detour-based indices tailored to after-work alcohol acquisitions on walking commutes. Using a revealed- and stated-preference survey of 230 eligible adults who reported a recent on-foot after-work alcohol purchase in Mannheim and Heidelberg, Germany, we calibrate three detour thresholds for after-work alcohol runs and embed them in two path-based metrics on Mannheim's pedestrian network: a home-level index capturing the share of transit–home walking paths that include at least one feasible purchase opportunity, and a store-level leverage index capturing how many such paths each outlet can intercept. At the 250 m detour threshold, half of stop–home walking segments contain a purchase opportunity, and 29% of homes have such opportunities on all stop–home paths. Kiosks, while only about 28% of outlets, account for roughly 38% of this after-work leverage. We then use the indices in a comparison of three outlet rules. When exposure is recalculated from the remaining outlets, a specialist-only rule produces about 75% lower mean route-based opportunity than the current outlet set, while excluding the 25% highest-leverage outlets produces a mean reduction close to a convenience-channel restriction that excludes more alcohol-sale locations. We conclude by outlining extensions toward a broader class of purchase-chain-specific exposure metrics."
     },
     {
       "title": "Detour-based metrics of alcohol availability along walking commutes",
