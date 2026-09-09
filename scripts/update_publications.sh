@@ -18,7 +18,7 @@ log "=== Güncelleme başladı ==="
 if [ ! -f "$VENV_PYTHON" ]; then
     log "venv bulunamadı, oluşturuluyor..."
     python3 -m venv /tmp/scholar-venv
-    /tmp/scholar-venv/bin/pip install -q scholarly
+    /tmp/scholar-venv/bin/pip install -q scholarly "bibtexparser<2"
     log "venv oluşturuldu"
 fi
 

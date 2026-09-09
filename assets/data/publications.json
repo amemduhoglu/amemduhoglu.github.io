@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-09-01",
+    "fetched_at": "2026-09-09",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 15,
     "i10_index": 23,
-    "citations_total": 556
+    "citations_total": 558
   },
   "publications": [
     {
@@ -13,12 +13,23 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 12,
+      "citations": 13,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
       "doi": "",
       "type": "journal",
       "quartile": "Q1",
       "abstract": "Multi-Criteria Decision Making (MCDM) methods integrated with Geographic Information Systems (GIS) are essential for spatial planning, particularly in renewable energy development. The Analytic Hierarchy Process (AHP) traditionally relies on expert elicitation for criteria weighting, which can be costly, time-consuming, and inconsistent. This study develops a framework to evaluate Large Language Models (LLMs) as virtual experts for spatial MCDM, addressing the need for accessible and reliable decision-support alternatives in urban and environmental systems. We empirically compared six contemporary LLMs with a panel of ten regional domain experts in determining AHP criteria weights for solar power plant site selection. The framework tests multiple prompting strategies, assesses architectural performance, examines stability across iterations, and identifies biases. Fourteen spatially explicit criteria were used, spanning resource potential, topography, environmental constraints, and infrastructure connectivity. Optimally configured LLMs achieve strong correlations with expert consensus (r = 0.838), approaching typical inter-expert agreement levels, though systematic biases in specific criterion categories reveal important limitations in expert simulation. Expert Panel Role-Based prompting outperformed Chain-of-Thought and Minimal Context methods. Stability analysis revealed significant reliability differences across architectures, while systematic biases included underestimation of topographical factors and overemphasis on infrastructure connectivity. The framework provides empirical performance benchmarks and identifies model-specific optimization needs and bias correction protocols. This research establishes a controlled testbed for exploring AI decision-making patterns rather than replacing expert processes in high-stakes energy infrastructure decisions."
+    },
+    {
+      "title": "Behaviorally calibrated metrics for comparing alcohol outlet configurations along after-work walking commutes in Mannheim, Germany",
+      "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Johannes Huber and Alexander Zipf",
+      "venue": "Cities",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0264275126007341",
+      "doi": "",
+      "type": "journal",
+      "quartile": "Q1"
     },
     {
       "title": "Detour-based metrics of alcohol availability along walking commutes",
@@ -131,7 +142,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 29,
+      "citations": 30,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal",
@@ -315,7 +326,7 @@
       "authors": "Nizar POLAT and ÖNAL Mehmet and KAYA Yunus and Abdulkadir MEMDUHOĞLU and KAYA Neslihan and Mustafa ULUKAVAK and Süheyla İrem MUTLU and Semih MUTLU",
       "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
       "year": "2021",
-      "citations": 12,
+      "citations": 11,
       "url": "https://dergipark.org.tr/en/pub/bitlisfen/issue/62708/881781",
       "doi": "",
       "type": "journal"
@@ -396,7 +407,7 @@
       "authors": "Saffet Erdoğan and Abdulkadir Memduhoğlu",
       "venue": "Journal of European Real Estate Research",
       "year": "2019",
-      "citations": 17,
+      "citations": 18,
       "url": "https://www.emerald.com/jerer/article/12/2/207/217162",
       "doi": "",
       "type": "journal",
@@ -549,8 +560,8 @@
       "type": "thesis"
     },
     {
-      "title": "Rüzgar Türbini Kurulacak Alanların Cbs–Çok Ölçütlü Karar Analizi Kullanılarak Belirlenmesi: Davutpaşa Kampüsü",
-      "authors": "Abdulkadir Memduhoğlu and Gülşah Özmen and Gazale Göyçek and Fatmagül Kılıç",
+      "title": "Rüzgar Türbini Kurulacak Alanların CBS Çok Ölçütlü Karar Analizi Kullanılarak Belirlenmesi Davutpaşa Kampüsü",
+      "authors": "Abdulkadir Memduhoğlu and Gülşah Özmen and Gazale Göyçek",
       "venue": "V. Uzaktan Algılama ve Coğrafi Bilgi Sistemleri Sempozyumu (UZAL-CBS 2014)",
       "year": "2014",
       "citations": 11,
