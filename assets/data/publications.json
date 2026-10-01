@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-09-09",
+    "fetched_at": "2026-10-01",
     "scholar_id": "EWXdpogAAAAJ",
     "name": "Abdulkadir Memduhoğlu",
     "h_index": 15,
     "i10_index": 23,
-    "citations_total": 558
+    "citations_total": 569
   },
   "publications": [
     {
@@ -13,7 +13,7 @@
       "authors": "Abdulkadir Memduhoglu and Nir Fulman and Nizar Polat and Tacettin Atas",
       "venue": "Expert Systems with Applications",
       "year": "2026",
-      "citations": 13,
+      "citations": 16,
       "url": "https://www.sciencedirect.com/science/article/pii/S0957417425037868",
       "doi": "",
       "type": "journal",
@@ -83,7 +83,7 @@
       "authors": "Abdulkadir Memduhoğlu",
       "venue": "ISPRS International Journal of Geo-Information",
       "year": "2025",
-      "citations": 14,
+      "citations": 15,
       "url": "https://www.mdpi.com/2220-9964/14/1/35",
       "doi": "",
       "type": "journal",
@@ -119,7 +119,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nizar Polat",
       "venue": "Drones",
       "year": "2025",
-      "citations": 1,
+      "citations": 2,
       "url": "https://www.mdpi.com/2504-446X/9/3/205",
       "doi": "",
       "type": "journal",
@@ -131,7 +131,7 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoğlu and Alexander Zipf",
       "venue": "The Professional Geographer",
       "year": "2024",
-      "citations": 31,
+      "citations": 34,
       "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2024.2372792",
       "doi": "",
       "type": "journal",
@@ -143,7 +143,7 @@
       "authors": "Abdulkadir Memduhoğlu and Nir Fulman and Alexander Zipf",
       "venue": "Earth Science Informatics",
       "year": "2024",
-      "citations": 30,
+      "citations": 31,
       "url": "https://link.springer.com/article/10.1007/s12145-024-01463-8",
       "doi": "",
       "type": "journal",
@@ -189,8 +189,8 @@
       "authors": "Nir Fulman and Abdulkadir Memduhoglu and Alexander Zipf",
       "venue": "GeoExT@ ECIR",
       "year": "2024",
-      "citations": 3,
-      "url": "https://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-3683/paper8.pdf",
+      "citations": 4,
+      "url": "https://ceur-ws.org/Vol-3683/paper8.pdf",
       "doi": "",
       "type": "conference",
       "abstract": "We report our initial findings from an examination of potential systematic bias in Large Language Models' (LLM) spatial reasoning capabilities. We devised a series of questions to probe the spatial reasoning abilities of four LLMs: GPT-3.5, GPT-4, Gemini, and Llama-2, targeting four specific biases rooted in human spatial perception: hierarchical, proximity and directional biases. The questions encompassed scenarios challenging the models' spatial reasoning, and each question was posed 10 times independently to gauge the consistency of the LLMs' responses. The models demonstrated a strong understanding of straightforward geographical relationships, achieving 87% accuracy in questions that did not challenge biases in spatial reasoning. However, when faced with questions highlighting these biases, the models' accuracy dropped to 24%. We discuss the design of a large-scale experiment aimed at examining spatial cognition biases in large language models and identifying potential mitigation strategies."
@@ -277,7 +277,7 @@
       "venue": "Advanced UAV",
       "year": "2022",
       "citations": 4,
-      "url": "https://scholar.google.com/scholar?cluster=13728309812289015627&hl=en&oi=scholarr",
+      "url": "https://yakarm.com/journals/uav/article/view/69",
       "doi": "",
       "type": "journal"
     },
@@ -327,7 +327,7 @@
       "authors": "Nizar POLAT and ÖNAL Mehmet and KAYA Yunus and Abdulkadir MEMDUHOĞLU and KAYA Neslihan and Mustafa ULUKAVAK and Süheyla İrem MUTLU and Semih MUTLU",
       "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
       "year": "2021",
-      "citations": 11,
+      "citations": 12,
       "url": "https://dergipark.org.tr/en/pub/bitlisfen/issue/62708/881781",
       "doi": "",
       "type": "journal"
@@ -440,7 +440,7 @@
       "venue": "TMMOB 17. Türkiye Harita Bilimsel ve Teknik Kurultayı",
       "year": "2019",
       "citations": 8,
-      "url": "https://www.hkmo.org.tr/resimler/ekler/8b7fba3de39e70b_ek.pdf",
+      "url": "https://obs.hkmo.org.tr/show-media/resimler/ekler/8b7fba3de39e70b_ek.pdf",
       "doi": "",
       "type": "conference"
     },
