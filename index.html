@@ -980,9 +980,7 @@
         <li><a href="#research"     data-tr="Araştırma"      data-en="Research">Araştırma</a></li>
         <li><a href="#publications" data-tr="Yayınlar"       data-en="Publications">Yayınlar</a></li>
         <li><a href="#projects"     data-tr="Projeler"       data-en="Projects">Projeler</a></li>
-        <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
         <li><a href="#students"     data-tr="Öğrenci Köşesi" data-en="Students">Öğrenci Köşesi</a></li>
-        -->
       </ul>
       <div style="display:flex;align-items:center;gap:0.5rem;">
         <div class="lang-toggle" role="group" aria-label="Dil seçimi">
@@ -1000,9 +998,7 @@
       <a href="#research"     data-tr="Araştırma"      data-en="Research">Araştırma</a>
       <a href="#publications" data-tr="Yayınlar"       data-en="Publications">Yayınlar</a>
       <a href="#projects"     data-tr="Projeler"       data-en="Projects">Projeler</a>
-      <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
       <a href="#students"     data-tr="Öğrenci Köşesi" data-en="Students">Öğrenci Köşesi</a>
-      -->
     </div>
   </nav>
 
@@ -1310,22 +1306,20 @@
   </section>
 
   <!-- STUDENTS -->
-  <!-- Öğrenci Köşesi pasif — kullanıma alınınca bu section'ı ve ilgili nav/footer linklerini,
-       ann-list/courses-list scriptlerinin çağrılarını (loadAnnouncements/loadCourses) tekrar aç.
   <section id="students" class="sec sec-cream">
     <div class="sec-container">
       <div class="sec-label reveal" data-tr="05 — Öğrenci Köşesi" data-en="05 — Student Corner">05 — Öğrenci Köşesi</div>
       <div class="sec-title reveal" data-tr="Öğrenci Köşesi" data-en="Student Corner">Öğrenci Köşesi</div>
-      <p class="sec-desc reveal" data-tr="Duyurular ve ders materyalleri" data-en="Announcements and course materials">Duyurular ve ders materyalleri</p>
+      <p class="sec-desc reveal" data-tr="Ders materyalleri" data-en="Course materials">Ders materyalleri</p>
 
       <nav class="st-tabs reveal" role="tablist">
-        <button class="st-tab active" id="tab-ann" data-panel="ann" role="tab" aria-selected="true" aria-controls="panel-ann">
+        <button class="st-tab" id="tab-ann" data-panel="ann" role="tab" aria-selected="false" style="display:none" aria-controls="panel-ann">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
           </svg>
           <span data-tr="Duyurular" data-en="Announcements">Duyurular</span>
         </button>
-        <button class="st-tab" id="tab-courses" data-panel="courses" role="tab" aria-selected="false" aria-controls="panel-courses">
+        <button class="st-tab active" id="tab-courses" data-panel="courses" role="tab" aria-selected="true" aria-controls="panel-courses">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
@@ -1333,7 +1327,7 @@
         </button>
       </nav>
 
-      <div class="st-panel active" id="panel-ann" role="tabpanel" aria-labelledby="tab-ann">
+      <div class="st-panel" id="panel-ann" role="tabpanel" aria-labelledby="tab-ann">
         <div class="ann-list" id="ann-list">
           <div class="pub-loading" id="ann-loading">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
@@ -1349,7 +1343,7 @@
         </div>
       </div>
 
-      <div class="st-panel" id="panel-courses" role="tabpanel" aria-labelledby="tab-courses">
+      <div class="st-panel active" id="panel-courses" role="tabpanel" aria-labelledby="tab-courses">
         <div id="courses-list">
           <div class="pub-loading" id="courses-loading">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
@@ -1362,7 +1356,6 @@
       </div>
     </div>
   </section>
-  -->
 
   <!-- FOOTER -->
   <footer>
@@ -1383,9 +1376,7 @@
           <li><a href="#research"     data-tr="Araştırma Alanları" data-en="Research Areas">Araştırma Alanları</a></li>
           <li><a href="#publications" data-tr="Yayınlar"           data-en="Publications">Yayınlar</a></li>
           <li><a href="#projects"     data-tr="Projeler"           data-en="Projects">Projeler</a></li>
-          <!-- Öğrenci Köşesi pasif — kullanıma alınınca aç:
           <li><a href="#students"     data-tr="Öğrenci Köşesi"     data-en="Student Corner">Öğrenci Köşesi</a></li>
-          -->
         </ul>
       </div>
       <div>
@@ -1812,7 +1803,7 @@
           : (lang === 'en' ? 'All Announcements' : 'Tüm Duyurular');
       }
     }
-    // loadAnnouncements(); // Öğrenci Köşesi pasif — bkz. yukarıdaki section yorumu
+    // loadAnnouncements(); // Duyurular sekmesi gizli (kullanıcı kararı, 2026-10-05)
 
     // ---- COURSES ----
     async function loadCourses() {
@@ -1893,7 +1884,7 @@
         container.innerHTML = '<p class="pub-error">Ders verileri yüklenemedi.</p>';
       }
     }
-    // loadCourses(); // Öğrenci Köşesi pasif — bkz. yukarıdaki section yorumu
+    loadCourses();
   </script>
 
 </body>

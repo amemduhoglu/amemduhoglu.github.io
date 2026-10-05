@@ -24,20 +24,35 @@
 # GÜZ DÖNEMİ
 # =====================
 
+kod: 3.Dönem
+ad: Kartografya I
+tur: lisans
+donem: guz
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/kartografya-1/ | Ders slaytları (PDF, şifre derste verilir) | link
+
+kod: 3.Dönem
+ad: Veri Tabanı Yönetimi
+tur: lisans
+donem: guz
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/veri-tabani-yonetimi/ | Ders slaytları (PDF, şifre derste verilir) | link
+
 kod: 5.Dönem
 ad: Coğrafi Bilgi Sistemleri
 tur: lisans
 donem: guz
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs/ | Ders slaytları (PDF, şifre derste verilir) | link
 
 kod: 7.Dönem
 ad: CBS'de Mekansal Analizler
 tur: lisans
 donem: guz
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs-mekansal-analiz/ | Slaytlar ve uygulama föyleri (PDF, şifre derste verilir) | link
 
 kod: 1.Dönem
 ad: CBS'de Mekansal İstatistik
 tur: lisansustu
 donem: guz
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs-mekansal-istatistik/ | Ders slaytları (PDF, şifre derste verilir) | link
 
 # =====================
 # BAHAR DÖNEMİ
@@ -62,3 +77,4 @@ kod: 2.Dönem
 ad: Web Tabanlı Kartografya ve CBS
 tur: lisansustu
 donem: bahar
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/web-tabanli-kartografya-ve-cbs/ | Ders slaytları (PDF, şifre derste verilir) | link
