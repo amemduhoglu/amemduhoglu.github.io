@@ -46,7 +46,7 @@ kod: 7.Dönem
 ad: CBS'de Mekansal Analizler ve Uygulamaları
 tur: lisans
 donem: guz
-dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs-mekansal-analiz/ | Slaytlar ve uygulama föyleri (PDF, şifre derste verilir) | link
+dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs-mekansal-analiz/ | Slaytlar, uygulama föyleri ve veri (şifre derste verilir) | link
 
 kod: 1.Dönem
 ad: CBS'de Mekansal İstatistik
