@@ -43,7 +43,7 @@ donem: guz
 dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs/ | Ders slaytları (PDF, şifre derste verilir) | link
 
 kod: 7.Dönem
-ad: CBS'de Mekansal Analizler
+ad: CBS'de Mekansal Analizler ve Uygulamaları
 tur: lisans
 donem: guz
 dosya: https://ders-hrt-49rfc.hrt-ders.workers.dev/cbs-mekansal-analiz/ | Slaytlar ve uygulama föyleri (PDF, şifre derste verilir) | link
